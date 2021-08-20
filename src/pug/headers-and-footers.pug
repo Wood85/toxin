@@ -1,0 +1,30 @@
+- var menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения'];
+
+header.header
+  .header__logo
+    .header__logo-image
+      img.header__logo-image-img(src='./assets/img/header-logo-image.svg')
+    .header__logo-title
+      img.header__logo-title-img(src='./assets/img/header-logo-title.svg')
+  nav.header__menu
+    ul.header__menu-list
+      each value in menuValues
+        li.header__menu-item
+          a.header__menu-link #{value}
+    .header__authentication-block
+      a.header__button-login(href='#') войти
+      a.header__button-register(href='#') зарегистрироваться
+header.header
+  .header__logo
+    .header__logo-image
+      img.header__logo-image-img(src='./assets/img/header-logo-image.svg')
+    .header__logo-title
+      img.header__logo-title-img(src='./assets/img/header-logo-title.svg')
+  nav.header__menu
+    ul.header__menu-list
+      each value in menuValues
+        li.header__menu-item
+          a.header__menu-link #{value}
+    .header__authentication-block
+      a.header__button-login(href='#') войти
+      a.header__button-register(href='#') зарегистрироваться

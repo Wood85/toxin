@@ -1,0 +1,113 @@
+@import 'variables';
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 9.7%;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.header__logo{
+  display: flex;
+  height: 100%;
+}
+.header__logo-image{
+  display: flex;
+  align-items: center;
+
+}
+.header__logo-image-img{
+
+}
+.header__logo-title{
+  display: flex;
+  align-items: center;
+  padding-left: 11%;
+}
+.header__logo-title-img{
+
+}
+.header__menu{
+  display: flex;
+  width: 66.5%;
+}
+.header__menu-list{
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  width: 60.6%;
+  justify-content: space-between;
+  align-items: center;
+  color: $darkShade50;
+}
+.header__menu-item{
+  &:first-child{
+    color:$darkShade75;
+    font-weight: 700;
+}
+  &:nth-child(2),&:nth-child(5) {
+    position: relative;
+    &:after {
+      content: '';
+      background-image: url('../assets/img/check.png');
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      top: 50%;
+      right: 7px;
+      transform: translate(0, -40%)
+    }
+  }
+  &:nth-child(2){
+    padding-right: 24px;
+  }
+  &:nth-child(5){
+    padding-right: 28px;
+  }
+}
+.header__menu-link{
+}
+.header__authentication-block{
+  max-width: 44%;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.header__button-login{
+  position: relative;
+  width: 83px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $purple;
+  border-radius: 18px;
+  background: #ffffff;
+  &:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    z-index: -1;
+  }
+}
+.header__button-register{
+  margin-left: 22px;
+  width: 196px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  color: #ffffff;
+}
