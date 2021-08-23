@@ -1,29 +1,93 @@
-- var menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения'];
+-
+  const menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+  const menuNavigationValues = ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+  const menuAboutUsValues = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+  const menuSupportValues = ['Соглашения', 'Сообщества', 'Связь с нами']
+
+mixin logoBlock
+  .logo-block
+    a.logo-block__image(href='#')
+      img.logo-block__image-img(src='./assets/img/header-logo-image.svg' alt='logo')
+    a.logo-block__title(href='#')
+      img.logo-block__title-img(src='./assets/img/header-logo-title.svg' alt='title')
+
+mixin socialNetworksBlock
+  .social-networks-block
+    .social-networks-block__item
+      a.social-networks-block__link(href='#')
+        img.social-networks-block__img(src='./assets/img/twitter-icon.svg' alt='twitter')
+    .social-networks-block__item
+      a.a.social-networks-block__link(href='#')
+        img.social-networks-block__img(src='./assets/img/facebook-icon.svg' alt='facebook')
+    .social-networks-block__item
+      a.a.social-networks-block__link(href='#')
+        img.social-networks-block__img(src='./assets/img/instagram-icon.svg' alt='instagram')
+
+mixin copyright
+  .copiright Copyright © 2018 Toxin отель. Все права защищены.
+
 
 header.header
-  .header__logo
-    .header__logo-image
-      img.header__logo-image-img(src='./assets/img/header-logo-image.svg')
-    .header__logo-title
-      img.header__logo-title-img(src='./assets/img/header-logo-title.svg')
+  +logoBlock
   nav.header__menu
     ul.header__menu-list
       each value in menuValues
         li.header__menu-item
-          a.header__menu-link #{value}
+          a.header__menu-link(href='#') #{value}
     .header__authentication-block
       a.header__button-login(href='#') войти
       a.header__button-register(href='#') зарегистрироваться
 header.header
-  .header__logo
-    .header__logo-image
-      img.header__logo-image-img(src='./assets/img/header-logo-image.svg')
-    .header__logo-title
-      img.header__logo-title-img(src='./assets/img/header-logo-title.svg')
+  +logoBlock
   nav.header__menu
     ul.header__menu-list
       each value in menuValues
         li.header__menu-item
-          a.header__menu-link #{value}
+          a.header__menu-link(href='#') #{value}
     .header__authentication-block
       a.header__profile(href='#') Юлий Цезарь
+footer.footer
+  .footer-top
+    .footer-top__description
+      .footer-top__description-logo
+        +logoBlock
+      .footer-top__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+    nav.footer-top__menu
+      .footer-top__menu-section
+        h3.footer-top__menu-title навигация
+        ul.footer-top__menu-list
+          each value in menuNavigationValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href='#') #{value}
+      .footer-top__menu-section
+        h3.footer-top__menu-title о нас
+        ul.footer-top__menu-list
+          each value in menuAboutUsValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href='#') #{value}
+      .footer-top__menu-section
+        h3.footer-top__menu-title служба поддержки
+        ul.footer-top__menu-list
+          each value in menuSupportValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href='#') #{value}
+    .footer-top__subscription
+      h3.footer-top__subscription-title Подписка
+      .footer-top__subscription-text Получайте специальные предложения и новости сервиса
+      form.footer-top__subscription-form(action='#' method='post')
+        input.footer-top__subscription-input(type='text' name='email' placeholder='Email')
+        button.footer-top__subscription-button(type='submit')
+          img.footer-top__subscription-button-img(src='./assets/img/arrow-forward.svg' alt='button subscription')
+  .footer-line
+  .footer-bottom
+    +copyright
+    +socialNetworksBlock
+footer.footer-mobile
+  .footer-mobile-logo
+    +logoBlock
+  .footer-mobile__copyright
+    +copyright
+  .footer-mobile__social-networks
+    +socialNetworksBlock
+
+
