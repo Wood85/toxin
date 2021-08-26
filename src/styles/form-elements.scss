@@ -1,0 +1,110 @@
+@import 'variables';
+.form-elements{
+  padding: 143px 141px 131px;
+  &>div{
+    margin-top: 20px;
+  }
+}
+// inputField
+.input-field{
+}
+.input-field__title{
+}
+.input-field__input,
+.subscription-field__input{
+  &::placeholder{
+    color:$darkShade25;
+  }
+  &:hover,&:focus{
+    border: 1px solid $darkShade50;
+  }
+}
+// dropdown
+.dropdown__title{
+}
+.dropdown__input{
+  &::placeholder{
+    letter-spacing: 0;
+  }
+}
+// inputMaskedField
+.input-field__input{
+  &::placeholder{
+    letter-spacing: 0;
+  }
+}
+
+.date-dropdown{
+  display: flex;
+  justify-content: space-between;
+}
+.filter-date-dropdown__input{
+  &::placeholder{
+    letter-spacing: 0.1px;
+  }
+}
+.subscription-field__button{
+  height: 100%;
+  width: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+// dropdownSelect
+.dropdown-select__select{
+  position: relative;
+}
+.dropdown-select__trigger{
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.dropdown-container{
+  width: 266px;
+  height: 118px;
+  padding-left: 14px;
+  padding-right: 7px;
+}
+.dropdown-select__dropdown{
+  display: none;
+  background-color: #ffffff;
+  border: 1px solid $darkShade25;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+.dropdown-select__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7px;
+}
+.quantity-change-block{
+  display: flex;
+  justify-content: space-between;
+  width: 92px;
+}
+.button-minus,
+.button-plus{
+  height: 30px;
+  width: 30px;
+  border: 1px solid $darkShade25;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 18px;
+  color: $darkShade50;
+  cursor: pointer;
+}
+.quantity{
+  padding-top: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $darkShade100;
+}

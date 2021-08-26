@@ -1,0 +1,67 @@
+mixin inputField
+  .input-field.container-input-field
+    h3.input-field__title.title-form text field
+    input.input-field__input.long-input(type='email' placeholder='Email')
+mixin dropdown
+  .dropdown.container-input-field
+    h3.dropdown__title.title-form dropdown
+    .dropdown__input-wrap.input-wrap
+      input.dropdown__input.long-input(placeholder='Сколько гостей')
+mixin inputMaskedField
+  .input-masked.container-input-field
+    h3.input-masked__title.title-form masked text field
+    input.input-field__input.long-input(type='text' placeholder='ДД.ММ.ГГГГ')
+mixin dataDropdown
+  .date-dropdown.container-input-field
+    .dropdown
+      h3.dropdown__title.title-form date dropdown
+      .dropdown__input-wrap.input-wrap
+        input.dropdown__input.short-input(placeholder='ДД.ММ.ГГГГ')
+    .dropdown
+      h3.dropdown__title.title-form date dropdown
+      .dropdown__input-wrap.input-wrap
+        input.dropdown__input.short-input(placeholder='19.08.2019')
+mixin filterDateDropdown
+  .filter-date-dropdown.container-input-field_middle
+    h3.title-form filter date dropdown
+    .input-wrap
+      input.filter-date-dropdown__input.middle-input(placeholder='19 авг - 23 авг')
+mixin subscriptionField
+  .subscription-field.container-input-field_middle
+    h3.title-form subscription text field
+    .input-wrap_void
+      input.subscription-field__input.middle-input(placeholder='Email')
+      button.subscription-field__button(type='submit')
+        img.subscription-field__button-img(src='./assets/img/arrow-forward.svg' alt='button subscription')
+mixin quantityChangeBlock
+  .quantity-change-block
+    button.button-minus -
+    .quantity 0
+    button.button-plus +
+mixin dropdownSelection
+  .dropdown-select.container-input-field_middle
+    .dropdown-select__title.title-form dropdown
+    .dropdown-select__select
+      .dropdown-select__backdrop.middle-select
+      button.dropdown-select__trigger
+        img.dropdown-select__trigger-img(src='./assets/img/check.png' alt='select trigger')
+      ul.dropdown-select__dropdown.dropdown-container
+        li.dropdown-select__item
+          .title-form спальни
+          +quantityChangeBlock
+        li.dropdown-select__item
+          .title-form кровати
+          +quantityChangeBlock
+        li.dropdown-select__item
+          .title-form ванные комнаты
+          +quantityChangeBlock
+
+.form-elements
+  +inputField
+  +dropdown
+  +inputMaskedField
+  +dataDropdown
+  +filterDateDropdown
+  +subscriptionField
+  +dropdownSelection
+  +inputField
