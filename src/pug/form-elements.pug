@@ -33,28 +33,52 @@ mixin subscriptionField
       input.subscription-field__input.middle-input(placeholder='Email')
       button.subscription-field__button(type='submit')
         img.subscription-field__button-img(src='./assets/img/arrow-forward.svg' alt='button subscription')
-mixin quantityChangeBlock
-  .quantity-change-block
-    button.button-minus -
-    .quantity 0
-    button.button-plus +
+mixin quantityChangeBlock(count)
+  .quantity-change-block(data-step='1' data-min='0' data-max='10')
+    button.button-minus(data-title=count) -
+    input.quantity(type='text' name=count value='2' readonly)
+    button.button-plus(data-title=count) +
+
 mixin dropdownSelection
   .dropdown-select.container-input-field_middle
     .dropdown-select__title.title-form dropdown
     .dropdown-select__select
-      .dropdown-select__backdrop.middle-select
+      input.dropdown-select__backdrop.middle-select(value='2 спальни, 2 кровати...' readonly)
       button.dropdown-select__trigger
         img.dropdown-select__trigger-img(src='./assets/img/check.png' alt='select trigger')
       ul.dropdown-select__dropdown.dropdown-container
         li.dropdown-select__item
           .title-form спальни
-          +quantityChangeBlock
+          +quantityChangeBlock('bedrooms')
         li.dropdown-select__item
           .title-form кровати
-          +quantityChangeBlock
+          +quantityChangeBlock('bed')
         li.dropdown-select__item
           .title-form ванные комнаты
-          +quantityChangeBlock
+          +quantityChangeBlock('bathrooms')
+mixin checkboxButton(id,name)
+  input.input-checkbox(type='checkbox' id=id)&attributes(attributes)
+  label(fot=id)=name
+mixin expandableCheckboxList
+  .expandable-checkbox-list
+    .expandable-checkbox-list__title.title-form expandable checkbox list
+    button.expandable-checkbox-list__trigger
+      img.expandable-checkbox-list__trigger-img(src='./assets/img/check.png' alt='checkbox list trigger')
+    ul.expandable-checkbox-list__dropdown
+      li.expandable-checkbox-list__item
+        +checkboxButton('breakfast','Завтрак')(class='expandable-checkbox-list__checkbox')
+      li.expandable-checkbox-list__item
+        +checkboxButton('table','Письменный стол')(class='expandable-checkbox-list__checkbox', checked)
+      li.expandable-checkbox-list__item
+        +checkboxButton('chair','Стул для кормления')(class='expandable-checkbox-list__checkbox', checked)
+      li.expandable-checkbox-list__item
+        +checkboxButton('crib','Кроватка')(class='expandable-checkbox-list__checkbox', checked)
+      li.expandable-checkbox-list__item
+        +checkboxButton('tv','Телевизор')(class='expandable-checkbox-list__checkbox')
+      li.expandable-checkbox-list__item
+        +checkboxButton('shampoo','Шампунь')(class='expandable-checkbox-list__checkbox')
+
+
 
 .form-elements
   +inputField
@@ -65,3 +89,7 @@ mixin dropdownSelection
   +subscriptionField
   +dropdownSelection
   +inputField
+  +expandableCheckboxList
+
+
+

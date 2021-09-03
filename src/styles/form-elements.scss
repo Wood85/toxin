@@ -57,7 +57,8 @@
 .dropdown-select__select{
   position: relative;
 }
-.dropdown-select__trigger{
+.dropdown-select__trigger,
+.expandable-checkbox-list__trigger{
   width: 44px;
   height: 44px;
   cursor: pointer;
@@ -89,22 +90,46 @@
   display: flex;
   justify-content: space-between;
   width: 92px;
+  user-select: none;
 }
 .button-minus,
 .button-plus{
   height: 30px;
   width: 30px;
-  border: 1px solid $darkShade25;
+  border: 1px solid $darkShade50;
   border-radius: 50%;
   background-color: transparent;
   font-size: 18px;
   color: $darkShade50;
   cursor: pointer;
 }
+.limit{
+  border-color: $darkShade25;
+  color: $darkShade25;
+}
 .quantity{
-  padding-top: 6px;
+  width: 32px;
+  text-align: center;
+  padding-bottom: 4px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   color: $darkShade100;
+  outline: none;
 }
+//expandableCheckboxList
+
+.expandable-checkbox-list{
+  position: relative;
+  width: 266px;
+  height: 44px;
+}
+.expandable-checkbox-list__title{
+  height: 100%;
+  padding-top: 14px;
+}
+.active-trigger{
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+
