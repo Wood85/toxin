@@ -56,9 +56,20 @@ mixin dropdownSelection
         li.dropdown-select__item
           .title-form ванные комнаты
           +quantityChangeBlock('bathrooms')
-mixin checkboxButton(id,name)
-  input.input-checkbox(type='checkbox' id=id)&attributes(attributes)
-  label(fot=id)=name
+mixin checkboxButton(name)
+  label.checkbox
+    input.checkbox__input(type='checkbox')&attributes(attributes)
+    span.checkbox__img
+    span.checkbox__text=name
+mixin checkboxButtons(title)
+  .checkbox-buttons__title.title-form=title
+  ul.checkbox-buttons__checkbox-list
+    li.checkbox-buttons__checkbox-item
+      +checkboxButton('Можно курить')(class='checkbox-buttons__button')
+    li.checkbox-buttons__checkbox-item
+      +checkboxButton('Можно с питомцами')(class='checkbox-buttons__button', checked)
+    li.checkbox-buttons__checkbox-item
+      +checkboxButton('Можно пригласить гостей (до 10 человек)')(class='checkbox-buttons__button', checked)
 mixin expandableCheckboxList
   .expandable-checkbox-list
     .expandable-checkbox-list__title.title-form expandable checkbox list
@@ -66,30 +77,44 @@ mixin expandableCheckboxList
       img.expandable-checkbox-list__trigger-img(src='./assets/img/check.png' alt='checkbox list trigger')
     ul.expandable-checkbox-list__dropdown
       li.expandable-checkbox-list__item
-        +checkboxButton('breakfast','Завтрак')(class='expandable-checkbox-list__checkbox')
+        +checkboxButton('Завтрак')(class='expandable-checkbox-list__checkbox')
       li.expandable-checkbox-list__item
-        +checkboxButton('table','Письменный стол')(class='expandable-checkbox-list__checkbox', checked)
+        +checkboxButton('Письменный стол')(class='expandable-checkbox-list__checkbox', checked)
       li.expandable-checkbox-list__item
-        +checkboxButton('chair','Стул для кормления')(class='expandable-checkbox-list__checkbox', checked)
+        +checkboxButton('Стул для кормления')(class='expandable-checkbox-list__checkbox', checked)
       li.expandable-checkbox-list__item
-        +checkboxButton('crib','Кроватка')(class='expandable-checkbox-list__checkbox', checked)
+        +checkboxButton('Кроватка')(class='expandable-checkbox-list__checkbox', checked)
       li.expandable-checkbox-list__item
-        +checkboxButton('tv','Телевизор')(class='expandable-checkbox-list__checkbox')
+        +checkboxButton('Телевизор')(class='expandable-checkbox-list__checkbox')
       li.expandable-checkbox-list__item
-        +checkboxButton('shampoo','Шампунь')(class='expandable-checkbox-list__checkbox')
+        +checkboxButton('Шампунь')(class='expandable-checkbox-list__checkbox')
+mixin radioButton(text)
+  .radio-button
+    input.radio-button__input(type='radio')
+    span.radio-button__text=text
+mixin radioButtons(title)
+  .radio-buttons
+    .radio-buttons__title.title-form=title
+    +radioButton
+
+
 
 
 
 .form-elements
-  +inputField
-  +dropdown
-  +inputMaskedField
-  +dataDropdown
-  +filterDateDropdown
-  +subscriptionField
-  +dropdownSelection
-  +inputField
-  +expandableCheckboxList
+  .form-elements__column-one
+    +inputField
+    +dropdown
+    +inputMaskedField
+    +dataDropdown
+    +filterDateDropdown
+    +subscriptionField
+    +dropdownSelection
+    +inputField
+    +expandableCheckboxList
+  .form-elements__column-two
+    +checkboxButtons('Checkbox Buttons')
+    +radioButtons('Radio Buttons')
 
 
 

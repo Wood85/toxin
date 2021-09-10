@@ -10,6 +10,20 @@ $('.dropdown-select__trigger').click(function () {
   }
     isDrop = !isDrop
 })
+//expandableCheckboxList
+let isExpandable = false
+$('.expandable-checkbox-list__trigger').click(function () {
+  if(!isExpandable) {
+    $('.expandable-checkbox-list__dropdown').slideDown()
+    $(this).addClass('active-trigger')
+    $(this).removeClass('active2-trigger')
+  }else{
+    $('.expandable-checkbox-list__dropdown').slideUp()
+    $(this).removeClass('active-trigger')
+    $(this).addClass('active2-trigger')
+  }
+  isExpandable = !isExpandable
+})
 
 //quantitySelect
 
