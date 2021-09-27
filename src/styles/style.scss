@@ -62,7 +62,8 @@ input,button,textarea {
 .short-input,
 .long-input,
 .middle-input,
-.middle-select{
+.middle-select,
+.long-select{
   height: 44px;
   border-radius: 4px;
   border: 1px solid $darkShade25;
@@ -82,11 +83,18 @@ input,button,textarea {
 .middle-input{
   width: 266px;
 }
-.middle-select{
-  border-radius: 4px 4px 0 0;
-  width: 266px;
+.middle-select,
+.long-select{
   letter-spacing: 0;
   color: $darkShade75;
+}
+.middle-select{
+  width: 266px;
+  border-radius: 4px 4px 0 0;
+}
+.long-select{
+  width: 320px;
+  border-radius: 4px;
 }
 .input-wrap,
 .expandable-checkbox-list-wrap{

@@ -6,7 +6,7 @@ mixin dropdown
   .dropdown.container-input-field
     h3.dropdown__title.title-form dropdown
     .dropdown__input-wrap.input-wrap
-      input.dropdown__input.long-input(placeholder='Сколько гостей')
+      input.dropdown__input.long-input(placeholder='Сколько гостей' readonly)
 mixin inputMaskedField
   .input-masked.container-input-field
     h3.input-masked__title.title-form masked text field
@@ -33,10 +33,10 @@ mixin subscriptionField
       input.subscription-field__input.middle-input(placeholder='Email')
       button.subscription-field__button(type='submit')
         img.subscription-field__button-img(src='./assets/img/arrow-forward.svg' alt='button subscription')
-mixin quantityChangeBlock(count)
+mixin quantityChangeBlock(count,value)
   .quantity-change-block(data-step='1' data-min='0' data-max='10')
     button.button-minus(data-title=count) -
-    input.quantity(type='text' name=count value='2' readonly)
+    input.quantity(type='text' name=count value=value readonly)
     button.button-plus(data-title=count) +
 
 mixin dropdownSelection
@@ -49,13 +49,35 @@ mixin dropdownSelection
       ul.dropdown-select__dropdown.dropdown-container
         li.dropdown-select__item
           .title-form спальни
-          +quantityChangeBlock('bedrooms')
+          +quantityChangeBlock('bedrooms','2')
         li.dropdown-select__item
           .title-form кровати
-          +quantityChangeBlock('bed')
+          +quantityChangeBlock('bed','2')
         li.dropdown-select__item
           .title-form ванные комнаты
-          +quantityChangeBlock('bathrooms')
+          +quantityChangeBlock('bathrooms','2')
+
+mixin dropdownQuests
+    .dropdown-quests.container-input-field
+      .dropdown-quests__title.title-form dropdown
+      .dropdown-quests__select
+        input.dropdown-quests__backdrop.long-select(value='Сколько гостей' readonly)
+        button.dropdown-quests__trigger
+          img.dropdown-quests__trigger-img(src='./assets/img/check.png' alt='select trigger')
+        ul.dropdown-quests__dropdown.dropdown-quests-container
+          li.dropdown-quests__item
+            .title-form взрослые
+            +quantityChangeBlock('adults', '0')
+          li.dropdown-quests__item
+            .title-form дети
+            +quantityChangeBlock('children', '0')
+          li.dropdown-quests__item
+            .title-form младенцы
+            +quantityChangeBlock('babies', '0')
+          li.dropdown-quests_buttons
+            button.dropdown-quests_button.dropdown-quests__reset очистить
+            button.dropdown-quests_button.dropdown-quests__apply применить
+
 mixin checkboxButton(name)
   label.checkbox
     input.checkbox__input(type='checkbox')&attributes(attributes)
@@ -88,18 +110,60 @@ mixin expandableCheckboxList
         +checkboxButton('Телевизор')(class='expandable-checkbox-list__checkbox')
       li.expandable-checkbox-list__item
         +checkboxButton('Шампунь')(class='expandable-checkbox-list__checkbox')
-mixin radioButton(text)
-  .radio-button
-    input.radio-button__input(type='radio')
+mixin radioButton(text, name, value)
+  label.radio-button
+    input.radio-button__input(type='radio' name=name value=value)
+    .radio-button__img
+      //virtual element
     span.radio-button__text=text
 mixin radioButtons(title)
   .radio-buttons
     .radio-buttons__title.title-form=title
-    +radioButton
-
-
-
-
+    .radio-buttons__buttons
+      +radioButton('Мужчина', 'gender', 'male')
+      +radioButton('Женщина', 'gender', 'female')
+mixin toggleButton(name)
+  label.toggle
+    input.toggle__input(type='checkbox')&attributes(attributes)
+    span.toggle__img
+    span.toggle__text=name
+mixin likeButton(count)
+  button.button-like&attributes(attributes)
+    .button-like__count&attributes(attributes)=count
+mixin rateButton(value)
+  .rate(data-total-value=value)
+    .rate__item(data-item-value='5')
+      img.rate__star-border(src='./assets/img/rate-star-border.svg')
+      img.rate__star(src='./assets/img/rate-star.svg')
+    .rate__item(data-item-value='4')
+      img.rate__star-border(src='./assets/img/rate-star-border.svg')
+      img.rate__star(src='./assets/img/rate-star.svg')
+    .rate__item(data-item-value='3')
+      img.rate__star-border(src='./assets/img/rate-star-border.svg')
+      img.rate__star(src='./assets/img/rate-star.svg')
+    .rate__item(data-item-value='2')
+      img.rate__star-border(src='./assets/img/rate-star-border.svg')
+      img.rate__star(src='./assets/img/rate-star.svg')
+    .rate__item(data-item-value='1')
+      img.rate__star-border(src='./assets/img/rate-star-border.svg')
+      img.rate__star(src='./assets/img/rate-star.svg')
+mixin checkboxButtonWithDescription(title,description)
+  label.checkbox
+    input.checkbox__input(type='checkbox')&attributes(attributes)
+    span.checkbox__img
+    .checkbox__content
+      .checkbox__title=title
+      .checkbox__description=description
+mixin richCheckboxButtons(title)
+  .rich-checkbox-buttons
+    .rich-checkbox-buttons__title.title-form=title
+    ul.rich-checkbox-buttons__checkbox-list
+      li.rich-checkbox-buttons__checkbox-item
+        +checkboxButtonWithDescription('Широкий коридор',
+          'Ширина коридоров в номере ' +
+        'не менее 91 см.')(class='rich-checkbox-buttons__button')
+      li.rich-checkbox-buttons__checkbox-item
+        +checkboxButtonWithDescription('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')(class='rich-checkbox-buttons__button')
 
 .form-elements
   .form-elements__column-one
@@ -110,11 +174,27 @@ mixin radioButtons(title)
     +filterDateDropdown
     +subscriptionField
     +dropdownSelection
-    +inputField
     +expandableCheckboxList
   .form-elements__column-two
     +checkboxButtons('Checkbox Buttons')
     +radioButtons('Radio Buttons')
+    .toggle__wrap
+      .toggle__title.title-form Toggle
+      .toggle__item
+        +toggleButton('Получать спецпредложения')(class='toggle-button')
+    .like-button__container
+      .like-button__title.title-form like button
+      .like-button__buttons
+        +likeButton(2)
+        +likeButton(12)(class='like')
+    .rate-button__container
+      .rate-button__title.title-form rate button
+      .rate-button__rate
+        + rateButton(4)
+        + rateButton(5)
+    +dropdownQuests
+    +richCheckboxButtons('rich checkbox buttons')
+
 
 
 

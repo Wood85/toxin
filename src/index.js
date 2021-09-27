@@ -10,6 +10,24 @@ $('.dropdown-select__trigger').click(function () {
   }
     isDrop = !isDrop
 })
+//dropdownQuests
+let isDropQuests = false
+$('.dropdown-quests__trigger').click(function () {
+    if(!isDropQuests) {
+      $('.dropdown-quests__dropdown').slideDown()
+      $('.long-select').css('border-radius', '4px 4px 0 0 ')
+      $(".button-minus[data-title='adults']").addClass('limit')
+      $(".button-minus[data-title='children']").addClass('limit')
+      $(".button-minus[data-title='babies']").addClass('limit')
+    }else{
+      $('.dropdown-quests__dropdown').slideUp()
+      setTimeout(resetCSS, 400)
+      function resetCSS() {
+        $('.long-select').css('border-radius', '4px')
+      }
+    }
+    isDropQuests = !isDropQuests
+})
 //expandableCheckboxList
 let isExpandable = false
 $('.expandable-checkbox-list__trigger').click(function () {
@@ -112,5 +130,93 @@ $(document).ready(function() {
     }
 
     $('.dropdown-select__backdrop').val(`${bedroomsValue} ${bedroomsTitle}, ${bedValue} ${bedTitle}...`)
+
+    //dropdownQuests
+    let adultsValue = $(".quantity[name='adults']").val()
+    let childrenValue = $(".quantity[name='children']").val()
+    let babiesValue = $(".quantity[name='babies']").val()
+    let countsQuests = Number(adultsValue) + Number(childrenValue) + Number(babiesValue)
+    let questsTitle = 'гостей'
+
+    $('.dropdown-quests__reset').click(function () {
+      $(".quantity[name='adults']").val(0)
+      $(".quantity[name='children']").val(0)
+      $(".quantity[name='babies']").val(0)
+      $('.dropdown-quests__backdrop').val(`Сколько гостей`)
+      $(".button-minus[data-title='adults']").addClass('limit')
+      $(".button-minus[data-title='children']").addClass('limit')
+      $(".button-minus[data-title='babies']").addClass('limit')
+      $(this).css('visibility','hidden')
+    })
+
+    $('.dropdown-quests__apply').click(function () {
+      if (countsQuests > 0) {
+        $('.dropdown-quests__dropdown').slideUp()
+        setTimeout(resetCSS, 400)
+        function resetCSS() {
+          $('.long-select').css('border-radius', '4px')
+        }}
+      }
+    )
+
+    if (countsQuests==0) {
+      countsQuests= 'Сколько'
+      questsTitle = 'гостей'
+    }
+    if(countsQuests > 0) {
+      $('.dropdown-quests__reset').css('visibility','visible')
+    }else{
+      $('.dropdown-quests__reset').css('visibility','hidden')
+    }
+    if (countsQuests==1 || countsQuests==21) {
+      questsTitle = 'гость'
+    }
+    if ((countsQuests > 1 && countsQuests < 5) || (countsQuests > 21 && countsQuests < 25)) {
+      questsTitle = 'гостя'
+    }
+
+    if(adultsValue==0) {
+      $(".button-minus[data-title='adults']").addClass('limit')
+    }else{
+      $(".button-minus[data-title='adults']").removeClass('limit')
+    }
+    if(bedroomsValue==10) {
+      $(".button-plus[data-title='adults']").addClass('limit')
+    }else{
+      $(".button-plus[data-title='adults']").removeClass('limit')
+    }
+
+    if(childrenValue==0) {
+      $(".button-minus[data-title='children']").addClass('limit')
+    }else{
+      $(".button-minus[data-title='children']").removeClass('limit')
+    }
+    if(bedroomsValue==10) {
+      $(".button-plus[data-title='children']").addClass('limit')
+    }else{
+      $(".button-plus[data-title='children']").removeClass('limit')
+    }
+    if(babiesValue==0) {
+      $(".button-minus[data-title='babies']").addClass('limit')
+    }else{
+      $(".button-minus[data-title='babies']").removeClass('limit')
+    }
+    if(bedroomsValue==10) {
+      $(".button-plus[data-title='babies']").addClass('limit')
+    }else{
+      $(".button-plus[data-title='babies']").removeClass('limit')
+    }
+
+    $('.dropdown-quests__backdrop').val(`${countsQuests} ${questsTitle}`)
+
   })
 })
+
+//rateButton
+const rateItemsList = document.querySelectorAll('.rate__item')
+const rateItemsArray = Array.prototype.slice.call(rateItemsList)
+
+rateItemsArray.forEach(item => item.addEventListener('click', () => {
+  const {itemValue} = item.dataset
+  item.parentNode.dataset.totalValue = itemValue
+}))
