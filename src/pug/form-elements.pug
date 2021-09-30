@@ -164,6 +164,24 @@ mixin richCheckboxButtons(title)
         'не менее 91 см.')(class='rich-checkbox-buttons__button')
       li.rich-checkbox-buttons__checkbox-item
         +checkboxButtonWithDescription('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')(class='rich-checkbox-buttons__button')
+mixin rangeSlider(title,min,max,step,value1,value2)
+  .range-slider
+    .range-slider__top
+      .range-slider__title.title-form=title
+      .range-slider__values
+        span.range-slider__value.range-slider__value_1 5 000
+        span.range-slider__rub ₽
+        span.range-slider__dash -
+        span.range-slider__value.range-slider__value_2 10 000
+        span.range-slider__rub ₽
+    .range-slider__slider
+      input.range-slider__runner#input-left(type='range', step=step, min=min, max=max, value=value1)
+      input.range-slider__runner#input-right(type='range', step=step,  min=min, max=max, value=value2)
+      .range-slider__container
+        .range-slider__track
+        .range-slider__range
+        .range-slider__thumb.range-slider__thumb_left
+        .range-slider__thumb.range-slider__thumb_right
 
 .form-elements
   .form-elements__column-one
@@ -194,6 +212,7 @@ mixin richCheckboxButtons(title)
         + rateButton(5)
     +dropdownQuests
     +richCheckboxButtons('rich checkbox buttons')
+    +rangeSlider('range slider','0','15000','100','5000','10000')
 
 
 

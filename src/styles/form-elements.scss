@@ -423,9 +423,115 @@
 .checkbox__title{
   font-weight: 700;
 }
+.rich-checkbox-buttons__checkbox-item{
+  margin-top: 8px;
+}
 .checkbox__description{
   font-size: 12px;
   line-height: 14px;
   color: $darkShade50;
   width: 230px;
+  padding-top: 3px;
 }
+.rich-checkbox-buttons__checkbox-item:first-child > label > div >.checkbox__description{
+  width: 200px;
+}
+
+//rangeSlider
+.range-slider{
+  width: 266px;
+  height: 48px;
+}
+.range-slider__top{
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 21px;
+  .title-form{
+    padding-bottom: 0;
+  }
+}
+.range-slider__values{
+  height: 100%;
+  display: flex;
+}
+.range-slider__value,
+.range-slider__rub,
+.range-slider__dash{
+  font-size: 12px;
+  line-height: 15px;
+  color: $darkShade50;
+  text-align: center;
+}
+.range-slider__dash{
+  padding: 0 3px 2px;
+}
+.range-slider__slider{
+  position: relative;
+  width: 100%;
+  input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+    opacity: 0;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    -webkit-appearance: none;
+  }
+}
+.range-slider__container {
+  position: relative;
+  z-index: 1;
+  height: 6px;
+}
+.range-slider__container > .range-slider__track {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid $darkShade25;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.range-slider__container > .range-slider__range {
+  position: absolute;
+  z-index: 2;
+  left: 34%;
+  right: 39.5%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+}
+.range-slider__container > .range-slider__thumb {
+  position: absolute;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+.range-slider__container > .range-slider__thumb_left {
+  left: 34%;
+  transform: translate(-15px, -5px);
+}
+.range-slider__container > .range-slider__thumb_right {
+  right: 39.5%;
+  transform: translate(15px, -5px);
+}
+
