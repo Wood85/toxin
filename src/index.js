@@ -1,12 +1,13 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
+import './pages/form-elements/form-elements'
 //dropdown
 let isDrop = false
-$('.dropdown-select__trigger').click(function () {
+$('.dropdown-selection__trigger').click(function () {
   if(!isDrop) {
-    $('.dropdown-select__dropdown').slideDown()
+    $('.dropdown-selection__dropdown').slideDown()
   }else{
-    $('.dropdown-select__dropdown').slideUp()
+    $('.dropdown-selection__dropdown').slideUp()
   }
     isDrop = !isDrop
 })
@@ -15,7 +16,7 @@ let isDropQuests = false
 $('.dropdown-quests__trigger').click(function () {
     if(!isDropQuests) {
       $('.dropdown-quests__dropdown').slideDown()
-      $('.long-select').css('border-radius', '4px 4px 0 0 ')
+      $('.dropdown-quests__backdrop').css('border-radius', '4px 4px 0 0 ')
       $(".button-minus[data-title='adults']").addClass('limit')
       $(".button-minus[data-title='children']").addClass('limit')
       $(".button-minus[data-title='babies']").addClass('limit')
@@ -23,7 +24,7 @@ $('.dropdown-quests__trigger').click(function () {
       $('.dropdown-quests__dropdown').slideUp()
       setTimeout(resetCSS, 400)
       function resetCSS() {
-        $('.long-select').css('border-radius', '4px')
+        $('.dropdown-quests__backdrop').css('border-radius', '4px')
       }
     }
     isDropQuests = !isDropQuests
@@ -129,7 +130,7 @@ $(document).ready(function() {
       $(".button-plus[data-title='bathrooms']").removeClass('limit')
     }
 
-    $('.dropdown-select__backdrop').val(`${bedroomsValue} ${bedroomsTitle}, ${bedValue} ${bedTitle}...`)
+    $('.dropdown-selection__backdrop').val(`${bedroomsValue} ${bedroomsTitle}, ${bedValue} ${bedTitle}...`)
 
     //dropdownQuests
     let adultsValue = $(".quantity[name='adults']").val()
@@ -154,7 +155,7 @@ $(document).ready(function() {
         $('.dropdown-quests__dropdown').slideUp()
         setTimeout(resetCSS, 400)
         function resetCSS() {
-          $('.long-select').css('border-radius', '4px')
+          $('.dropdown-quests__backdrop').css('border-radius', '4px')
         }}
       }
     )

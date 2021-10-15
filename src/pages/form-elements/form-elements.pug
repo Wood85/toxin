@@ -1,0 +1,22 @@
+include  ../../components/form-elements/input-field/input-field
+include  ../../components/form-elements/dropdown/dropdown
+include  ../../components/form-elements/input-masked-field/input-masked-field
+include  ../../components/form-elements/date-dropdown/date-dropdown
+include  ../../components/form-elements/filter-date-dropdown/filter-date-dropdown
+include  ../../components/form-elements/subscription-field/subscription-field
+include  ../../components/form-elements/dropdown-selection/dropdown-selection
+include  ../../components/form-elements/dropdown-quests/dropdown-quests
+
+.form-elements
+  .input-field
+    h3.input-field__title.title-form text field
+    +inputField('email', 'Email')
+  +dropdown('dropdown')
+  +inputMaskedField('masked text field')
+  +dateDropdown('date dropdown', 'date dropdown','ДД.ММ.ГГГГ' , '19.08.2019')
+  +filterDateDropdown('filter date dropdown', '19 авг', '23 авг')
+  .subscription-field
+    h3.subscription-field__title subscription text field
+    +subscriptionField
+  +dropdownSelection('dropdown')
+  +dropdownQuests('dropdown')

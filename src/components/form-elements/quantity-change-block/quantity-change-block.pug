@@ -1,0 +1,5 @@
+mixin quantityChangeBlock(count,value)
+    .quantity-change-block(data-step='1' data-min='0' data-max='10')
+        button.button-minus(data-title=count) -
+        input.quantity(type='text' name=count value=value readonly)
+        button.button-plus(data-title=count) +

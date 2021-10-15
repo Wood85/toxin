@@ -1,0 +1,19 @@
+include  ../quantity-change-block/quantity-change-block
+
+mixin dropdownSelection(title)
+  .dropdown-selection
+    .dropdown-selection__title=title
+    .dropdown-selection__select
+      input.dropdown-selection__backdrop(value='2 спальни, 2 кровати...' readonly)
+      button.dropdown-selection__trigger
+        img.dropdown-selection__trigger-img(src='./assets/img/check.png' alt='select trigger')
+      ul.dropdown-selection__dropdown.dropdown-container
+        li.dropdown-selection__item
+          .dropdown-selection__item-title спальни
+          +quantityChangeBlock('bedrooms','2')
+        li.dropdown-selection__item
+          .dropdown-selection__item-title кровати
+          +quantityChangeBlock('bed','2')
+        li.dropdown-selection__item
+          .dropdown-selection__item-title ванные комнаты
+          +quantityChangeBlock('bathrooms','2')

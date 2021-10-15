@@ -1,0 +1,26 @@
+@import '../../components/form-elements/input-field/input-field';
+@import '../../components/form-elements/dropdown/dropdown';
+@import '../../components/form-elements/input-masked-field/input-masked-field';
+@import '../../components/form-elements/date-dropdown/date-dropdown';
+@import '../../components/form-elements/filter-date-dropdown/filter-date-dropdown';
+@import '../../components/form-elements/subscription-field/subscription-field';
+@import '../../components/form-elements/dropdown-selection/dropdown-selection';
+@import '../../components/form-elements/dropdown-quests/dropdown-quests';
+.form-elements{
+  padding: 143px 141px 131px;
+  &>div{
+    margin-top: 20px;
+  }
+}
+.title-form,
+.subscription-field__title{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: $darkShade100;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.subscription-field__title{
+  padding-bottom: 2px;
+}
