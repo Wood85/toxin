@@ -1,12 +1,12 @@
 .toggle{
   display: flex;
   cursor: pointer;
- }
- .toggle__input{
+}
+.toggle__input{
   position: absolute;
   appearance: none;
- }
- .toggle__img{
+}
+.toggle__img{
   height: 20px;
   width: 40px;
   border: 1px solid $darkShade25;
@@ -27,16 +27,16 @@
     border-radius: 50%;
     transition: all .4s ease 0s;
   }
- }
- .toggle__text{
+}
+.toggle__text{
   padding-top: 2px;
   width: 210px;
   line-height: 18px;
- }
- .toggle__input:checked + .toggle__img{
+}
+.toggle__input:checked + .toggle__img{
   border-color: $purple;
   &:after{
     background: $purple;
     left: 23px;
   }
- }
+}

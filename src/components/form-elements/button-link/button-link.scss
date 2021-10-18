@@ -1,0 +1,13 @@
+a.button-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $purple;
+  transition: color .3s ease-in 0s;
+  &:hover {
+    color: $darkShade50;
+    cursor: default;
+  }
+}

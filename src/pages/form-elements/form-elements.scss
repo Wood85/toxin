@@ -12,6 +12,16 @@
 @import '../../components/form-elements/toggle-button/toggle-button';
 @import '../../components/form-elements/like-button/like-button';
 @import '../../components/form-elements/rate-button/rate-button';
+@import '../../components/form-elements/rich-checkbox-buttons/rich-checkbox-buttons';
+@import '../../components/form-elements/range-slider/range-slider';
+@import '../../components/form-elements/button-color/button-color';
+@import '../../components/form-elements/button-transparent/button-transparent';
+@import '../../components/form-elements/button-link/button-link';
+@import '../../components/form-elements/button-size-large/button-size-large';
+@import '../../components/form-elements/pagination/pagination';
+@import '../../components/form-elements/bullet-list/bullet-list';
+@import '../../components/form-elements/room-details-item/room-details-item';
+@import '../../components/form-elements/reviews/reviews';
 
 .form-elements{
   padding: 143px 141px 131px;
@@ -60,4 +70,19 @@
   width: 261px;
   display: flex;
   justify-content: space-between;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+.buttons__item{
+  & > button,a{
+    margin-bottom: 20px;
+  }
+  & > button:first-child{
+    margin-top: 20px;
+  }
+}
+.pagination__title{
+  margin-bottom: 12px;
 }

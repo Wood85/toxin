@@ -4,7 +4,7 @@
   height: 20px;
   align-items: center;
  }
- .radio-button__input{
+.radio-button__input{
   display: none;
   &:checked + .radio-button__img:after{
     transform: scale(1);
@@ -12,8 +12,8 @@
   &:checked ~ .radio-button__text{
     color: $darkShade100;
   }
- }
- .radio-button__img{
+}
+.radio-button__img{
   margin-top: 2px;
   width: 20px;
   height: 20px;
@@ -30,8 +30,8 @@
     transform: scale(0);
     transition: transform .15s ease;
   }
- }
- .radio-button__text{
+}
+.radio-button__text{
   color: $darkShade50;
   padding-left: 10px;
- }
+}

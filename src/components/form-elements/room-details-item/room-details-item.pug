@@ -1,0 +1,9 @@
+mixin roomDetailsItem(img, alt, title, text)
+  .room-details__container
+    .room-details__item
+      .room-details__img
+        img(src=img alt=alt)
+      .room-details__info
+        .room-details__title=title
+        .room-details__text=text
+    .room-details__line

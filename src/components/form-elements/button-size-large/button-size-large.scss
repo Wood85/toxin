@@ -1,0 +1,25 @@
+.button-size-large{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 44px;
+  border-radius: 22px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-weight: 400;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    background-image: url('../assets/img/arrow-forward-white.svg');
+    width: 17px;
+    height: 17px;
+    top: 50%;
+    right: 0;
+    transform: translate(-75%,-50%);
+  }
+}

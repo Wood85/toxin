@@ -4,19 +4,19 @@ mixin dropdownQuests(title)
   .dropdown-quests
     .dropdown-quests__title=title
     .dropdown-quests__select
-      input.dropdown-quests__backdrop(value='Сколько гостей' readonly)
+      input.dropdown-quests__backdrop(value="Сколько гостей" readonly)
       button.dropdown-quests__trigger
-        img.dropdown-quests__trigger-img(src='./assets/img/check.png' alt='select trigger')
+        img.dropdown-quests__trigger-img(src="./assets/img/check.png" alt="select trigger")
       ul.dropdown-quests__dropdown
         li.dropdown-quests__item
           .dropdown-quests__item-title взрослые
-          +quantityChangeBlock('adults', '0')
+          +quantityChangeBlock("adults", "0")
         li.dropdown-quests__item
           .dropdown-quests__item-title дети
-          +quantityChangeBlock('children', '0')
+          +quantityChangeBlock("children", "0")
         li.dropdown-quests__item
           .dropdown-quests__item-title младенцы
-          +quantityChangeBlock('babies', '0')
+          +quantityChangeBlock("babies", "0")
         li.dropdown-quests__buttons
           button.dropdown-quests__button.dropdown-quests__reset очистить
           button.dropdown-quests__button.dropdown-quests__apply применить

@@ -12,6 +12,16 @@ include  ../../components/form-elements/radio-button/radio-button
 include  ../../components/form-elements/toggle-button/toggle-button
 include  ../../components/form-elements/like-button/like-button
 include  ../../components/form-elements/rate-button/rate-button
+include  ../../components/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
+include  ../../components/form-elements/range-slider/range-slider
+include  ../../components/form-elements/button-color/button-color
+include  ../../components/form-elements/button-transparent/button-transparent
+include  ../../components/form-elements/button-link/button-link
+include  ../../components/form-elements/button-size-large/button-size-large
+include  ../../components/form-elements/pagination/pagination
+include  ../../components/form-elements/bullet-list/bullet-list
+include  ../../components/form-elements/room-details-item/room-details-item
+include  ../../components/form-elements/reviews/reviews
 .form-elements
   .input-field
     h3.input-field__title.title-form text field
@@ -45,4 +55,23 @@ include  ../../components/form-elements/rate-button/rate-button
     .rate-button__title.title-form rate button
     .rate-button__rate
       + rateButton(4)
-      + rateButton(5)    
+      + rateButton(5)
+  +richCheckboxButtons('rich checkbox buttons')
+  +rangeSlider('range slider','0','15000','100','5000','10000')
+  .buttons
+    .buttons__title.title-form buttons
+    .buttons__item
+      +buttonColor('CLICK ME')
+      +buttonTransparent('CLICK ME')
+      +buttonLink('CLICK ME', "/mock-address/change-me")
+      +buttonSizeLarge ('перейти к оплате')
+  .pagination__wrap
+    .pagination__title.title-form pagination
+    +pagination
+  +bulletList('bullet list')
+  .room-details
+    +roomDetailsItem('./assets/img/smile-icon.svg', "smile-icon", 'Комфорт', 'Шумопоглощающие стены')
+    +roomDetailsItem('./assets/img/city-icon.svg', "city-icon", 'Удобство', 'Окно в каждой из спален')
+  +reviews('./assets/img/user-image.png','Мурад Сарафанов', '5 дней назад', 12,'Великолепный матрас на кровати в основной спальне!' +
+  ' А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.' +
+  ' Выкрикивал комплименты повару — никто не жаловался из соседей.')(class='like')

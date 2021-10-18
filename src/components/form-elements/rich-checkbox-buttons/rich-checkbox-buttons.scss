@@ -1,0 +1,16 @@
+@import '../checkbox-button-with-description/checkbox-button-with-description';
+
+.rich-checkbox-buttons__title{
+ font-size: 12px;
+ line-height: 15px;
+ font-weight: 700;
+ color: $darkShade100;
+ text-transform: uppercase;
+ padding-bottom: 5px;
+}
+.rich-checkbox-buttons__checkbox-item{
+ margin-top: 8px;
+}
+.rich-checkbox-buttons__checkbox-item:first-child > label > div >.checkbox__description{
+ width: 200px;
+}

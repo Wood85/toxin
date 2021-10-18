@@ -1,0 +1,12 @@
+include  ../checkbox-button-with-description/checkbox-button-with-description
+
+mixin richCheckboxButtons(title)
+  .rich-checkbox-buttons
+    .rich-checkbox-buttons__title=title
+    ul.rich-checkbox-buttons__checkbox-list
+      li.rich-checkbox-buttons__checkbox-item
+        +checkboxButtonWithDescription("Широкий коридор",
+          "Ширина коридоров в номере " +
+          "не менее 91 см.")(class="rich-checkbox-buttons__button")
+      li.rich-checkbox-buttons__checkbox-item
+        +checkboxButtonWithDescription("Помощник для инвалидов","На 1 этаже вас встретит специалист  и проводит до номера.")(class="rich-checkbox-buttons__button")

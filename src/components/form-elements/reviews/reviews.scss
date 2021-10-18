@@ -1,0 +1,32 @@
+.reviews{
+  width: 711px;
+  display: flex;
+  flex-direction: column;
+}
+.reviews__user-profile{
+  display: flex;
+}
+.reviews__user-avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.reviews__user-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 9px;
+}
+.reviews__user-name{
+  font-weight: 700;
+}
+.reviews__user-review{
+  display: flex;
+  margin-top: 9px;
+}
+.reviews__like-button{
+  margin-top: 2px;
+  margin-left: 3px;
+}
+.reviews__user-review-text{
+  margin-left: 14px;
+}
