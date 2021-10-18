@@ -1,0 +1,42 @@
+.toggle{
+  display: flex;
+  cursor: pointer;
+ }
+ .toggle__input{
+  position: absolute;
+  appearance: none;
+ }
+ .toggle__img{
+  height: 20px;
+  width: 40px;
+  border: 1px solid $darkShade25;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 2px;
+  background-color: #fff;
+  position: relative;
+  transition: all .4s ease 0s;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: $darkShade25;
+    border-radius: 50%;
+    transition: all .4s ease 0s;
+  }
+ }
+ .toggle__text{
+  padding-top: 2px;
+  width: 210px;
+  line-height: 18px;
+ }
+ .toggle__input:checked + .toggle__img{
+  border-color: $purple;
+  &:after{
+    background: $purple;
+    left: 23px;
+  }
+ }

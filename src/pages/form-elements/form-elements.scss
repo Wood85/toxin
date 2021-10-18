@@ -6,6 +6,13 @@
 @import '../../components/form-elements/subscription-field/subscription-field';
 @import '../../components/form-elements/dropdown-selection/dropdown-selection';
 @import '../../components/form-elements/dropdown-quests/dropdown-quests';
+@import '../../components/form-elements/checkbox-buttons/checkbox-buttons';
+@import '../../components/form-elements/expandable-checkbox-list/expandable-checkbox-list';
+@import '../../components/form-elements/radio-button/radio-button';
+@import '../../components/form-elements/toggle-button/toggle-button';
+@import '../../components/form-elements/like-button/like-button';
+@import '../../components/form-elements/rate-button/rate-button';
+
 .form-elements{
   padding: 143px 141px 131px;
   &>div{
@@ -23,4 +30,34 @@
 }
 .subscription-field__title{
   padding-bottom: 2px;
+}
+.radio-buttons__buttons{
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.toggle__item{
+  padding-top: 9px;
+} 
+.like-button__container{
+  height: 51px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.like-button__buttons{
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+}
+.rate-button__container{
+  padding-top: 20px;
+}
+.rate-button__rate{
+  margin-top: 12px;
+  padding-left: 2px;
+  width: 261px;
+  display: flex;
+  justify-content: space-between;
 }

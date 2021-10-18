@@ -1,0 +1,20 @@
+include  ../checkbox-button/checkbox-button
+
+mixin expandableCheckboxList(title)
+  .expandable-checkbox-list
+    .expandable-checkbox-list__title=title
+    button.expandable-checkbox-list__trigger
+      img.expandable-checkbox-list__trigger-img(src='./assets/img/check.png' alt='checkbox list trigger')
+    ul.expandable-checkbox-list__dropdown
+      li.expandable-checkbox-list__item
+        +checkboxButton('Завтрак')(class='expandable-checkbox-list__checkbox')
+      li.expandable-checkbox-list__item
+        +checkboxButton('Письменный стол')(class='expandable-checkbox-list__checkbox', checked)
+      li.expandable-checkbox-list__item
+        +checkboxButton('Стул для кормления')(class='expandable-checkbox-list__checkbox', checked)
+      li.expandable-checkbox-list__item
+        +checkboxButton('Кроватка')(class='expandable-checkbox-list__checkbox', checked)
+      li.expandable-checkbox-list__item
+        +checkboxButton('Телевизор')(class='expandable-checkbox-list__checkbox')
+      li.expandable-checkbox-list__item
+        +checkboxButton('Шампунь')(class='expandable-checkbox-list__checkbox')

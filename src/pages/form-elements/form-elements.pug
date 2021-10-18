@@ -6,7 +6,12 @@ include  ../../components/form-elements/filter-date-dropdown/filter-date-dropdow
 include  ../../components/form-elements/subscription-field/subscription-field
 include  ../../components/form-elements/dropdown-selection/dropdown-selection
 include  ../../components/form-elements/dropdown-quests/dropdown-quests
-
+include  ../../components/form-elements/checkbox-buttons/checkbox-buttons
+include  ../../components/form-elements/expandable-checkbox-list/expandable-checkbox-list
+include  ../../components/form-elements/radio-button/radio-button
+include  ../../components/form-elements/toggle-button/toggle-button
+include  ../../components/form-elements/like-button/like-button
+include  ../../components/form-elements/rate-button/rate-button
 .form-elements
   .input-field
     h3.input-field__title.title-form text field
@@ -20,3 +25,24 @@ include  ../../components/form-elements/dropdown-quests/dropdown-quests
     +subscriptionField
   +dropdownSelection('dropdown')
   +dropdownQuests('dropdown')
+  +checkboxButtons('Checkbox Buttons')
+  +expandableCheckboxList('expandable checkbox list')
+  .radio-buttons
+    .radio-buttons__title.title-form Radio Buttons
+    .radio-buttons__buttons
+      +radioButton('Мужчина', 'gender', 'male')
+      +radioButton('Женщина', 'gender', 'female')
+  .toggle__wrap
+    .toggle__title.title-form Toggle
+    .toggle__item
+      +toggleButton('Получать спецпредложения')(class='toggle-button')
+  .like-button__container
+    .like-button__title.title-form like button
+    .like-button__buttons
+      +likeButton(2)
+      +likeButton(12)(class='like')        
+  .rate-button__container
+    .rate-button__title.title-form rate button
+    .rate-button__rate
+      + rateButton(4)
+      + rateButton(5)    

@@ -34,12 +34,12 @@ let isExpandable = false
 $('.expandable-checkbox-list__trigger').click(function () {
   if(!isExpandable) {
     $('.expandable-checkbox-list__dropdown').slideDown()
-    $(this).addClass('active-trigger')
-    $(this).removeClass('active2-trigger')
+    $(this).addClass('trigger-up')
+    $(this).removeClass('trigger-down')
   }else{
     $('.expandable-checkbox-list__dropdown').slideUp()
-    $(this).removeClass('active-trigger')
-    $(this).addClass('active2-trigger')
+    $(this).removeClass('trigger-up')
+    $(this).addClass('trigger-down')
   }
   isExpandable = !isExpandable
 })

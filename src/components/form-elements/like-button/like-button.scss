@@ -1,0 +1,45 @@
+.button-like{
+  width: 40px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid $darkShade25;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  cursor: pointer;
+  position: relative;
+  &:before {
+    content: '';
+    height: 8px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translateY(-50%);
+    background-image: url('../assets/img/like-img.svg');
+  }
+ }
+ .button-like__count{
+  display: flex;
+  width: 10px;
+  font-size: 10px;
+  color: $darkShade25;
+  padding-bottom: 1px;
+  margin-left: 15px;
+  justify-content: center;
+ }
+ .like{
+  border-color: $purple;
+  color: $purple;
+  &:after{
+    content: '';
+    height: 8px;
+    width: 10px;
+    position: absolute;
+    top: 50% ;
+    left: 13% ;
+    transform: translateY(-50%);
+    background-image: url('../assets/img/like-img-color.svg');
+  }
+ }

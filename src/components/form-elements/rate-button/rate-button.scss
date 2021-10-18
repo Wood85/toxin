@@ -1,0 +1,31 @@
+.rate{
+  display: inline-flex;
+  flex-direction: row-reverse;
+  &[data-total-value='1'] .rate__item:nth-child(n + 5) > .rate__star,
+  &[data-total-value='2'] .rate__item:nth-child(n + 4) > .rate__star,
+  &[data-total-value='3'] .rate__item:nth-child(n + 3) > .rate__star,
+  &[data-total-value='4'] .rate__item:nth-child(n + 2) > .rate__star,
+  &[data-total-value='5'] .rate__item:nth-child(n + 1) > .rate__star{
+    opacity: 1;
+  }
+ }
+ .rate__item{
+  position: relative;
+  cursor: pointer;
+  height: 19px;
+  width: 20px;
+  margin-right: 4px;
+  &:hover > .rate__star, &:hover ~ & .rate__star{
+    opacity: 1;
+  }
+ }
+ .rate__star-border, .rate__star{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+ .rate__star{
+  opacity: 0;
+  transition: opacity .3s ease 0s;
+ }

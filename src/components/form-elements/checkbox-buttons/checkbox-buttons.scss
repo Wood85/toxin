@@ -1,0 +1,20 @@
+@import '../checkbox-button/checkbox-button';
+
+.checkbox-buttons__title{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: $darkShade100;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.checkbox-buttons__checkbox-list{
+  padding-top: 10px;
+ }
+ .checkbox-buttons__checkbox-item{
+  padding-top: 6px;
+  padding-bottom: 2px;
+  &:first-child{
+    padding-top: 1px;
+  }
+ }

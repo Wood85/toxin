@@ -137,79 +137,79 @@
 //}
 ////expandableCheckboxList
 //
-//.expandable-checkbox-list{
+// .expandable-checkbox-list{
 //  position: relative;
 //  z-index: 99;
 //  width: 266px;
 //  height: 44px;
-//}
-//.expandable-checkbox-list__title{
+// }
+// .expandable-checkbox-list__title{
 //  height: 100%;
 //  padding-top: 14px;
-//}
-//.expandable-checkbox-list__dropdown{
+// }
+// .expandable-checkbox-list__dropdown{
 //  display: none;
-//}
-//.checkbox-buttons__checkbox-item,
-//.expandable-checkbox-list__item{
+// }
+// .checkbox-buttons__checkbox-item,
+// .expandable-checkbox-list__item{
 //  padding-top: 6px;
 //  padding-bottom: 2px;
 //  &:first-child{
 //    padding-top: 1px;
 //  }
-//}
-//.active-trigger{
+// }
+// .active-trigger{
 //  transform: rotate(-180deg);
 //  transition: transform 0.4s ease;
-//}
-//.active2-trigger{
+// }
+// .active2-trigger{
 //  transform: rotate(0deg);
 //  transition: transform 0.4s ease;
-//}
+// }
 ////checkboxButton
-//.checkbox{
+// .checkbox{
 //  display: flex;
-//}
-//.checkbox__input{
+// }
+// .checkbox__input{
 //  position: absolute;
 //  appearance: none;
-//}
-//.checkbox__img{
+// }
+// .checkbox__img{
 //  height: 20px;
 //  width: 20px;
 //  border: 1px solid $darkShade25;
 //  border-radius: 4px;
 //  margin-right: 10px;
 //  margin-top: 2px;
-//}
-//.checkbox__text{
+// }
+// .checkbox__text{
 //  padding-top: 2px;
 //  width: 210px;
 //  line-height: 18px;
 //  color: $darkShade50;
-//}
-//.checkbox__input:checked + .checkbox__img{
+// }
+// .checkbox__input:checked + .checkbox__img{
 //  border-color: $purple;
 //  background-image: url('../assets/img/checkbox-check.svg');
 //  background-repeat: no-repeat;
 //  background-size: 10px, 10px;
 //  background-position: 50% 40%;
-//}
+// }
 ////checkbox-buttons
 //.checkbox-buttons__button{
 //}
-//.checkbox-buttons__checkbox-list{
+// .checkbox-buttons__checkbox-list{
 //  padding-top: 10px;
-//}
+// }
 //
 ////radioButton
-//.radio-button{
+// .radio-button{
 //  display: flex;
 //  cursor: pointer;
 //  height: 20px;
 //  align-items: center;
-//}
-//.radio-button__input{
+// }
+// .radio-button__input{
 //  display: none;
 //  &:checked + .radio-button__img:after{
 //    transform: scale(1);
@@ -217,8 +217,8 @@
 //  &:checked ~ .radio-button__text{
 //    color: $darkShade100;
 //  }
-//}
-//.radio-button__img{
+// }
+// .radio-button__img{
 //  margin-top: 2px;
 //  width: 20px;
 //  height: 20px;
@@ -235,29 +235,29 @@
 //    transform: scale(0);
 //    transition: transform .15s ease;
 //  }
-//}
-//.radio-button__text{
+// }
+// .radio-button__text{
 //  color: $darkShade50;
 //  padding-left: 10px;
-//}
+// }
 //
 ////radioButtons
-//.radio-buttons__buttons{
+// .radio-buttons__buttons{
 //  width: 220px;
 //  display: flex;
 //  justify-content: space-between;
 //  margin-top: 10px;
-//}
+// }
 ////toggle
-//.toggle{
+// .toggle{
 //  display: flex;
 //  cursor: pointer;
-//}
-//.toggle__input{
+// }
+// .toggle__input{
 //  position: absolute;
 //  appearance: none;
-//}
-//.toggle__img{
+// }
+// .toggle__img{
 //  height: 20px;
 //  width: 40px;
 //  border: 1px solid $darkShade25;
@@ -278,24 +278,24 @@
 //    border-radius: 50%;
 //    transition: all .4s ease 0s;
 //  }
-//}
-//.toggle__text{
+// }
+// .toggle__text{
 //  padding-top: 2px;
 //  width: 210px;
 //  line-height: 18px;
-//}
-//.toggle__input:checked + .toggle__img{
+// }
+// .toggle__input:checked + .toggle__img{
 //  border-color: $purple;
 //  &:after{
 //    background: $purple;
 //    left: 23px;
 //  }
-//}
-//.toggle__item{
+// }
+// .toggle__item{
 //  padding-top: 9px;
-//}
+// }
 ////likeButton
-//.button-like{
+// .button-like{
 //  width: 40px;
 //  height: 20px;
 //  background: #FFFFFF;
@@ -316,8 +316,8 @@
 //    transform: translateY(-50%);
 //    background-image: url('../assets/img/like-img.svg');
 //  }
-//}
-//.button-like__count{
+// }
+// .button-like__count{
 //  display: flex;
 //  width: 10px;
 //  font-size: 10px;
@@ -325,8 +325,8 @@
 //  padding-bottom: 1px;
 //  margin-left: 15px;
 //  justify-content: center;
-//}
-//.like{
+// }
+// .like{
 //  border-color: $purple;
 //  color: $purple;
 //  &:after{
@@ -339,21 +339,21 @@
 //    transform: translateY(-50%);
 //    background-image: url('../assets/img/like-img-color.svg');
 //  }
-//}
+// }
 ////=====
-//.like-button__container{
+// .like-button__container{
 //  height: 51px;
 //  display: flex;
 //  flex-direction: column;
 //  justify-content: space-between;
-//}
-//.like-button__buttons{
+// }
+// .like-button__buttons{
 //  display: flex;
 //  width: 90px;
 //  justify-content: space-between;
 //}
 ////rateButton
-//.rate{
+// .rate{
 //  display: inline-flex;
 //  flex-direction: row-reverse;
 //  &[data-total-value='1'] .rate__item:nth-child(n + 5) > .rate__star,
@@ -363,8 +363,8 @@
 //  &[data-total-value='5'] .rate__item:nth-child(n + 1) > .rate__star{
 //    opacity: 1;
 //  }
-//}
-//.rate__item{
+// }
+// .rate__item{
 //  position: relative;
 //  cursor: pointer;
 //  height: 19px;
@@ -373,28 +373,28 @@
 //  &:hover > .rate__star, &:hover ~ & .rate__star{
 //    opacity: 1;
 //  }
-//}
-//.rate__star-border, .rate__star{
+// }
+// .rate__star-border, .rate__star{
 //  display: block;
 //  position: absolute;
 //  top: 0;
 //  left: 0;
-//}
-//.rate__star{
+// }
+// .rate__star{
 //  opacity: 0;
 //  transition: opacity .3s ease 0s;
-//}
+// }
 ////====
-//.rate-button__container{
+// .rate-button__container{
 //  padding-top: 20px;
-//}
-//.rate-button__rate{
+// }
+// .rate-button__rate{
 //  margin-top: 12px;
 //  padding-left: 2px;
 //  width: 261px;
 //  display: flex;
 //  justify-content: space-between;
-//}
+// }
 //
 ////dropdownQuests
 //.dropdown-quests_buttons{

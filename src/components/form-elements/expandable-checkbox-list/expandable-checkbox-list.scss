@@ -1,0 +1,44 @@
+@import '../checkbox-button/checkbox-button';
+
+.expandable-checkbox-list{
+  position: relative;
+  z-index: 99;
+  width: 266px;
+  height: 44px;
+ }
+.expandable-checkbox-list__title{
+  height: 100%;
+  padding: 14px 0 5px 0;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: $darkShade100;
+  text-transform: uppercase;
+}
+.expandable-checkbox-list__trigger{
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.expandable-checkbox-list__dropdown{
+  display: none;
+}
+.expandable-checkbox-list__item{
+  padding-top: 6px;
+  padding-bottom: 2px;
+  &:first-child{
+    padding-top: 1px;
+  }
+}
+.trigger-up{
+  transform: rotate(-180deg);
+  transition: transform 0.4s ease;
+}
+.trigger-down{
+  transform: rotate(0deg);
+  transition: transform 0.4s ease;
+}
