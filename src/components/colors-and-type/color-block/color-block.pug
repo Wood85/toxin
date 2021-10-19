@@ -1,6 +1,6 @@
 mixin colorBlock(title, name) 
   .color-block 
-    .color-block__color
+    .color-block__color&attributes(attributes)
     .color-block__info 
-      color-block__title=title 
-      color-black__name=name 
+      .color-block__title=title
+      .color-block__name=name

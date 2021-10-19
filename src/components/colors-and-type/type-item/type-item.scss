@@ -1,0 +1,15 @@
+.type__item{
+  display: flex;
+  width: 440px;
+  justify-content: space-between;
+}
+.type__title{
+  width: 40px;
+  display: flex;
+  justify-content: flex-end;
+  color: $darkShade25;
+}
+.type__text{
+  width: 370px;
+  font-weight: 700;
+}

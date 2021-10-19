@@ -1,0 +1,86 @@
+include  ../../components/headers-and-footers/logo-block/logo-block
+include  ../../components/form-elements/subscription-field/subscription-field
+-
+  const menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+  const menuNavigationValues = ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+  const menuAboutUsValues = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+  const menuSupportValues = ['Соглашения', 'Сообщества', 'Связь с нами']
+
+mixin socialNetworksBlock
+  .social-networks-block
+    .social-networks-block__item
+      a.social-networks-block__link(href="/mock-address/change-me")
+        img.social-networks-block__img(src="./assets/img/twitter-icon.svg" alt="twitter")
+    .social-networks-block__item
+      a.a.social-networks-block__link(href="/mock-address/change-me")
+        img.social-networks-block__img(src="./assets/img/facebook-icon.svg" alt="facebook")
+    .social-networks-block__item
+      a.a.social-networks-block__link(href="/mock-address/change-me")
+        img.social-networks-block__img(src="./assets/img/instagram-icon.svg" alt="instagram")
+
+mixin copyright
+  .copiright Copyright © 2018 Toxin отель. Все права защищены.
+
+
+header.header
+  +logoBlock
+  nav.header__menu
+    ul.header__menu-list
+      each value in menuValues
+        li.header__menu-item
+          a.header__menu-link(href="/mock-address/change-me") #{value}
+    .header__authentication-block
+      a.header__button-login(href="/mock-address/change-me") войти
+      a.header__button-register(href="/mock-address/change-me") зарегистрироваться
+header.header
+  +logoBlock
+  nav.header__menu
+    ul.header__menu-list
+      each value in menuValues
+        li.header__menu-item
+          a.header__menu-link(href="/mock-address/change-me") #{value}
+    .header__authentication-block
+      a.header__profile(href="/mock-address/change-me") Юлий Цезарь
+footer.footer
+  .footer-top
+    .footer-top__description
+      .footer-top__description-logo
+        +logoBlock
+      .footer-top__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+    nav.footer-top__menu
+      .footer-top__menu-section
+        h3.footer-top__menu-title навигация
+        ul.footer-top__menu-list
+          each value in menuNavigationValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href="/mock-address/change-me") #{value}
+      .footer-top__menu-section
+        h3.footer-top__menu-title о нас
+        ul.footer-top__menu-list
+          each value in menuAboutUsValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href="/mock-address/change-me") #{value}
+      .footer-top__menu-section
+        h3.footer-top__menu-title служба поддержки
+        ul.footer-top__menu-list
+          each value in menuSupportValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href="/mock-address/change-me") #{value}
+    .footer-top__subscription
+      h3.footer-top__subscription-title Подписка
+      .footer-top__subscription-text Получайте специальные предложения и новости сервиса
+      form.footer-top__subscription-form(action="#" method="post")
+        +subscriptionField
+  .footer-line
+  .footer-bottom
+    +copyright
+    +socialNetworksBlock
+footer.footer-mobile
+  .footer-mobile-logo
+    +logoBlock
+  .footer-mobile__copyright
+    +copyright
+  .footer-mobile__social-networks
+    +socialNetworksBlock
+
+

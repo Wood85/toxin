@@ -1,3 +1,5 @@
+@import '../../components/headers-and-footers/logo-block/logo-block';
+@import '../../components/form-elements/subscription-field/subscription-field';
 .header{
   display: flex;
   justify-content: space-between;
@@ -5,13 +7,6 @@
   width: 80.56%;
   margin: 0 auto 40px;
   align-items: center;
-}
-.logo-block{
-  display: flex;
-  height: 100%;
-  width: 105px;
-  align-items: center;
-  justify-content: space-between;
 }
 .social-networks-block{
   display: flex;
@@ -45,7 +40,7 @@
   &:first-child{
     color:$darkShade75;
     font-weight: 700;
-}
+  }
   &:nth-child(2),&:nth-child(5) {
     position: relative;
     &:after {

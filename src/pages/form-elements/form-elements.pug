@@ -23,55 +23,55 @@ include  ../../components/form-elements/bullet-list/bullet-list
 include  ../../components/form-elements/room-details-item/room-details-item
 include  ../../components/form-elements/reviews/reviews
 .form-elements
-  //- .input-field
-  //-   h3.input-field__title.title-form text field
-  //-   +inputField('email', 'Email')
-  //- +dropdown('dropdown')
-  //- +inputMaskedField('masked text field')
-  //- +dateDropdown('date dropdown', 'date dropdown','ДД.ММ.ГГГГ' , '19.08.2019')
-  //- +filterDateDropdown('filter date dropdown', '19 авг', '23 авг')
-  //- .subscription-field
-  //-   h3.subscription-field__title subscription text field
-  //-   +subscriptionField
-  //- +dropdownSelection('dropdown')
-  //- +dropdownQuests('dropdown')
-  //- +checkboxButtons('Checkbox Buttons')
-  //- +expandableCheckboxList('expandable checkbox list')
-  //- .radio-buttons
-  //-   .radio-buttons__title.title-form Radio Buttons
-  //-   .radio-buttons__buttons
-  //-     +radioButton('Мужчина', 'gender', 'male')
-  //-     +radioButton('Женщина', 'gender', 'female')
-  //- .toggle__wrap
-  //-   .toggle__title.title-form Toggle
-  //-   .toggle__item
-  //-     +toggleButton('Получать спецпредложения')(class='toggle-button')
-  //- .like-button__container
-  //-   .like-button__title.title-form like button
-  //-   .like-button__buttons
-  //-     +likeButton(2)
-  //-     +likeButton(12)(class='like')        
+  .input-field
+    h3.input-field__title.title-form text field
+    +inputField('email', 'Email')
+  +dropdown('dropdown')
+  +inputMaskedField('masked text field')
+  +dateDropdown('date dropdown', 'date dropdown','ДД.ММ.ГГГГ' , '19.08.2019')
+  +filterDateDropdown('filter date dropdown', '19 авг', '23 авг')
+  .subscription-field
+    h3.subscription-field__title subscription text field
+    +subscriptionField
+  +dropdownSelection('dropdown')
+  +dropdownQuests('dropdown')
+  +checkboxButtons('Checkbox Buttons')
+  +expandableCheckboxList('expandable checkbox list')
+  .radio-buttons
+    .radio-buttons__title.title-form Radio Buttons
+    .radio-buttons__buttons
+      +radioButton('Мужчина', 'gender', 'male')
+      +radioButton('Женщина', 'gender', 'female')
+  .toggle__wrap
+    .toggle__title.title-form Toggle
+    .toggle__item
+      +toggleButton('Получать спецпредложения')(class='toggle-button')
+  .like-button__container
+    .like-button__title.title-form like button
+    .like-button__buttons
+      +likeButton(2)
+      +likeButton(12)(class='like')
   .rate-button__container
     .rate-button__title.title-form rate button
     .rate-button__rate
       + rateButton(4)
       + rateButton(5)
-  //- +richCheckboxButtons('rich checkbox buttons')
+  +richCheckboxButtons('rich checkbox buttons')
   +rangeSlider('range slider','0','15000','100','5000','10000')
-  //- .buttons
-  //-   .buttons__title.title-form buttons
-  //-   .buttons__item
-  //-     +buttonColor('CLICK ME')
-  //-     +buttonTransparent('CLICK ME')
-  //-     +buttonLink('CLICK ME', "/mock-address/change-me")
-  //-     +buttonSizeLarge ('перейти к оплате')
-  //- .pagination__wrap
-  //-   .pagination__title.title-form pagination
-  //-   +pagination
-  //- +bulletList('bullet list')
-  //- .room-details
-  //-   +roomDetailsItem('./assets/img/smile-icon.svg', "smile-icon", 'Комфорт', 'Шумопоглощающие стены')
-  //-   +roomDetailsItem('./assets/img/city-icon.svg', "city-icon", 'Удобство', 'Окно в каждой из спален')
-  //- +reviews('./assets/img/user-image.png','Мурад Сарафанов', '5 дней назад', 12,'Великолепный матрас на кровати в основной спальне!' +
-  //- ' А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.' +
-  //- ' Выкрикивал комплименты повару — никто не жаловался из соседей.')(class='like')
+  .buttons
+    .buttons__title.title-form buttons
+    .buttons__item
+      +buttonColor('CLICK ME')
+      +buttonTransparent('CLICK ME')
+      +buttonLink('CLICK ME', "/mock-address/change-me")
+      +buttonSizeLarge ('перейти к оплате')
+  .pagination__wrap
+    .pagination__title.title-form pagination
+    +pagination
+  +bulletList('bullet list')
+  .room-details
+    +roomDetailsItem('./assets/img/smile-icon.svg', "smile-icon", 'Комфорт', 'Шумопоглощающие стены')
+    +roomDetailsItem('./assets/img/city-icon.svg', "city-icon", 'Удобство', 'Окно в каждой из спален')
+  +reviews('./assets/img/user-image.png','Мурад Сарафанов', '5 дней назад', 12,'Великолепный матрас на кровати в основной спальне!' +
+  ' А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.' +
+  ' Выкрикивал комплименты повару — никто не жаловался из соседей.')(class='like')
