@@ -1,0 +1,12 @@
+@import '../../components/colors-and-type/color-block/color-block';
+
+.colors-and-type{
+  display: flex;
+  padding: 145px 150px;
+  width: 1000px;
+  height: 500px;
+}
+.colors{
+  display: flex;
+  flex-direction: column;
+}

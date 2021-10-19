@@ -1,0 +1,23 @@
+.color-block{
+  display: flex;
+} 
+.color-block__color{
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background: #1F2041;
+  margin: 0 40px 20px 0;
+}
+.color-block__info{
+  display: flex;
+  flex-direction: column;
+  font-size: 19px;
+  line-height: 28px;
+  color: #1F2041;
+  padding-top: 7px;
+} 
+.color-block__title{
+   font-weight: 700;
+} 
+.color-black__name{
+}
