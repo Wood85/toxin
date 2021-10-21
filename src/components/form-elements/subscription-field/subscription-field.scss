@@ -9,6 +9,7 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.5px;
+  position: relative;
   &::placeholder{
     color:$darkShade25;
     letter-spacing: 0;
@@ -19,11 +20,13 @@
   }
 }
 .subscription-field__button{
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 44px;
   width: 44px;
   background-color: transparent;
   cursor: pointer;
-  transform: translate(-48px,4px);
 }
 .subscription-field__button-img{
   width: 18px;

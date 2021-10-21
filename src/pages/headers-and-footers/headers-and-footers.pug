@@ -1,4 +1,6 @@
 include  ../../components/headers-and-footers/logo-block/logo-block
+include  ../../components/headers-and-footers/social-networks-block/social-networks-block
+include  ../../components/headers-and-footers/copyright/copyright
 include  ../../components/form-elements/subscription-field/subscription-field
 -
   const menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
@@ -6,24 +8,9 @@ include  ../../components/form-elements/subscription-field/subscription-field
   const menuAboutUsValues = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
   const menuSupportValues = ['Соглашения', 'Сообщества', 'Связь с нами']
 
-mixin socialNetworksBlock
-  .social-networks-block
-    .social-networks-block__item
-      a.social-networks-block__link(href="/mock-address/change-me")
-        img.social-networks-block__img(src="./assets/img/twitter-icon.svg" alt="twitter")
-    .social-networks-block__item
-      a.a.social-networks-block__link(href="/mock-address/change-me")
-        img.social-networks-block__img(src="./assets/img/facebook-icon.svg" alt="facebook")
-    .social-networks-block__item
-      a.a.social-networks-block__link(href="/mock-address/change-me")
-        img.social-networks-block__img(src="./assets/img/instagram-icon.svg" alt="instagram")
-
-mixin copyright
-  .copiright Copyright © 2018 Toxin отель. Все права защищены.
-
-
 header.header
-  +logoBlock
+  .header__logo
+    +logoBlock
   nav.header__menu
     ul.header__menu-list
       each value in menuValues
@@ -33,7 +20,8 @@ header.header
       a.header__button-login(href="/mock-address/change-me") войти
       a.header__button-register(href="/mock-address/change-me") зарегистрироваться
 header.header
-  +logoBlock
+  .header__logo
+    +logoBlock
   nav.header__menu
     ul.header__menu-list
       each value in menuValues
