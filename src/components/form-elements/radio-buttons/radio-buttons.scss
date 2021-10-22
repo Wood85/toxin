@@ -1,0 +1,8 @@
+@import '../radio-button/radio-button';
+
+.radio-buttons__buttons{
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

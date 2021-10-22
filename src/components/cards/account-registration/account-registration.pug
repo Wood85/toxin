@@ -1,0 +1,13 @@
+include  ../../form-elements/input-field/input-field
+include  ../../form-elements/radio-buttons/radio-buttons
+
+.account-registration
+  h1.account-registration__title Регистрация аккаунта
+  form.account-registration__form
+    .account-registration__name
+      +inputField("text", "Имя")
+    .account-registration__surname
+      +inputField("text", "Фамилия")
+    .account-registration__gender
+      +radioButtons
+

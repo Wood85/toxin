@@ -8,7 +8,7 @@
 @import '../../components/form-elements/dropdown-quests/dropdown-quests';
 @import '../../components/form-elements/checkbox-buttons/checkbox-buttons';
 @import '../../components/form-elements/expandable-checkbox-list/expandable-checkbox-list';
-@import '../../components/form-elements/radio-button/radio-button';
+@import '../../components/form-elements/radio-buttons/radio-buttons';
 @import '../../components/form-elements/toggle-button/toggle-button';
 @import '../../components/form-elements/like-button/like-button';
 @import '../../components/form-elements/rate-button/rate-button';
@@ -40,12 +40,6 @@
 }
 .subscription-field__title{
   padding-bottom: 2px;
-}
-.radio-buttons__buttons{
-  width: 220px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
 }
 .toggle__item{
   padding-top: 9px;

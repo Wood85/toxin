@@ -1,0 +1,30 @@
+@import '../../form-elements/date-dropdown/date-dropdown';
+@import '../../form-elements/dropdown-quests/dropdown-quests';
+@import '../../form-elements/button-size-large/button-size-large';
+
+.room-search-form{
+  width: 380px;
+  height: 374px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.room-search-form__title{
+  line-height: 29.26px;
+  padding-bottom: 22px;
+}
+.room-search-form__body{
+  &>div{
+    padding-top: 20px;
+    &:first-child{
+      padding-top: 0;
+    }
+    &:last-child{
+      padding-top: 31px;
+    }
+  }
+}
