@@ -1,0 +1,68 @@
+@import '../../form-elements/date-dropdown/date-dropdown';
+@import '../../form-elements/dropdown-quests/dropdown-quests';
+@import '../../form-elements/button-size-large/button-size-large';
+
+.room-reservation{
+  width: 380px;
+  height: 512px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.room-reservation__info{
+  display: flex;
+  justify-content: space-between;
+}
+.room-reservation__title{
+  display: flex;
+}
+.room-reservation__number{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: $darkShade100;
+}
+.room-reservation__number-room{
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: $darkShade100;
+}
+.room-reservation__name{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $purple;
+}
+.room-reservation__price{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color:$darkShade50;
+}
+.room-reservation__day{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color:$darkShade50;
+  padding-left: 5px;
+}
+.room-reservation__date{}
+.room-reservation__quests{}
+.room-reservation__calculations{}
+.room-reservation__price-period{}
+.room-reservation__item{}
+.room-reservation__amount{}
+.room-reservation__discount{}
+a.room-reservation__icon-info{}
+.room-reservation__tax{}
+.room-reservation__total{}
+.room-reservation__total-title{}
+.room-reservation__total-line{}
+.room-reservation__total-amount{}
+.room-reservation__reservation-button{}

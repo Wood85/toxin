@@ -1,9 +1,14 @@
 @import '../../components/cards/room-search-form/room-search-form';
 @import '../../components/cards/account-registration/account-registration';
+@import '../../components/cards/room-reservation/room-reservation';
 
 .cards{
+  display: flex;
   padding: 150px 140px;
   background: #F4F4F6;
+}
+.cards__column-1{
+  margin-right: 40px;
 }
 .cards__room-search{
   margin-bottom: 40px;

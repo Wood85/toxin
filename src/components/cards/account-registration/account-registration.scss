@@ -1,5 +1,9 @@
 @import '../../form-elements/input-field/input-field';
 @import '../../form-elements/radio-buttons/radio-buttons';
+@import '../../form-elements/input-masked-field/input-masked-field';
+@import '../../form-elements/toggle-button/toggle-button';
+@import '../../form-elements/button-size-large/button-size-large';
+@import '../../form-elements/button-transparent/button-transparent';
 
 .account-registration{
   width: 380px;
@@ -18,6 +22,40 @@
 .account-registration__name{
   margin-top: 23px;
 }
-.account-registration__surname{
+.account-registration__surname,
+.account-registration__password{
   margin-top: 10px;
+}
+.account-registration__date-of-birth,
+.account-registration__payment-button{
+  margin-top: 24px;
+}
+.account-registration__login-details{
+  margin-top: 20px;
+}
+.account-registration__login-details-title{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: $darkShade100;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.account-registration__toggle-special-offers{
+  margin-top: 8px;
+}
+.account-registration__log-in{
+  height: 44px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.account-registration__log-in-text{
+  display: flex;
+  align-items: center;
+}
+.account-registration__log-in-button{
+  margin-top: 2px;
+  position: relative;
+  z-index: 6;
 }
