@@ -1,6 +1,8 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
-import './pages/form-elements/form-elements'
+
+
+// import './pages/form-elements/form-elements'
 //dropdown
 let isDrop = false
 $('.dropdown-selection__trigger').click(function () {
@@ -29,6 +31,7 @@ $('.dropdown-quests__trigger').click(function () {
     }
     isDropQuests = !isDropQuests
 })
+
 //expandableCheckboxList
 let isExpandable = false
 $('.expandable-checkbox-list__trigger').click(function () {
@@ -219,6 +222,10 @@ $(document).ready(function() {
   })
 })
 
+//calendar
+  $(function () {
+    $('#calendar').datepicker()
+  })
 
 
 

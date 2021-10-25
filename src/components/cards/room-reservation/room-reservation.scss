@@ -25,6 +25,7 @@
   font-size: 14px;
   line-height: 17px;
   color: $darkShade100;
+  padding: 10px 4px 0 0;
 }
 .room-reservation__number-room{
   font-size: 24px;
@@ -38,31 +39,79 @@
   line-height: 15px;
   text-transform: uppercase;
   color: $purple;
+  padding: 12px 0 0 7px;
 }
 .room-reservation__price{
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   color:$darkShade50;
+  padding: 10px 0 0 0;
 }
 .room-reservation__day{
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color:$darkShade50;
+  padding-left: 2px;
+}
+.room-reservation__date{
+  margin-top: 22px;
+}
+.room-reservation__quests{
+  margin-top: 20px;
+}
+.room-reservation__calculations{
+  margin-top: 18px;
+}
+.room-reservation__string{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.room-reservation__item{
+  display: flex;
+}
+.room-reservation__item-text{
+  width: 214px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $darkShade75;
+  padding-top: 3px;
+}
+.room-reservation__amount{
+  border-bottom: 5px;
+}
+.room-reservation__discount{
+  padding-bottom: 6px;
+}
+a.room-reservation__icon-info-link{
+  margin-left: 6px;
+}
+.room-reservation__icon-info-img{
+}
+.room-reservation__total{
+  display: flex;
+  margin-top: 20px;
+}
+.room-reservation__total-title,
+.room-reservation__total-amount{
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: $darkShade100;
+}
+.room-reservation__total-line{
+  width: 182px;
+  height: 1px;
+  border-bottom: 1px dotted $darkShade25;
+  padding-top: 18px;
+  margin-left: 5px;
+}
+.room-reservation__total-amount{}
+.room-reservation__total-amount_end{
   padding-left: 5px;
 }
-.room-reservation__date{}
-.room-reservation__quests{}
-.room-reservation__calculations{}
-.room-reservation__price-period{}
-.room-reservation__item{}
-.room-reservation__amount{}
-.room-reservation__discount{}
-a.room-reservation__icon-info{}
-.room-reservation__tax{}
-.room-reservation__total{}
-.room-reservation__total-title{}
-.room-reservation__total-line{}
-.room-reservation__total-amount{}
-.room-reservation__reservation-button{}
+.room-reservation__reservation-button{
+  margin-top: 21px;
+}

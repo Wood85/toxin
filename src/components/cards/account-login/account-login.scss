@@ -1,0 +1,42 @@
+@import '../../form-elements/input-field/input-field';
+@import '../../form-elements/button-size-large/button-size-large';
+@import '../../form-elements/button-transparent/button-transparent';
+
+.account-login{
+  width: 380px;
+  height: 358px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.account-login__title{
+  padding-top: 2px;
+}
+.account-login__form{
+  margin-top: 23px;
+}
+.account-login__email{
+
+}
+.account-login__password{
+  margin: 10px 0 20px 0;
+}
+.account-login__login-creation{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  height: 44px;
+}
+.account-login__login-creation-text{
+  display: flex;
+  align-items: center;
+}
+.account--login__login-creation-button{
+  margin-top: 2px;
+  position: relative;
+  z-index: 6;
+}

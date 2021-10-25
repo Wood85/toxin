@@ -1,0 +1,25 @@
+.calendar{
+  width: 320px;
+  height: 369px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.calendar__month{}
+.calendar__arrow-prev{}
+.calendar__date-container{}
+.calendar__date{}
+.calendar__arrow-next{}
+.calendar__weekdays{}
+.calendar__monday{}
+.calendar__tuesday{}
+.calendar__wednesday{}
+.calendar__thursday{}
+.calendar__friday{}
+.calendar__saturday{}
+.calendar__sunday{}
+.calendar__days{}

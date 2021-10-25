@@ -10,7 +10,7 @@
   padding: 40px 30px 30px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 .room-search-form__title{
@@ -27,4 +27,8 @@
       padding-top: 31px;
     }
   }
+}
+.room-search-form__quests{
+  position: relative;
+  z-index: 2;
 }

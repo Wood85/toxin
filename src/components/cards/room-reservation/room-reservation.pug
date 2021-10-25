@@ -1,7 +1,6 @@
 include  ../../form-elements/date-dropdown/date-dropdown
 include  ../../form-elements/dropdown-quests/dropdown-quests
 include  ../../form-elements/button-size-large/button-size-large
-
 .room-reservation
   .room-reservation__info
     .room-reservation__title
@@ -15,20 +14,26 @@ include  ../../form-elements/button-size-large/button-size-large
   .room-reservation__quests
     +dropdownQuests("Гости")
   .room-reservation__calculations
-    .room-reservation__price-period
-      .room-reservation__item 9 990₽ х 4 суток
+    .room-reservation__string.room-reservation__price-period
+      .room-reservation__item
+        .room-reservation__item-text 9 990₽ х 4 суток
       .room-reservation__amount 39 960₽
-    .room-reservation__discount
-      .room-reservation__item Сбор за услуги: скидка 2 179₽
-      a.room-reservation__icon-info(href="/mock-address/change-me") i
+    .room-reservation__string.room-reservation__discount
+      .room-reservation__item
+        .room-reservation__item-text Сбор за услуги: скидка 2 179₽
+        a.room-reservation__icon-info-link(href="/mock-address/change-me")
+          img.room-reservation__icon-info-img(src="./assets/img/info-icon.svg" alt="info-icon")
       .room-reservation__amount 0₽
-    .room-reservation__tax
-      .room-reservation__item Сбор за дополнительные услуги
-      a.room-reservation__icon-info(href="/mock-address/change-me") i
+    .room-reservation__string.room-reservation__tax
+      .room-reservation__item
+        .room-reservation__item-text Сбор за дополнительные услуги
+        a.room-reservation__icon-info-link(href="/mock-address/change-me")
+          img.room-reservation__icon-info-img(src="./assets/img/info-icon.svg" alt="info-icon")
       .room-reservation__amount 300₽
   .room-reservation__total
     .room-reservation__total-title Итого
     .room-reservation__total-line
-    .room-reservation__total-amount 38 081₽
+    .room-reservation__total-amount 38
+      span.room-reservation__total-amount_end 081₽
   .room-reservation__reservation-button
     +buttonSizeLarge("Забронировать")

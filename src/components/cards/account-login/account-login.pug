@@ -1,0 +1,17 @@
+include  ../../form-elements/input-field/input-field
+include  ../../form-elements/button-size-large/button-size-large
+include  ../../form-elements/button-transparent/button-transparent
+
+.account-login
+    h1.account-login__title Войти
+    form.account-login__form
+      .account-login__email
+        +inputField("email", "Email")
+      .account-login__password
+        +inputField("password", "Пароль")
+      .account-login__login-button
+        +buttonSizeLarge("войти")
+    .account-login__login-creation
+      .account-login__login-creation-text Нет аккаунта на Toxin?
+      .account--login__login-creation-button
+        +buttonTransparent("Создать")
