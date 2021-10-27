@@ -1,25 +1,38 @@
+@import 'air-datepicker/air-datepicker';
 .calendar{
   width: 320px;
   height: 369px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding-top: 10px;
+  padding-right: 7px;
   background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid $darkShade25;
+  box-shadow: 0 10px 20px $darkShade50;
   border-radius: 4px;
 }
-.calendar__month{}
-.calendar__arrow-prev{}
-.calendar__date-container{}
-.calendar__date{}
-.calendar__arrow-next{}
-.calendar__weekdays{}
-.calendar__monday{}
-.calendar__tuesday{}
-.calendar__wednesday{}
-.calendar__thursday{}
-.calendar__friday{}
-.calendar__saturday{}
-.calendar__sunday{}
-.calendar__days{}
+.calendar__body{
+  margin: 0 auto;
+}
+.calendar__title-month,
+.calendar__title-year{
+  letter-spacing: 1.1px;
+}
+.calendar__title-month{
+  padding-right: 4px;
+}
+.calendar__buttons{
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  margin-left: 20px;
+}
+.calendar__button{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $purple;
+  background-color: transparent;
+}
