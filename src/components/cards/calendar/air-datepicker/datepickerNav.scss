@@ -28,14 +28,6 @@
   border-radius: var(--adp-border-radius);
   user-select: none;
 
-  &:hover {
-    background: var(--adp-background-color-hover);
-  }
-
-  &:active {
-    background: var(--adp-background-color-active);
-  }
-
   &.-disabled- {
     visibility: hidden;
   }

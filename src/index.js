@@ -1,9 +1,9 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
+import './pages/cards/cards'
 import AirDatepicker from 'air-datepicker';
 
 
-// import './pages/form-elements/form-elements'
 //dropdown
 let isDrop = false
 $('.dropdown-selection__trigger').click(function () {
@@ -225,6 +225,7 @@ $(document).ready(function() {
 
 
 //calendar
+
 new AirDatepicker('.calendar__body',{
   navTitles: {
     days: '<h2 class="calendar__title-month">MMMM</h2> <h2 class="calendar__title-year">yyyy</h2>'

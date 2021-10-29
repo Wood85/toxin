@@ -1,1 +1,20 @@
-mixin roomCard
+include  ../../form-elements/rate-button/rate-button
+
+mixin roomCard(number, name, price, stars, count)
+  .room-card
+    .room-card__slider
+    .room-card__content
+      .room-card__info 
+        .room-card__title
+          .room-card__number №
+          span.room-card__number-room=number
+          .room-card__name=name
+        .room-card__price=price
+          span.room-card__day в сутки
+      .room-card__line  
+      .room-card__reviews  
+        .room-card__rate 
+          + rateButton(stars)
+        .room-card__total-reviews  
+          .room-card__count=count
+          .room-card__reviews-word Отзывов

@@ -1,0 +1,1 @@
+import '../../form-elements/rate-button/rate-button'

@@ -1,0 +1,57 @@
+@import '../../form-elements/rate-button/rate-button.scss';
+
+.room-card{
+   width: 270px;
+   height: 257px;
+   background: #FFFFFF;
+   box-shadow: 0px 10px 20px $darkShade5;
+   border-radius: 4px;
+}
+.room-card__slider{
+   height: 151px;
+}
+.room-card__content{
+   margin-top: 14px;
+}
+.room-card__info{
+   display: flex;
+   justify-content: space-between;
+ }
+ .room-card__title{
+   display: flex;
+ }
+ .room-card__number{
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 17px;
+   color: $darkShade100;
+   padding: 10px 4px 0 0;
+ }
+ .room-card__number-room{
+   font-size: 24px;
+   line-height: 29px;
+   font-weight: 700;
+   color: $darkShade100;
+ }
+ .room-card__name{
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 15px;
+   text-transform: uppercase;
+   color: $purple;
+   padding: 12px 0 0 7px;
+ }
+ .room-card__price{
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+   color:$darkShade50;
+   padding: 10px 0 0 0;
+ }
+ .room-card__day{
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 18px;
+   color:$darkShade50;
+   padding-left: 2px;
+ }

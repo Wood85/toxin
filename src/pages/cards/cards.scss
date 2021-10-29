@@ -3,6 +3,7 @@
 @import '../../components/cards/room-reservation/room-reservation';
 @import '../../components/cards/account-login/account-login';
 @import '../../components/cards/calendar/calendar';
+@import '../../components/cards/room-card/room-card.scss';
 
 .cards{
   display: flex;
@@ -14,6 +15,7 @@
   margin-right: 40px;
 }
 .cards__room-search,
-.cards__room-reservation{
+.cards__room-reservation,
+.cards__calendar{
   margin-bottom: 40px;
 }
