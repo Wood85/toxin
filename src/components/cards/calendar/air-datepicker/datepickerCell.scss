@@ -17,22 +17,10 @@
   color: $darkShade50;
   z-index: 1; // ?
 
-  &.-focus- {
-    background: var(--adp-background-color-hover);
-  }
-
   &.-current- {
     color: var(--adp-color-current-date);
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 22px;
-
-    &.-focus- {
-      color: var(--adp-color);
-    }
-
-    &.-in-range- {
-      color: var(--adp-color-current-date);
-    }
   }
 
   &.-disabled- {
@@ -55,41 +43,69 @@
   }
 
   &.-in-range- {
-    background: var(--adp-cell-background-color-in-range);
     border-radius: 0;
-
-    &:hover {
-      background: var(--adp-cell-background-color-in-range-hover);
+    color: $darkShade50;
+    position: relative;
+    &:after {
+      content: '';
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      opacity: 0.25;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0;
+      left: 0;
     }
   }
 
   &.-range-from- {
-    border: 1px solid var(--adp-cell-border-color-in-range);
-    background-color: var(--adp-cell-background-color-in-range);
-    border-radius: var(--adp-cell-border-radius) 0 0 var(--adp-cell-border-radius);
+    border-radius: 22px;
   }
   &.-range-to- {
-    border: 1px solid var(--adp-cell-border-color-in-range);
-    background-color: var(--adp-cell-background-color-in-range);
-    border-radius: 0 var(--adp-cell-border-radius) var(--adp-cell-border-radius) 0;
+    border-radius: 22px;
   }
 
   &.-range-to-.-range-from- {
-    border-radius: var(--adp-cell-border-radius);
+    border-radius: 22px;
+    &::before, &::after{
+      display: none;
+    }
   }
 
   &.-selected- {
     color: #fff;
     border: none;
-    background: var(--adp-cell-background-color-selected);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
-    &.-current- {
-      color: #fff;
-      background: var(--adp-cell-background-color-selected);
+    &.-range-from- {
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        opacity: 0.25;
+        top: 0;
+        left: 0;
+        border-radius: 22px 0 0 22px;
+        z-index: -1;
+      }
     }
-
-    &.-focus- {
-      background: var(--adp-cell-background-color-selected-hover);
+    &.-range-to-{
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        opacity: 0.25;
+        top: 0;
+        left: 0;
+        border-radius: 0 22px 22px 0;
+        z-index: -1;
+      }
     }
   }
 }
