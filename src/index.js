@@ -1,7 +1,7 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
 import './pages/cards/cards'
-import AirDatepicker from 'air-datepicker';
+import AirDatepicker from 'air-datepicker'
 
 
 //dropdown
