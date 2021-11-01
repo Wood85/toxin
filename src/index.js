@@ -1,8 +1,7 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
-import './pages/cards/cards'
+// import './pages/website-pages/main/main'
 import AirDatepicker from 'air-datepicker'
-
 
 //dropdown
 let isDrop = false
@@ -234,6 +233,7 @@ new AirDatepicker('.calendar__body',{
   nextHtml:'<img src="assets/img/arrow-forward.svg" alt="arrow-forward"/>',
   range: true
 });
+
 
 
 

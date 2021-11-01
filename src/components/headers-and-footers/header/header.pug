@@ -1,0 +1,16 @@
+include ../logo-block/logo-block
+
+-
+  const menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+
+header.header
+  .header__logo
+    +logoBlock
+  nav.header__menu
+    ul.header__menu-list
+      each value in menuValues
+        li.header__menu-item
+          a.header__menu-link(href="/mock-address/change-me") #{value}
+    .header__authentication-block
+      a.header__button-login(href="/mock-address/change-me") войти
+      a.header__button-register(href="/mock-address/change-me") зарегистрироваться

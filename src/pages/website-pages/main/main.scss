@@ -1,0 +1,43 @@
+@import '../../../components/headers-and-footers/header/header';
+@import '../../../components/cards/room-search-form/room-search-form';
+@import '../../../components/headers-and-footers/footer/footer';
+//@import '../../../../node_modules/swiper/swiper';
+//@import '../../../../node_modules/swiper/swiper-vars';
+
+.main{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.content{
+  width: 100%;
+  position: relative;
+}
+.content__background{
+  width: 100%;
+  height: 100%;
+}
+.content__background-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content__room-search-form{
+  position: absolute;
+  top: 126px;
+  left: 126px;
+  width: 360px;
+  height: 360px;
+  z-index: 50;
+}
+.content__background-text{
+  position: absolute;
+  width: 297px;
+  height: 48px;
+  right: 150px;
+  bottom: 18px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $darkShade75;
+  text-align: right;
+}

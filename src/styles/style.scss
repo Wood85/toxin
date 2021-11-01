@@ -2,8 +2,9 @@
 @import 'fonts';
 //@import '../pages/colors-and-type/colors-and-type';
 //@import '../pages/form-elements/form-elements';
-@import '../pages/cards/cards';
+//@import '../pages/cards/cards';
 //@import '../pages/headers-and-footers/headers-and-footers';
+@import '../pages/website-pages/main/main';
 
 *{
   padding: 0;
@@ -27,6 +28,9 @@ h1, h2, h3 {
 }
 h1{
   font-size: 24px;
+  @media (max-width: 1350px) {
+    font-size: 22px;
+  }
 }
 h2{
   font-size: 18px;
@@ -34,6 +38,10 @@ h2{
 h3{
   font-size: 12px;
   line-height: 15px;
+  @media (max-width: 1350px) {
+    font-size: 11px;
+    line-height: 14px;
+  }
 }
 body{
   font-family: 'Montserrat';

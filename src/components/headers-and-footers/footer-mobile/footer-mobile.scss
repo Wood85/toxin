@@ -1,0 +1,17 @@
+@import '../logo-block/logo-block';
+@import '../social-networks-block/social-networks-block';
+@import '../copyright/copyright';
+
+.footer-mobile{
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-mobile__copyright{
+  padding-top: 10px;
+  padding-bottom: 23px;
+}
+.footer-mobile__social-networks{
+  padding-right: 20px;
+}

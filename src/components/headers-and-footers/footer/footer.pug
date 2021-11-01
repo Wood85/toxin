@@ -1,0 +1,44 @@
+include ../logo-block/logo-block
+include ../social-networks-block/social-networks-block
+include ../copyright/copyright
+include ../../form-elements/subscription-field/subscription-field
+
+-
+  const menuNavigationValues = ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+  const menuAboutUsValues = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+  const menuSupportValues = ['Соглашения', 'Сообщества', 'Связь с нами']
+
+footer.footer
+  .footer-top
+    .footer-top__description
+      .footer-top__description-logo
+        +logoBlock
+      .footer-top__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+    nav.footer-top__menu
+      .footer-top__menu-section
+        h3.footer-top__menu-title навигация
+        ul.footer-top__menu-list
+          each value in menuNavigationValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href="/mock-address/change-me") #{value}
+      .footer-top__menu-section
+        h3.footer-top__menu-title о нас
+        ul.footer-top__menu-list
+          each value in menuAboutUsValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href="/mock-address/change-me") #{value}
+      .footer-top__menu-section
+        h3.footer-top__menu-title служба поддержки
+        ul.footer-top__menu-list
+          each value in menuSupportValues
+            li.footer-top__menu-item
+              a.footer-top__menu-link(href="/mock-address/change-me") #{value}
+    .footer-top__subscription
+      h3.footer-top__subscription-title Подписка
+      .footer-top__subscription-text Получайте специальные предложения и новости сервиса
+      form.footer-top__subscription-form(action="#" method="post")
+        +subscriptionField
+  .footer-line
+  .footer-bottom
+    +copyright
+    +socialNetworksBlock

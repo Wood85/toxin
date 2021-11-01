@@ -10,7 +10,7 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
+        nextEl: '.room-card__slider-button-next',
         prevEl: '.room-card__slider-button-prev',
     }
 })
