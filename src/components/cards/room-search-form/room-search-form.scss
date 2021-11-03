@@ -12,26 +12,14 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  @media (max-width: 1350px) {
-    width: 345px;
-    height: 340px;
-    padding: 36px 25px 1px;
-  }
 }
 .room-search-form__title{
   line-height: 29.26px;
   padding-bottom: 22px;
-  @media (max-width: 1350px) {
-    line-height: 26px;
-    padding-bottom: 18px;
-  }
 }
 .room-search-form__body{
   &>div{
     padding-top: 20px;
-    @media (max-width: 1350px) {
-      padding-top: 14px;
-    }
     &:first-child{
       padding-top: 0;
     }

@@ -3,10 +3,6 @@
 .dropdown-quests{
   width: 320px;
   height: 64px;
-  @media (max-width: 1350px) {
-    width: 293px;
-    height: 58px;
-  }
 }
 .dropdown-quests__title{
   font-weight: 700;

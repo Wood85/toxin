@@ -1,21 +1,34 @@
 @import '../../../components/headers-and-footers/header/header';
+//@import '../../../components/headers-and-footers/header-with-profile/header-with-profile';
 @import '../../../components/cards/room-search-form/room-search-form';
+@import '../../../components/cards/calendar/calendar';
 @import '../../../components/headers-and-footers/footer/footer';
-//@import '../../../../node_modules/swiper/swiper';
-//@import '../../../../node_modules/swiper/swiper-vars';
+@import '../../../../node_modules/swiper/swiper';
+@import '../../../../node_modules/swiper/swiper-vars';
 
 .main{
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 .content{
-  width: 100%;
   position: relative;
+  width: 100%;
+}
+.content__header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 50;
 }
 .content__background{
   width: 100%;
-  height: 100%;
+}
+.swiper{
+  width: 100%;
 }
 .content__background-img{
   width: 100%;
@@ -24,20 +37,35 @@
 }
 .content__room-search-form{
   position: absolute;
-  top: 126px;
-  left: 126px;
-  width: 360px;
-  height: 360px;
+  top: 15.5%;
+  left: 9.7%;
+  width: 26.4%;
   z-index: 50;
+}
+.content__room-search-form-container{
+  position: relative;
+}
+.content__calendar{
+  //display: none;
+  position: absolute;
+  width: 320px;
+  height: 369px;
+  top: 192px;
+  left: 32px;
+  z-index: 51;
 }
 .content__background-text{
   position: absolute;
   width: 297px;
   height: 48px;
-  right: 150px;
-  bottom: 18px;
+  right: 9.2%;
+  bottom: 2.2%;
   font-size: 14px;
   line-height: 24px;
   color: $darkShade75;
   text-align: right;
+  z-index: 2;
+}
+.main__footer{
+  width: 100%;
 }

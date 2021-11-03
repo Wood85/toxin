@@ -1,7 +1,7 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
-// import './pages/website-pages/main/main'
-import AirDatepicker from 'air-datepicker'
+import './pages/website-pages/main/main'
+// import AirDatepicker from 'air-datepicker'
 
 //dropdown
 let isDrop = false
