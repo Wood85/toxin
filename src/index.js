@@ -1,7 +1,6 @@
 import * as $ from 'jquery'
 import './styles/style.scss'
 import './pages/website-pages/main/main'
-// import AirDatepicker from 'air-datepicker'
 
 //dropdown
 let isDrop = false
@@ -93,11 +92,6 @@ $(document).ready(function() {
     }else{
       $(".button-minus[data-title='bedrooms']").removeClass('limit')
     }
-
-    // switch(bedroomsValue){
-    //   case '1':
-    //     bedroomsTitle = 'спальня'
-    // }
 
     if(bedroomsValue==1){
       bedroomsTitle = 'спальня'
@@ -222,17 +216,6 @@ $(document).ready(function() {
   })
 })
 
-
-//calendar
-
-new AirDatepicker('.calendar__body',{
-  navTitles: {
-    days: '<h2 class="calendar__title-month">MMMM</h2> <h2 class="calendar__title-year">yyyy</h2>'
-  },
-  prevHtml:'<img class="calendar__arrow-prev" src="assets/img/arrow-prev.svg" alt="arrow-prev"/>',
-  nextHtml:'<img src="assets/img/arrow-forward.svg" alt="arrow-forward"/>',
-  range: true
-});
 
 
 

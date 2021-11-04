@@ -5,7 +5,7 @@
 .air-datepicker {
   --adp-font-family: 'Montserrat', sans-serif;
   --adp-font-size: 14px;
-  --adp-width: 246px; // Day cell width will be equal to 34px
+  --adp-width: 320px; // Day cell width will be equal to 34px
   --adp-z-index: 100;
   --adp-padding: 4px;
   --adp-grid-areas:
@@ -62,7 +62,7 @@
   --adp-cell-border-color-in-range: var(--adp-cell-background-color-selected);
 
   --adp-btn-height: 32px;
-  --adp-btn-color: var(--adp-accent-color);
+  --adp-btn-color: #BC9CFF;
   --adp-btn-color-hover: var(--adp-color);
   --adp-btn-border-radius: var(--adp-border-radius);
   --adp-btn-background-color-hover: var(--adp-background-color-hover);

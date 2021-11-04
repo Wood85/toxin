@@ -1,13 +1,13 @@
 @import 'air-datepicker/air-datepicker';
 
 .calendar{
-  width: 320px;
-  height: 369px;
+  //width: 320px;
+  //min-height: 369px;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
   padding-right: 7px;
-  background: #FFFFFF;
+  //background: #FFFFFF;
   border: 1px solid $darkShade25;
   box-shadow: 0 10px 20px $darkShade50;
   border-radius: 4px;
@@ -21,19 +21,4 @@
 }
 .calendar__title-month{
   padding-right: 4px;
-}
-.calendar__buttons{
-  width: 280px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 28px;
-  margin-left: 20px;
-}
-.calendar__button{
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $purple;
-  background-color: transparent;
 }
