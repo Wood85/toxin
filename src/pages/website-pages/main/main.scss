@@ -3,8 +3,8 @@
 @import '../../../components/cards/room-search-form/room-search-form';
 @import '../../../components/cards/calendar/calendar';
 @import '../../../components/headers-and-footers/footer/footer';
-// @import '../../../../node_modules/swiper/swiper';
-// @import '../../../../node_modules/swiper/swiper-vars';
+@import '../../../../node_modules/swiper/swiper';
+@import '../../../../node_modules/swiper/swiper-vars';
 
 .main{
   display: flex;
@@ -50,10 +50,10 @@
   position: absolute;
   width: 320px;
   background-color: #FFFFFF;
-  // height: 369px;
   top: 192px;
   left: 32px;
   z-index: 51;
+  border-radius: 4px;
 }
 .content__background-text{
   position: absolute;

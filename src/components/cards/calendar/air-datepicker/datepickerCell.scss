@@ -17,7 +17,8 @@
   color: $darkShade50;
   z-index: 1; // ?
 
-  &.-current- {
+  &.-current-,
+  &.-current-.-in-range-{
     color: var(--adp-color-current-date);
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 22px;
@@ -25,7 +26,6 @@
 
   &.-disabled- {
     cursor: default;
-    color: var(--adp-color-disabled);
 
     &.-focus- {
       color: var(--adp-color-disabled);
@@ -36,9 +36,7 @@
     }
 
     &.-current- {
-      &.-focus- {
-        color:var(--adp-color-disabled);
-      }
+      color: #FFFFFF;
     }
   }
 

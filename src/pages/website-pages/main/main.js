@@ -1,14 +1,14 @@
 import '../../../components/cards/calendar/calendar'
 
-// import Swiper from 'swiper';
-// const mainSwiper = new Swiper('.swiper', {
-//     loop: true,
-//     autoplay: {
-//         delay: 1000,
-//         stopOnLastSlide: false,
-//         disableOnInteraction: false
-//     }
-// })
+import Swiper from 'swiper';
+const mainSwiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+        delay: 1000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false
+    }
+})
 
 const valueDateDropdown = document.querySelectorAll('.date-dropdown__input')
 const calendar = document.querySelector('.content__calendar')
@@ -28,4 +28,4 @@ calendarButton.forEach(function (btn) {
   }
 })
 const calendarBody = document.querySelector('.calendar__body')
-const valueDateDropdown1 = document.querySelector('#date-dropdown__input1').value = selectedDates[0]
+const valueDateDropdown1 = document.querySelector('#date-dropdown__input1').value = arraySelectedDates[1]
