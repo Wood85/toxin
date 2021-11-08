@@ -32,7 +32,7 @@ module.exports = {
     },
     output: {
         filename: '[name].[hash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
 
     },
     optimization: optimization(),
@@ -86,7 +86,11 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            }
+            },
+            // {
+            //     test:/\.(png|svg|jpg|jpeg|gif)$/i,
+            //     type:'asset/resource',
+            // }
         ]
     }
 }
