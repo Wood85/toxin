@@ -16,6 +16,9 @@
 .room-search-form__title{
   line-height: 29.26px;
   padding-bottom: 22px;
+  @media (max-width: 1350px) {
+    width: 300px;
+  }
 }
 .room-search-form__body{
   &>div{

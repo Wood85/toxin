@@ -10,11 +10,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 1342px;
 }
 .content{
   position: relative;
   width: 100%;
+  height: 67%;
+  @media (min-width: 1441px) {
+    height: 1790px;
+  }
 }
 .content__header{
   position: absolute;
@@ -26,9 +30,11 @@
 }
 .content__background{
   width: 100%;
+  height: 100%;
 }
 .swiper{
   width: 100%;
+  height: 100%;
 }
 .content__background-img{
   width: 100%;

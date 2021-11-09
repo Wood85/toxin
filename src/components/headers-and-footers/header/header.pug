@@ -1,4 +1,5 @@
 include ../logo-block/logo-block
+include ../../form-elements/button-transparent/button-transparent
 
 -
   const menuValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
@@ -13,5 +14,6 @@ header.header
           li.header__menu-item
             a.header__menu-link(href="/mock-address/change-me") #{value}
       .header__authentication-block
-        a.header__button-login(href="/mock-address/change-me") войти
+        .header__button-login
+          +buttonTransparent("войти")
         a.header__button-register(href="/mock-address/change-me") зарегистрироваться

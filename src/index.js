@@ -2,6 +2,7 @@ import * as $ from 'jquery'
 import './styles/style.scss'
 import './pages/website-pages/main/main'
 
+
 //dropdown
 let isDrop = false
 $('.dropdown-selection__trigger').click(function () {
