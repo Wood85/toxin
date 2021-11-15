@@ -8,6 +8,12 @@
   height: 443px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    height: content-box;
+  }
 }
 .footer-top{
   display: flex;
@@ -17,13 +23,32 @@
   @media (max-width: 1430px) {
     width: 90%;
   }
+  @media (max-width: 1050px) {
+    width: 95%;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 .footer-top__description{
   flex: 0 0 25.86%;
   padding: 0 40px 0 0;
+  @media (max-width: 1050px) {
+    padding-right: 10px;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13px;
+  }
 }
 .footer-top__description-text{
   padding-top: 10px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .footer-top__menu{
   display: flex;
@@ -32,10 +57,16 @@
   @media (max-width: 1320px) {
     flex: 0 0 46.73%;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .footer-top__menu-section{
   flex: 0 0 33.33%;
   padding-right: 20px;
+  @media (max-width: 1050px) {
+    padding-right: 10px;
+  }
 }
 .footer-top__menu-item{
   padding: 15px 0 0;
@@ -58,6 +89,9 @@
   @media (max-width: 1320px) {
     flex: 0 0 27.41%;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .footer-top__subscription-text{
   padding: 17px 0 23px;
@@ -70,11 +104,19 @@
   display: flex;
   width: 97%;
   position: relative;
+  &>div {
+    @media (max-width: 1050px) {
+      width: 100%;
+    }
+  }
 }
 .footer-line{
   width: 100vw;
   height: 1px;
   background-color: #E5E5E5;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .footer-bottom{
   width: 80.56%;
@@ -83,4 +125,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    height: 67px;
+    width: 99%;
+  }
+  &>div:first-child {
+    @media (max-width: 768px) {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    @media (max-width: 380px) {
+      width: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
 }

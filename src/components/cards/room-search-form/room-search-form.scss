@@ -12,15 +12,29 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media (max-width: 380px) {
+    width: 100%;
+    padding: 40px 0 30px;
+  }
 }
 .room-search-form__title{
   line-height: 29.26px;
   padding-bottom: 22px;
   @media (max-width: 1350px) {
-    width: 300px;
+    width: 320px;
+    padding-right: 20px;
+  }
+  @media (max-width: 380px) {
+    margin: 0 auto;
+  }
+  @media (max-width: 330px) {
+    margin: 0 5px;
   }
 }
 .room-search-form__body{
+  @media (max-width: 380px) {
+    margin: 0 auto;
+  }
   &>div{
     padding-top: 20px;
     &:first-child{
