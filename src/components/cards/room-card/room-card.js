@@ -5,6 +5,13 @@ Swiper.use([Navigation, Pagination])
 
 const swiper = new Swiper('.swiper', {
     loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

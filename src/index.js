@@ -140,8 +140,10 @@ $(document).ready(function() {
     let adultsValue = $(".quantity[name='adults']").val()
     let childrenValue = $(".quantity[name='children']").val()
     let babiesValue = $(".quantity[name='babies']").val()
-    let countsQuests = Number(adultsValue) + Number(childrenValue) + Number(babiesValue)
+    let countsQuests = Number(adultsValue) + Number(childrenValue)
+    let countsBabies = Number(babiesValue)
     let questsTitle = 'гостей'
+    let babiesTitle = 'младенцев'
 
     $('.dropdown-quests__reset').click(function () {
       $(".quantity[name='adults']").val(0)
@@ -164,7 +166,7 @@ $(document).ready(function() {
       }
     )
 
-    if (countsQuests==0) {
+    if(countsQuests==0) {
       countsQuests= 'Сколько'
       questsTitle = 'гостей'
     }
@@ -173,11 +175,19 @@ $(document).ready(function() {
     }else{
       $('.dropdown-quests__reset').css('visibility','hidden')
     }
-    if (countsQuests==1 || countsQuests==21) {
+    if(countsQuests==1 || countsQuests==21) {
       questsTitle = 'гость'
     }
-    if ((countsQuests > 1 && countsQuests < 5) || (countsQuests > 21 && countsQuests < 25)) {
+    if((countsQuests > 1 && countsQuests < 5) || (countsQuests > 21 && countsQuests < 25)) {
       questsTitle = 'гостя'
+    }
+
+    if(countsBabies==1 || countsBabies==21) {
+      babiesTitle = 'младенец'
+    }
+
+    if((countsBabies > 1 && countsBabies < 5) || (countsBabies > 21 && countsBabies < 25)) {
+      babiesTitle = 'младенца'
     }
 
     if(adultsValue==0) {
@@ -185,7 +195,7 @@ $(document).ready(function() {
     }else{
       $(".button-minus[data-title='adults']").removeClass('limit')
     }
-    if(bedroomsValue==10) {
+    if(adultsValue==10) {
       $(".button-plus[data-title='adults']").addClass('limit')
     }else{
       $(".button-plus[data-title='adults']").removeClass('limit')
@@ -196,7 +206,7 @@ $(document).ready(function() {
     }else{
       $(".button-minus[data-title='children']").removeClass('limit')
     }
-    if(bedroomsValue==10) {
+    if(childrenValue==10) {
       $(".button-plus[data-title='children']").addClass('limit')
     }else{
       $(".button-plus[data-title='children']").removeClass('limit')
@@ -206,13 +216,16 @@ $(document).ready(function() {
     }else{
       $(".button-minus[data-title='babies']").removeClass('limit')
     }
-    if(bedroomsValue==10) {
+    if(babiesValue==10) {
       $(".button-plus[data-title='babies']").addClass('limit')
     }else{
       $(".button-plus[data-title='babies']").removeClass('limit')
     }
-
-    $('.dropdown-quests__backdrop').val(`${countsQuests} ${questsTitle}`)
+    if(countsBabies > 0){
+      $('.dropdown-quests__backdrop').val(`${countsQuests} ${questsTitle}, ${countsBabies} ${babiesTitle}`)
+    }else{
+      $('.dropdown-quests__backdrop').val(`${countsQuests} ${questsTitle}`)
+    }
 
   })
 })

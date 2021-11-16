@@ -5,6 +5,8 @@
 @import '../../../components/headers-and-footers/footer/footer';
 @import '../../../../node_modules/swiper/swiper';
 @import '../../../../node_modules/swiper/swiper-vars';
+@import '../../../../node_modules/swiper/modules/effect-fade/effect-fade';
+@import '../../../../node_modules/swiper/modules/autoplay/autoplay';
 
 .main{
   display: flex;
@@ -27,6 +29,7 @@
   width: 100%;
   height: 70px;
   max-height: 7vh;
+  min-height: 40px;
   z-index: 500;
 }
 .content__background{
