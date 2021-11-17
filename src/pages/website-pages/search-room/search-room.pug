@@ -1,5 +1,83 @@
+include  ../../../components/form-elements/filter-date-dropdown/filter-date-dropdown
+include  ../../../components/form-elements/dropdown-quests/dropdown-quests
+include  ../../../components/form-elements/range-slider/range-slider
+include  ../../../components/form-elements/checkbox-buttons/checkbox-buttons
+include  ../../../components/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
+include  ../../../components/form-elements/dropdown-selection/dropdown-selection
+include  ../../../components/form-elements/expandable-checkbox-list/expandable-checkbox-list
+include ../../../components/cards/room-card/room-card
+include ../../../components/form-elements/pagination/pagination
+
+
 include  ../../../components/headers-and-footers/header/header
 main.search-room
   .search-room__options
+    .search-room__filter-date
+      +filterDateDropdown("дата пребывания в отеле", "19 авг", "23 авг")
+    .search-room__dropdown-quests
+      +dropdownQuests("гости")
+    .search-room__price-range
+      +rangeSlider("диапазон цен","0","18000","100","5000","10000")
+      .search-room__price-range-text Стоимость за сутки пребывания в номере
+    .search-room__house-rules
+      +checkboxButtons("правила дома")
+    .search-room__reach
+      +richCheckboxButtons("доступность")
+    .search-room__room-amenities
+      +dropdownSelection("удобства номера")
+    .search-room__additional-amenities
+      +expandableCheckboxList("дополнительные удобства")
   .search-room__result
+    h1.search-room__title Номера, которые мы для вас подобрали
+    .search-room__rooms
+      .search-room__room
+        +roomCard("888","люкс", "9 990₽", "5", "145", "./assets/img/rooms-img/lux-img.jpg",
+          "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg",
+          "lux-img", "room-img", "lux-img", "room-img")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+      .search-room__room
+        +roomCard("840","", "9 900₽", "4", "65", "./assets/img/rooms-img/room-img.jpg",
+          "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
+          "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
+    .search-room__paginator
+.border-bottom-line
 include  ../../../components/headers-and-footers/footer/footer

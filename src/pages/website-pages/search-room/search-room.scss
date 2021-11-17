@@ -1,2 +1,40 @@
 @import '../../../components/headers-and-footers/header/header';
+@import '../../../components/form-elements/filter-date-dropdown/filter-date-dropdown';
+@import '../../../components/form-elements/dropdown-quests/dropdown-quests';
+@import '../../../components/form-elements/range-slider/range-slider';
+@import '../../../components/form-elements/checkbox-buttons/checkbox-buttons';
+@import '../../../components/form-elements/rich-checkbox-buttons/rich-checkbox-buttons';
+@import '../../../components/form-elements/dropdown-selection/dropdown-selection';
+@import '../../../components/form-elements/expandable-checkbox-list/expandable-checkbox-list';
+@import '../../../components/cards/room-card/room-card';
+@import '../../../components/form-elements/pagination/pagination';
 @import '../../../components/headers-and-footers/footer/footer';
+
+.search-room{
+  display: flex;
+  width: 80.56%;
+  margin: 30px auto 0 auto;
+}
+.search-room__options{
+  width: 28.1%;
+  & > div{
+    margin-bottom: 20px;
+  }
+}
+.search-room__result{
+  width: 71.9%;
+}
+.search-room__rooms{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 12px -6px;
+}
+.search-room__room{
+  padding: 10px 6px;
+}
+.border-bottom-line{
+  width: 100%;
+  height: 1px;
+  background-color: $darkShade25;
+}
