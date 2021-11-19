@@ -7,10 +7,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 21px;
-  .title-form{
-    padding-bottom: 0;
-  }
+  margin-bottom: 23px;
+}
+.range-slider__title{
+  font-weight: 700;
+  color: $darkShade100;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
 }
 .range-slider__values{
   height: 100%;

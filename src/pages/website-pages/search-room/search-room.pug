@@ -13,11 +13,11 @@ include  ../../../components/headers-and-footers/header/header
 main.search-room
   .search-room__options
     .search-room__filter-date
-      +filterDateDropdown("дата пребывания в отеле", "19 авг", "23 авг")
+      +filterDateDropdown("даты пребывания в отеле", "19 авг", "23 авг")
     .search-room__dropdown-quests
       +dropdownQuests("гости")
     .search-room__price-range
-      +rangeSlider("диапазон цен","0","18000","100","5000","10000")
+      +rangeSlider("диапазон цены","0","15000","100","5000","10000")
       .search-room__price-range-text Стоимость за сутки пребывания в номере
     .search-room__house-rules
       +checkboxButtons("правила дома")
@@ -28,6 +28,10 @@ main.search-room
     .search-room__additional-amenities
       +expandableCheckboxList("дополнительные удобства")
   .search-room__result
+    .search-room__filters
+      .search-room__filters-container
+        img.search-room__filters-img(src="./assets/img/filter-icon.svg" alt="filter-icon")
+        .search-room__filters-text Фильтры
     h1.search-room__title Номера, которые мы для вас подобрали
     .search-room__rooms
       .search-room__room
@@ -79,5 +83,6 @@ main.search-room
           "./assets/img/rooms-img/lux-img.jpg", "./assets/img/rooms-img/room-img.jpg", "./assets/img/rooms-img/lux-img.jpg",
           "room-img", "lux-img", "room-img", "lux-img")(class="no-navigation")
     .search-room__paginator
+      +pagination
 .border-bottom-line
 include  ../../../components/headers-and-footers/footer/footer

@@ -18,6 +18,7 @@
 .footer-top{
   display: flex;
   width: 80.56%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 92px 0 97px;
   @media (max-width: 1430px) {
@@ -120,6 +121,7 @@
 }
 .footer-bottom{
   width: 80.56%;
+  max-width: 1200px;
   margin: 0 auto;
   height: 70px;
   display: flex;
