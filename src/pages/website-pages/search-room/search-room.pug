@@ -11,22 +11,24 @@ include ../../../components/form-elements/pagination/pagination
 
 include  ../../../components/headers-and-footers/header/header
 main.search-room
-  .search-room__options
-    .search-room__filter-date
-      +filterDateDropdown("даты пребывания в отеле", "19 авг", "23 авг")
-    .search-room__dropdown-quests
-      +dropdownQuests("гости")
-    .search-room__price-range
-      +rangeSlider("диапазон цены","0","15000","100","5000","10000")
-      .search-room__price-range-text Стоимость за сутки пребывания в номере
-    .search-room__house-rules
-      +checkboxButtons("правила дома")
-    .search-room__reach
-      +richCheckboxButtons("доступность")
-    .search-room__room-amenities
-      +dropdownSelection("удобства номера")
-    .search-room__additional-amenities
-      +expandableCheckboxList("дополнительные удобства")
+  .search-room__options.scroll-container
+    .search-room__options-viewport
+      .search-room__options-content
+        .search-room__filter-date
+          +filterDateDropdown("даты пребывания в отеле", "19 авг", "23 авг")
+        .search-room__dropdown-quests
+          +dropdownQuests("гости")
+        .search-room__price-range
+          +rangeSlider("диапазон цены","0","15000","100","5000","10000")
+          .search-room__price-range-text Стоимость за сутки пребывания в номере
+        .search-room__house-rules
+          +checkboxButtons("правила дома")
+        .search-room__reach
+          +richCheckboxButtons("доступность")
+        .search-room__room-amenities
+          +dropdownSelection("удобства номера")
+        .search-room__additional-amenities
+          +expandableCheckboxList("дополнительные удобства")
   .search-room__result
     .search-room__filters
       .search-room__filters-container
