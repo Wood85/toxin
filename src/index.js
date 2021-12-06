@@ -1,6 +1,6 @@
-import * as $ from 'jquery'
-import './styles/style.scss'
-import './pages/website-pages/search-room/search-room'
+import * as $ from 'jquery';
+import './styles/style.scss';
+import './pages/website-pages/search-room/search-room';
 
 
 //dropdown
@@ -228,8 +228,7 @@ $(document).ready(function() {
     }
 
   })
-})
-
+});
 
 
 
