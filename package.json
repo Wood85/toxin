@@ -33,9 +33,7 @@
   },
   "dependencies": {
     "air-datepicker": "^3.0.1",
-    "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.6.0",
-    "simple-pagination": "^1.0.0",
     "swiper": "^7.2.0"
   },
   "repository": "https://github.com/Wood85/toxin.git"
