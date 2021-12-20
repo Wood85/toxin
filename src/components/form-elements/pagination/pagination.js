@@ -30,9 +30,9 @@ function getPageList(totalPages, page, maxLength){
 
 $(function(){
   const numberOfItems = rooms.length,
-    limitPerPage = 12, //How many card items visible per a page
+    limitPerPage = 12, //Сколько карточек показано на странице
     totalPages = Math.ceil(numberOfItems / limitPerPage),
-    paginationSize = 5; //How many page elements visible in the pagination
+    paginationSize = 5; //Сколько элементов показывать в пагинации
   let currentPage;
 
   function showPage(whichPage){

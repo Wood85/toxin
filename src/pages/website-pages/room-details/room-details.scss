@@ -1,0 +1,32 @@
+@import '../../../components/headers-and-footers/header/header';
+@import '../../../components/headers-and-footers/footer/footer';
+
+.page-room-details{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.page-room-details__photos-container{
+  display: flex;
+  justify-content: space-between;
+  height: 485px;
+  width: 100%;
+}
+.page-room-details__photo_main{
+  flex: 1 1 68%;
+  overflow: hidden;
+}
+.page-room-details__photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page-room-details__photos{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 32%;
+  overflow: hidden;
+}
+.page-room-details__photo_secondary{
+  flex: 1 1 50%;
+}
