@@ -1,32 +1,148 @@
 @import '../../../components/headers-and-footers/header/header';
+@import '../../../components/form-elements/room-details-item/room-details-item';
+@import '../../../components/form-elements/reviews/reviews';
+@import '../../../components/form-elements/bullet-list/bullet-list';
+@import '../../../components/cards/room-reservation/room-reservation';
 @import '../../../components/headers-and-footers/footer/footer';
 
 .page-room-details{
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-.page-room-details__photos-container{
-  display: flex;
-  justify-content: space-between;
-  height: 485px;
-  width: 100%;
-}
-.page-room-details__photo_main{
-  flex: 1 1 68%;
-  overflow: hidden;
-}
-.page-room-details__photo{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.page-room-details__photos{
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 32%;
-  overflow: hidden;
-}
-.page-room-details__photo_secondary{
-  flex: 1 1 50%;
+
+  h2{
+    letter-spacing: 0.6px;
+  }
+
+  &__photos-container{
+    display: flex;
+    justify-content: space-between;
+    max-height: 485px;
+    width: 100%;
+  }
+
+  &__photo_main{
+    flex: 1 1 68%;
+    overflow: hidden;
+  }
+
+  &__photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__photos{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 32%;
+    overflow: hidden;
+  }
+
+  &__photo_secondary{
+    height: 50%;
+  }
+
+  &__info{
+    width: 80.6%;
+    max-width: 1200px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main-block{
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+  }
+  &__main-block-top{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__details{
+
+  }
+
+  &__details-title{
+
+  }
+
+  &__diagram{
+
+  }
+
+  &__diagram-title{
+
+  }
+
+  &__reviews{
+    margin-top: 13px;
+    margin-bottom: 33px;
+  }
+
+  &__reviews-title-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__reviews-title{
+
+  }
+
+  &__number-of-reviews{
+    margin-top: 3px;
+    color: $darkShade50;
+  }
+
+  &__reviews-content{
+
+  }
+
+  &__review{
+    margin-top: 19px;
+    &:last-child{
+      margin-top: 23px;
+    }
+  }
+
+  &__main-block-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__rules{
+
+  }
+
+  &__rules-title{
+    padding-left: 20px;
+    padding-bottom: 8px;
+  }
+
+  &__cancel{
+    width: 48.2%;
+    margin-right: 6px;
+  }
+
+  &__cancel-title{
+
+  }
+
+  &__cancel-text{
+    margin-right: 13px;
+    margin-top: 17px;
+  }
+
+  &__card{
+
+  }
+
+  &__line{
+    width: 100%;
+    height: 1px;
+    background-color: $darkShade25;
+  }
 }

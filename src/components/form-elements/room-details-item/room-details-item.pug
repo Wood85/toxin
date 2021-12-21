@@ -1,3 +1,5 @@
+//when adding class="room-details__line_hidden" mixin to the parameters, bottom line will be hidden
+
 mixin roomDetailsItem(img, alt, title, text)
   .room-details__container
     .room-details__item
@@ -6,4 +8,4 @@ mixin roomDetailsItem(img, alt, title, text)
       .room-details__info
         .room-details__title=title
         .room-details__text=text
-    .room-details__line
+    .room-details__line&attributes(attributes)
