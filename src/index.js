@@ -4,6 +4,8 @@ import './styles/style.scss';
 // import './pages/website-pages/search-room/search-room';
 import './pages/website-pages/room-details/room-details';
 
+
+
 //dropdown
 let isDrop = false
 $('.dropdown-selection__trigger').click(function () {
