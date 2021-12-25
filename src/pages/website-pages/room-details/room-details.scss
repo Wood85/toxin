@@ -49,19 +49,38 @@
     margin: 70px auto 64px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1430px) {
+      width: 90%;
+    }
+    @media (max-width: 1026px) {
+      width: 97%;
+    }
+    @media (max-width: 950px) {
+      flex-direction: column-reverse;
+      margin-top: 20px;
+    }
+    @media (max-width: 850px) {
+      width: 90%;
+    }
   }
 
   &__main-block{
     display: flex;
     flex-direction: column;
     padding-right: 70px;
+    @media (max-width: 1300px) {
+      padding-right: 40px;
+    }
   }
   &__main-block-top{
     display: flex;
+    @media (max-width: 1150px) {
+      justify-content: space-between;
+    }
   }
 
   &__details{
-    width: 51%;
+    width: 50.5%;
   }
 
   &__details-title{
@@ -69,7 +88,10 @@
   }
 
   &__diagram{
-    width: 49%;
+    width: 49.5%;
+    @media (max-width: 1150px) {
+      width: 40%;
+    }
   }
 
   &__diagram-title{
@@ -77,12 +99,17 @@
   }
 
   &__diagram-content{
-    //position: relative;
     display: flex;
     padding-top: 20px;
+    @media (max-width: 1150px) {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
   }
 
   &__chart-container{
+    position: relative;
     height: 122px;
     width: 122px;
   }
@@ -91,11 +118,28 @@
 
   }
 
+  &__chart-subtext{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 49%;
+    font-weight: 400;
+    color: $purple;
+    font-size: 15.5px;
+
+  }
+
   &__legend-list{
     display: flex;
     flex-direction: column-reverse;
     margin-top: 27px;
     margin-left: 18px;
+    @media (max-width: 1150px) {
+      margin-left: 0;
+    }
   }
   &__legend-item{
     align-items: center;
@@ -124,21 +168,6 @@
       background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
     }
   }
-
-  //&__chart-title{
-  //  position:absolute;
-  //  top: 83px;
-  //  left: 17%;
-  //  transform: translate(-50%, -50%);
-  //  text-align: center;
-  //  color: $purple;
-  //}
-  //
-  //&__chart-title_top{
-  //  font-size: 24px;
-  //  font-weight: 700;
-  //  line-height: 20px;
-  //}
 
   &__chart-title_bottom{
     font-size: 15px;
@@ -205,7 +234,9 @@
   }
 
   &__card{
-
+    @media (max-width: 950px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__line{

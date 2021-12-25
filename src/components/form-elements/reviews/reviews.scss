@@ -4,6 +4,12 @@
   width: 711px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 1250px) {
+    width: 600px;
+  }
+  @media (max-width: 1150px) {
+    width: 500px;
+  }
 }
 .reviews__user-profile{
   display: flex;
