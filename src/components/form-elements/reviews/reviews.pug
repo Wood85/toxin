@@ -4,7 +4,7 @@ mixin reviews(img, name, data, count, text)
   .reviews
     .reviews__user-profile
       .reviews__user-avatar
-        img(src=img alt="user-avatar")
+        img.reviews__user-avatar-img(src=img alt="user-avatar")
       .reviews__user-info
         .reviews__user-name=name
         .reviews__data=data

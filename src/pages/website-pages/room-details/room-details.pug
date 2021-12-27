@@ -17,9 +17,10 @@ main.page-room-details
       .page-room-details__main-block-top
         .page-room-details__details
           h2.page-room-details__details-title Сведения о номере
-          +roomDetailsItem('./assets/img/smile-icon.svg', "smile-icon", 'Комфорт', 'Шумопоглощающие стены')
-          +roomDetailsItem('./assets/img/city-icon.svg', "city-icon", 'Удобство', 'Окно в каждой из спален')
-          +roomDetailsItem('./assets/img/fire-icon.svg', "fire-icon", 'Уют', 'Номер оснащён камином')(class="room-details__line_hidden")
+          .page-room-details__details-items
+            +roomDetailsItem('./assets/img/smile-icon.svg', "smile-icon", 'Комфорт', 'Шумопоглощающие стены')
+            +roomDetailsItem('./assets/img/city-icon.svg', "city-icon", 'Удобство', 'Окно в каждой из спален')
+            +roomDetailsItem('./assets/img/fire-icon.svg', "fire-icon", 'Уют', 'Номер оснащён камином')(class="room-details__line_hidden")
         .page-room-details__diagram
           h2.page-room-details__diagram-title Впечатления от номера
           .page-room-details__diagram-content

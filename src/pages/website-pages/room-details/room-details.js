@@ -1,7 +1,26 @@
+import '../../../components/headers-and-footers/header/header';
 import { Chart, registerables } from 'chart.js';
-
 Chart.register(...registerables);
 
+function arrayOfIntervals1(start, end, interval) {
+  const arr = [];
+  for(let i = start; i <= end; i = i+interval) {
+    if (i === 12 || i === 112 || i === 212 || i === 312 || i === 412 || i === 512 || i === 612 || i === 712 || i === 812 || i === 912) continue;
+    arr.push(i);
+    arr.push(i+1);
+    arr.push(i+2)
+  }
+  return arr;
+}
+
+function arrayOfIntervals2(start, end, interval) {
+  const arr = [];
+  for(let i = start; i <= end; i = i+interval) {
+    if (i === 11 || i === 111 || i === 211 || i === 311 || i === 411 || i === 511 || i === 611 || i === 711 || i === 811 || i === 911) continue;
+    arr.push(i);
+  }
+  return arr;
+}
 
 const labels = ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
   dataArray = [130, 65, 65, 0],
@@ -11,11 +30,13 @@ const labels = ['Великолепно', 'Хорошо', 'Удовлетвор�
   gradientTwo = ctx.createLinearGradient(0, 61, 0, 122),
   gradientThree = ctx.createLinearGradient(0, 0, 0, 61),
   gradientFour = ctx.createLinearGradient(0, 180, 0, 192),
-  colors = [];
+  colors = [],
+  firstArrayOfIntervals = arrayOfIntervals1(2,1000, 10),
+  secondArrayOfIntervals = arrayOfIntervals2(1,1000,10);
 let voices;
-if(dataSum > 1 && dataSum < 5 && dataSum > 21 && dataSum < 25) {
+if(firstArrayOfIntervals.includes(dataSum)) {
   voices = 'голоса';
-} else if(dataSum === 1 && dataSum === 21 && dataSum === 31) {
+} else if(secondArrayOfIntervals.includes(dataSum)) {
   voices = 'голос';
 } else {
   voices = 'голосов';

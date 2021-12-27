@@ -12,10 +12,19 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media (max-width: 340px) {
+    padding: 20px 10px;
+    height: 458px;
+    width: 340px;
+  }
 }
 .room-reservation__info{
   display: flex;
   justify-content: space-between;
+  @media (max-width: 340px) {
+    width: 310px;
+    margin: 0 auto;
+  }
 }
 .room-reservation__title{
   display: flex;
@@ -68,6 +77,10 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+  @media (max-width: 340px) {
+    width: 310px;
+    margin: 0 auto;
+  }
 }
 .room-reservation__item{
   display: flex;
@@ -93,6 +106,10 @@ a.room-reservation__icon-info-link{
 .room-reservation__total{
   display: flex;
   margin-top: 20px;
+  @media (max-width: 340px) {
+    width: 310px;
+    margin: 0 auto;
+  }
 }
 .room-reservation__total-title,
 .room-reservation__total-amount{
@@ -114,4 +131,8 @@ a.room-reservation__icon-info-link{
 }
 .room-reservation__reservation-button{
   margin-top: 21px;
+  @media (max-width: 340px) {
+    width: 310px;
+    margin: 15px auto 0 auto;
+  }
 }
