@@ -8,6 +8,7 @@
     text-align: center;
     user-select: none;
   }
+
   &__item {
     cursor: pointer;
   }
@@ -71,11 +72,9 @@
     }
   }
 
-  &__item_disable {
+  &__item_disabled {
     display: none;
-    //opacity: 0;
-    //cursor: auto;
-    //transition: all .3s ease;
+
   }
   &__information-line {
     margin-top: 8px;

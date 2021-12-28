@@ -5,49 +5,58 @@ const rooms = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
   101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,
   139,140,141,142,143,144,145,146,147,148,149,150, 151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176];
 
-function getPageList(totalPages, page, maxLength){
-  function range(start, end){
+function getPageList(totalPages, page, maxLength) {
+  function range(start, end) {
     return Array.from(Array(end - start + 1), (_, i) => i + start);
   }
 
   const sideWidth = maxLength < 9 ? 1 : 2,
     leftWidth = (maxLength - sideWidth * 2 - 3) >> 1,
     rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
-  if(totalPages <= maxLength){
+
+  if(totalPages <= maxLength) {
     return range(1, totalPages);
   }
 
-  if(page <= maxLength - sideWidth - 1 - rightWidth){
+  if(page <= maxLength - sideWidth - 1 - rightWidth) {
     return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
   }
 
-  if(page >= totalPages - sideWidth - 1 - rightWidth){
+  if(page >= totalPages - sideWidth - 1 - rightWidth) {
     return range(1, sideWidth).concat(0, range(totalPages- sideWidth - 1 - rightWidth - leftWidth, totalPages));
   }
 
   return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
 }
 
-$(function(){
+$(function() {
   const numberOfItems = rooms.length,
-    limitPerPage = 12, //Сколько карточек показано на странице
+    //задаем количество карточек которое нужно отобразить на странице
+    limitPerPage = 12,
     totalPages = Math.ceil(numberOfItems / limitPerPage),
-    paginationSize = 5; //Сколько элементов показывать в пагинации
+    //устанавливаем количество элементов которые нужно показать в пагинаторе
+    paginationSize = 5;
   let currentPage;
+  const $paginationPanel = $('.js-pagination__panel');
 
-  function showPage(whichPage){
+  function showPage(whichPage) {
+
+    const $informationLine = $('.js-pagination__information-line'),
+      $item = $('.js-pagination__item');
+
     if(whichPage < 1 || whichPage > totalPages) return false;
 
     currentPage = whichPage;
 
-    // $('.card-content .card').hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
-
-    $('.pagination__item').slice(1, -1).remove();
+    $item.slice(1, -1).remove();
 
     getPageList(totalPages, currentPage, paginationSize).forEach(item => {
-      $('<li>').addClass('pagination__item').addClass(item ? 'pagination__current-page' : 'pagination__dots')
-        .toggleClass('pagination__item_active', item === currentPage).append($('<a>').addClass('pagination__page-link')
-        .attr({href: 'javascript:void(0)'}).text(item || '...')).insertBefore('.pagination__button_next');
+      const $link = $('<a>').addClass('pagination__page-link').attr({href: 'javascript:void(0)'}).text(item || '...');
+      $('<li>').addClass('pagination__item js-pagination__item')
+          .addClass(item ? 'pagination__current-page js-pagination__current-page' : 'pagination__dots')
+          .toggleClass('pagination__item_active', item === currentPage)
+        .append($link)
+        .insertBefore('.js-pagination__button_next');
     });
     const startTrim = currentPage * limitPerPage - (limitPerPage - 1);
     let endTrim = currentPage * limitPerPage,
@@ -63,37 +72,43 @@ $(function(){
       amountOfItems = numberOfItems;
     }
 
-    $('.pagination__information-line').remove();
+    $informationLine.remove();
 
-    $('<div>').addClass('pagination__information-line').insertAfter('.pagination__panel');
+    $('<div>').addClass('pagination__information-line js-pagination__information-line')
+      .text(`${startTrim} – ${endTrim} из ${amountOfItems} вариантов аренды`)
+      .insertAfter('.js-pagination__panel');
 
-    $('.pagination__information-line')
-      .text(`${startTrim} – ${endTrim} из ${amountOfItems} вариантов аренды`);
-
-    $('.pagination__button_prev').toggleClass('pagination__item_disable', currentPage === 1);
-    $('.pagination__button_next').toggleClass('pagination__item_disable', currentPage === totalPages);
+    $buttonPrev.toggleClass('pagination__item_disabled', currentPage === 1);
+    $buttonNext.toggleClass('pagination__item_disabled', currentPage === totalPages);
     return true;
   }
 
-  $('.pagination__panel').append(
-    $('<li>').addClass('pagination__item').addClass('pagination__button_prev').append($('<a>').addClass('pagination__page-link')
-      .attr({href: 'javascript:void(0)'})),
-    $('<li>').addClass('pagination__item').addClass('pagination__button_next').append($('<a>').addClass('pagination__page-link')
-      .attr({href: 'javascript:void(0)'}))
-  );
-  // $('.card-content').show();
+  const $link = $('<a>').addClass('pagination__page-link')
+    .attr({href: 'javascript:void(0)'});
+
+  const $createButtonPrev = $('<li>').addClass('pagination__item js-pagination__item pagination__button_prev js-pagination__button_prev')
+    .append($link);
+
+  const $createButtonNext = $('<li>').addClass('pagination__item js-pagination__item pagination__button_next js-pagination__button_next')
+    .append($link);
+
+  $paginationPanel.append($createButtonPrev,$createButtonNext);
+
+  const $document = $(document),
+    $buttonNext = $('.js-pagination__button_next'),
+    $buttonPrev = $('.js-pagination__button_prev');
+
   showPage(1);
 
-  $(document).on('click', '.pagination__current-page:not(.pagination__item_active)', function(){
+  $document.on('click', '.js-pagination__current-page:not(.pagination__item_active)', function(){
     return showPage(+$(this).text());
   });
 
-  $('.pagination__button_next').on('click', function(){
+  $buttonNext.on('click', function(){
     return showPage(currentPage + 1);
   });
 
-  $('.pagination__button_prev').on('click', function(){
+  $buttonPrev.on('click', function(){
     return showPage(currentPage - 1);
   });
-
 });

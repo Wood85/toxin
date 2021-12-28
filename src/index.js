@@ -2,8 +2,8 @@ import * as $ from 'jquery';
 import './styles/style.scss';
 // import './pages/form-elements/form-elements';
 // import './pages/website-pages/main/main';
-// import './pages/website-pages/search-room/search-room';
-import './pages/website-pages/room-details/room-details';
+import './pages/website-pages/search-room/search-room';
+// import './pages/website-pages/room-details/room-details';
 
 
 
@@ -29,9 +29,7 @@ $('.dropdown-quests__trigger').click(function () {
     }else{
       $('.dropdown-quests__dropdown').slideUp()
       setTimeout(resetCSS, 400)
-      function resetCSS() {
-        $('.dropdown-quests__backdrop').css('border-radius', '4px')
-      }
+      resetCSS()
     }
     isDropQuests = !isDropQuests
 })
@@ -164,9 +162,7 @@ $(document).ready(function() {
       if (countsQuests > 0) {
         $('.dropdown-quests__dropdown').slideUp()
         setTimeout(resetCSS, 400)
-        function resetCSS() {
-          $('.dropdown-quests__backdrop').css('border-radius', '4px')
-        }}
+        resetCSS()}
       }
     )
 
@@ -233,6 +229,9 @@ $(document).ready(function() {
 
   })
 });
+function resetCSS() {
+  $('.dropdown-quests__backdrop').css('border-radius', '4px')
+}
 
 
 

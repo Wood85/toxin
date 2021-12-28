@@ -6,7 +6,7 @@ import './../../../components/form-elements/pagination/pagination';
 //Прокрутка контента внутри блока
 class ScrollBox {
   // минимальная высота ползунка скроллбара
-  static SCROLLER_HEIGHT_MIN = 25;
+  // static SCROLLER_HEIGHT_MIN = 25;
 
   constructor(container) {
     // область просмотра, в которой находится контент и скроллбар

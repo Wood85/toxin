@@ -131,7 +131,7 @@ const backgroundColors = colors,
   counter = {
     id: 'counter',
     beforeDraw(chart, args, options) {
-      const { ctx, chartArea: { top, right, bottom, left, width, height}} = chart;
+      const { ctx, chartArea: { top, left, width, height}} = chart;
       ctx.save();
       ctx.font = `${options.fontWeight} ${options.fontSize}px ${options.fontFamily}`;
       ctx.textAlign = 'center';
