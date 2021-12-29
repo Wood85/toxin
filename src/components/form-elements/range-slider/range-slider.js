@@ -10,10 +10,10 @@ const startValue = document.querySelector('.range-slider__value_1'),
 
 function setLeftValue() {
   let _this = inputLeft,
-      min = parseInt(_this.min),
-      max = parseInt(_this.max);
+      min = parseInt(_this.min, 10),
+      max = parseInt(_this.max, 10);
 
-  _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+  _this.value = Math.min(parseInt(_this.value, 10), parseInt(inputRight.value, 10) - 1);
 
   let percent = ((_this.value - min) / (max - min)) * max;
   startValue.textContent = (Math.floor(percent)).toLocaleString('ru');
@@ -25,10 +25,10 @@ setLeftValue();
 
 function setRightValue() {
   let _this = inputRight,
-    min = parseInt(_this.min),
-    max = parseInt(_this.max);
+    min = parseInt(_this.min, 10),
+    max = parseInt(_this.max, 10);
 
-  _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+  _this.value = Math.max(parseInt(_this.value, 10), parseInt(inputLeft.value, 10) + 1);
 
   let percent = ((_this.value - min) / (max - min)) * max;
 
