@@ -29,4 +29,17 @@
   &:hover:before{
     opacity: .5;
   }
+  &_size_small{
+    height: 30px;
+    width: 83px;
+    &:before{
+      @media (max-width: 850px) {
+        content: none;
+      }
+    }
+    @media (max-width: 850px) {
+      color: $darkShade50;
+      width: 100%;
+    }
+  }
 }

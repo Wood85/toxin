@@ -1,2 +1,5 @@
-mixin buttonTransparent(text)
-  button.button-transparent=text
+mixin buttonTransparent(options)
+  if options.sizeSmall
+    button.button-transparent(class="button-transparent_size_small")=options.text
+  else
+      button.button-transparent=options.text

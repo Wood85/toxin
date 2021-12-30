@@ -1,16 +1,8 @@
 .input-masked{
   width: 320px;
   height: 64px;
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-
-  input[type='number'],
-  input[type="number"]:hover,
-  input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+  @media (max-width: 340px) {
+    width: 310px;
   }
 }
 .input-masked__title{
@@ -32,6 +24,9 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   width: 320px;
+  @media (max-width: 340px) {
+    width: 310px;
+  }
   &::placeholder{
     letter-spacing: 0;
   }
