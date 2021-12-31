@@ -7,17 +7,14 @@
   height: 358px;
   display: flex;
   flex-direction: column;
-  padding: 40px 30px 30px;
+  padding: 40px 30px 35px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.account-login__title{
-  padding-top: 2px;
-}
 .account-login__form{
-  margin-top: 23px;
+  margin-top: 21px;
 }
 .account-login__email{
 

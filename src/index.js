@@ -5,9 +5,7 @@ import './styles/style.scss';
 // import './pages/website-pages/main/main';
 // import './pages/website-pages/search-room/search-room';
 // import './pages/website-pages/room-details/room-details';
-// import './pages/website-pages/registration/registration';
-// import './components/headers-and-footers/header/header';
-import './pages/website-pages/registration/registration';
+import './pages/website-pages/ayth/auth';
 
 
 //dropdown
