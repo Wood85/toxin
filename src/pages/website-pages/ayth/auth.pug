@@ -1,3 +1,5 @@
+- let isAuth = false;
+
 .auth
   .auth__content
     .auth__header
@@ -10,7 +12,11 @@
           .swiper-slide
             img.auth__background-img(src="./assets/img/main-bg-1.jpg" alt="background-image")
     .auth__card
-      //include ../../../components/cards/account-registration/account-registration
-      include ../../../components/cards/account-login/account-login
+      if isAuth
+        .auth__card-sign-in
+          include ../../../components/cards/account-login/account-login
+      else
+        .auth__card-registration
+           include ../../../components/cards/account-registration/account-registration
   .auth__footer
     include  ../../../components/headers-and-footers/footer/footer
