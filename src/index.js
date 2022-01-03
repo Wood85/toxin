@@ -1,39 +1,10 @@
-import * as $ from 'jquery';
 import './styles/style.scss';
 // import './pages/cards/cards';
 // import './pages/form-elements/form-elements';
 // import './pages/website-pages/main/main';
-// import './pages/website-pages/search-room/search-room';
+import './pages/website-pages/search-room/search-room';
 // import './pages/website-pages/room-details/room-details';
-import './pages/website-pages/ayth/auth';
-
-
-//dropdown
-let isDrop = false
-$('.dropdown-selection__trigger').click(function () {
-  if(!isDrop) {
-    $('.dropdown-selection__dropdown').slideDown()
-  }else{
-    $('.dropdown-selection__dropdown').slideUp()
-  }
-    isDrop = !isDrop
-})
-//dropdownQuests
-let isDropQuests = false
-$('.dropdown-quests__trigger').click(function () {
-    if(!isDropQuests) {
-      $('.dropdown-quests__dropdown').slideDown()
-      $('.dropdown-quests__backdrop').css('border-radius', '4px 4px 0 0 ')
-      $(".button-minus[data-title='adults']").addClass('limit')
-      $(".button-minus[data-title='children']").addClass('limit')
-      $(".button-minus[data-title='babies']").addClass('limit')
-    }else{
-      $('.dropdown-quests__dropdown').slideUp()
-      setTimeout(resetCSS, 400)
-      resetCSS()
-    }
-    isDropQuests = !isDropQuests
-})
+// import './pages/website-pages/auth/auth';
 
 //expandableCheckboxList
 let isExpandable = false

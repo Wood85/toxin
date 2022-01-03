@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path'),
   HTMLWebpackPlugin = require('html-webpack-plugin'),
   {CleanWebpackPlugin} = require('clean-webpack-plugin'),
@@ -8,7 +9,7 @@ const path = require('path'),
   ESLintWebpackPlugin = require('eslint-webpack-plugin'),
 
   isDev = process.env.NODE_ENV === 'development',
-  isProd = !isDev,
+  isProd = !isDev;
 
   optimization = () => {
     const config = {
@@ -46,6 +47,11 @@ module.exports = {
       minify: {
         collapseWhitespace: isProd
       }
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jquery': 'jquery'
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({

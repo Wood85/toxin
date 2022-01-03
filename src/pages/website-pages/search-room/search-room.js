@@ -2,6 +2,8 @@ import './../../../components/headers-and-footers/header/header';
 import './../../../components/form-elements/range-slider/range-slider';
 import './../../../components/cards/room-card/room-card';
 import './../../../components/form-elements/pagination/pagination';
+import './../../../components/form-elements/dropdown-selection/dropdown-selection';
+import './../../../components/form-elements/dropdown-quests/dropdown-quests';
 
 //Прокрутка контента внутри блока
 class ScrollBox {
