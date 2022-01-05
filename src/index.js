@@ -2,27 +2,61 @@ import './styles/style.scss';
 // import './pages/cards/cards';
 // import './pages/form-elements/form-elements';
 // import './pages/website-pages/main/main';
-import './pages/website-pages/search-room/search-room';
+// import './pages/website-pages/search-room/search-room';
 // import './pages/website-pages/room-details/room-details';
 // import './pages/website-pages/auth/auth';
+import {DropdownQuantity} from './components/form-elements/dropdown-quantity/dropdown-quantity';
 
-//expandableCheckboxList
-let isExpandable = false
-$('.expandable-checkbox-list__trigger').click(function () {
-  if(!isExpandable) {
-    $('.expandable-checkbox-list__dropdown').slideDown()
-    $(this).addClass('trigger-up')
-    $(this).removeClass('trigger-down')
-  }else{
-    $('.expandable-checkbox-list__dropdown').slideUp()
-    $(this).removeClass('trigger-up')
-    $(this).addClass('trigger-down')
-  }
-  isExpandable = !isExpandable
-})
+//====================
+const dropdown = new DropdownQuantity('#dropdown', {
+  placeholder: 'Сколько гостей',
+  data: [
+    {id: '1', title: 'взрослые', value: '1'},
+    {id: '2', title: 'дети', value: '2'},
+    {id: '3', title: 'младенцы', value: '3'}
+  ]
+});
 
-//quantitySelect
+window.d = dropdown;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//====================
+
+
+/*//quantitySelect
 $(document).ready(function() {
   $('body').on('click', '.button-minus, .button-plus', function(){
     let $row = $(this).closest('.quantity-change-block')
@@ -43,8 +77,8 @@ $(document).ready(function() {
     let $input = $(this)
     let $row = $input.closest('.quantity-change-block')
     let step = $row.data('step')
-    let min = parseInt($row.data('min'))
-    let max = parseInt($row.data('max'))
+    let min = parseInt($row.data('min'),10)
+    let max = parseInt($row.data('max'),10)
     let val = parseFloat($input.val())
     if (isNaN(val)) {
       val = step
@@ -203,7 +237,7 @@ $(document).ready(function() {
 });
 function resetCSS() {
   $('.dropdown-quests__backdrop').css('border-radius', '4px')
-}
+}*/
 
 
 

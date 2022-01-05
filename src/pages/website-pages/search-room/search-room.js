@@ -4,6 +4,7 @@ import './../../../components/cards/room-card/room-card';
 import './../../../components/form-elements/pagination/pagination';
 import './../../../components/form-elements/dropdown-selection/dropdown-selection';
 import './../../../components/form-elements/dropdown-quests/dropdown-quests';
+import './../../../components/form-elements/expandable-checkbox-list/expandable-checkbox-list';
 
 //Прокрутка контента внутри блока
 class ScrollBox {

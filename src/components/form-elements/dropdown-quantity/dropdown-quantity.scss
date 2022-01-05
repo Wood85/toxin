@@ -1,0 +1,92 @@
+$heightInput: 44px;
+$width: 266px;
+$inputBorder: 1px solid rgba(31, 32, 65, 0.25);
+$heightDropdown: 120px;
+
+
+.dropdown-quantity{
+  width: $width;
+  position: relative;
+  &.open{
+    .dropdown-quantity__dropdown{
+      display: block;
+    }
+  }
+
+  &__input{
+    height: $heightInput;
+    border: $inputBorder;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: space-between;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      background-image: url('../assets/img/check-black.png');
+      width: 12px;
+      height: 8px;
+      top: 50%;
+      right: 0;
+      transform: translate(-75%,-50%);
+    }
+  }
+
+  &__dropdown{
+    display: none;
+    position: absolute;
+    top: $heightInput;
+    border: $inputBorder;
+    border-radius: 4px;
+    left: 0;
+    right: 0;
+    height: $heightDropdown;
+    overflow-y: auto;
+    padding: 0 7px 7px 15px;
+  }
+
+  &__list{
+
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7px;
+  }
+
+  &__block-quantity{
+    display: flex;
+    width: 92px;
+    justify-content: space-between;
+    user-select: none;
+  }
+
+  &__button-minus,
+  &__button-plus{
+    height: 30px;
+    width: 30px;
+    border: 1px solid $darkShade50;
+    border-radius: 50%;
+    font-size: 18px;
+    color: $darkShade50;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__value{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $darkShade100;
+    padding-top: 7px;
+  }
+
+  &__button-plus{
+
+  }
+}
