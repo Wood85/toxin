@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'fonts';
-@import 'global';
+//@import 'global';
 //@import '../pages/colors-and-type/colors-and-type';
 //@import '../pages/form-elements/form-elements';
 //@import '../pages/cards/cards';
@@ -10,3 +10,6 @@
 //@import '../pages/website-pages/room-details/room-details';
 //@import '../pages/website-pages/auth/auth';
 @import '../components/form-elements/dropdown-selection/dropdown-selection';
+body{
+  padding: 100px;
+}
