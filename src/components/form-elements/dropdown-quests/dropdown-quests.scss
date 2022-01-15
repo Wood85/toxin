@@ -1,86 +1,143 @@
-@import '../quantity-change-block/quantity-change-block';
+@mixin dropdown-font {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $darkShade100;
+}
 
-.dropdown-quests{
+.dropdown-quests {
   width: 320px;
-  height: 64px;
-  @media (max-width: 340px) {
-    width: 310px;
-    margin: 0 auto;
+
+  .iqdropdown {
+    height: 44px;
+    border-radius: 4px 4px 0 0;
+    border-color: $darkShade25;
+
+    .iqdropdown-selection {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $darkShade75;
+      padding-bottom: 3.5px;
+      &::after {
+        background-image: none;
+      }
+    }
+
+    .iqdropdown-menu {
+      box-shadow: none;
+      top: 43px;
+      border: 1px solid $darkShade50;
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      padding: 5px 6px 7px 14px;
+      width: 320px;
+      margin: 0;
+      left: -1px;
+    }
+
+    .iqdropdown-menu-option {
+      justify-content: space-between;
+      height: 30px;
+      padding: 0;
+      margin-bottom: 7px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    .iqdropdown-item {
+      @include dropdown-font;
+      padding-bottom: 2px;
+    }
+
+    .iqdropdown-item-controls{
+      width: 92px;
+      height: 30px;
+      justify-content: space-between;
+
+      button {
+        align-items: center;
+        border: 1px solid $darkShade25;
+        display: flex;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        &:hover{
+          background-color: #FFFFFF;
+        }
+      }
+
+      button.button-decrement,
+      button.button-increment{
+        border-radius: 50%;
+        &.iqdropdown-limit {
+          border-color: $darkShade5;
+          .icon-decrement::after{
+            background: $darkShade5;
+          }
+          .icon-decrement.icon-increment::after{
+            background: $darkShade5;
+          }
+          .icon-decrement.icon-increment::before{
+            background: $darkShade5;
+          }
+        }
+      }
+
+      .counter {
+        @include dropdown-font;
+        border: none;
+        padding: 6px 0 0 0;
+      }
+    }
+
+    .icon-decrement {
+      display: inline-block;
+      height: 8px;
+      margin: auto;
+      min-width: 8px;
+      position: relative;
+      width: 8px;
+      &::after{
+        background: $darkShade50;
+        width: 4px;
+        height: 1.5px;
+        top: 4px;
+        left: 2px;
+      }
+    }
+
+    .icon-decrement.icon-increment{
+
+      &::before {
+        background: $darkShade50;
+        height: 1px;
+        top: 3px;
+        width: 7px;
+        left: 1px;
+      }
+      &::after{
+        background: $darkShade50;
+        width: 8px;
+        height: 1px;
+        top: 3px;
+        left: 0;
+
+      }
+    }
+
   }
-}
-.dropdown-quests__title{
-  font-weight: 700;
-  color: $darkShade100;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-}
-.dropdown-quests__select{
-  position: relative;
-  height: 68.75%;
-}
-.dropdown-quests__backdrop{
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  border: 1px solid $darkShade25;
-  padding-left: 4.7%;
-  background-color: #ffffff;
-  outline: none;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: $darkShade75;
-}
-.dropdown-quests__trigger{
-  width: 44px;
-  height: 100%;
-  cursor: pointer;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.dropdown-quests__dropdown{
-  display: none;
-  width: 100%;
-  height: 159px;
-  padding-left: 14px;
-  padding-right: 6px;
-  background-color: #ffffff;
-  border: 1px solid $darkShade25;
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-}
-.dropdown-quests__item{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 7px;
-}
-.dropdown-quests__item-title{
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  color: $darkShade100;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-}
-.dropdown-quests__buttons{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 19px;
-}
-.dropdown-quests__button{
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $purple;
-  background-color: transparent;
-  cursor: pointer;
-}
-.dropdown-quests__reset{
-  visibility: hidden;
-}
 
+  .iqdropdown.menu-open {
+    border-color: $darkShade50;
 
+    & .iqdropdown-selection::after{
+      background-image: none;
+    }
+  }
+
+}

@@ -21,6 +21,7 @@
       font-size: 14px;
       line-height: 24px;
       color: $darkShade75;
+      padding-bottom: 3.5px;
       &::after {
         background-image: none;
       }
@@ -73,7 +74,18 @@
       button.button-decrement,
       button.button-increment{
         border-radius: 50%;
-
+        &.iqdropdown-limit {
+          border-color: $darkShade5;
+          .icon-decrement::after{
+            background: $darkShade5;
+          }
+          .icon-decrement.icon-increment::after{
+            background: $darkShade5;
+          }
+          .icon-decrement.icon-increment::before{
+            background: $darkShade5;
+          }
+        }
       }
 
       .counter {
@@ -114,6 +126,7 @@
         height: 1px;
         top: 3px;
         left: 0;
+
       }
     }
 
