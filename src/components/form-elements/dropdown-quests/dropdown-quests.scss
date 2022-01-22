@@ -37,6 +37,28 @@
       width: 320px;
       margin: 0;
       left: -1px;
+
+      .iqdropdown-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 6px;
+        flex-direction: row-reverse;
+      }
+      .iqdropdown-button-clean,
+      .iqdropdown-button-apply {
+        color: $purple;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        font-family: Montserrat;
+      }
+      .iqdropdown-button-clean{
+        display: none;
+      }
+      .iqdropdown-button-clean_active{
+        display: block;
+      }
     }
 
     .iqdropdown-menu-option {
