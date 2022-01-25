@@ -10,6 +10,15 @@
 .dropdown-selection {
   width: 266px;
 
+  &__title {
+    font-weight: 700;
+    color: $darkShade100;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+
   .iqdropdown {
     height: 44px;
     border-radius: 4px 4px 0 0;
@@ -61,7 +70,7 @@
 
       button {
         align-items: center;
-        border: 1px solid $darkShade25;
+        border: 1px solid $darkShade50;
         display: flex;
         height: 30px;
         width: 30px;
@@ -75,15 +84,15 @@
       button.button-increment{
         border-radius: 50%;
         &.iqdropdown-limit {
-          border-color: $darkShade5;
+          border-color: $darkShade25;
           .icon-decrement::after{
-            background: $darkShade5;
+            background: $darkShade25;
           }
           .icon-decrement.icon-increment::after{
-            background: $darkShade5;
+            background: $darkShade25;
           }
           .icon-decrement.icon-increment::before{
-            background: $darkShade5;
+            background: $darkShade25;
           }
         }
       }

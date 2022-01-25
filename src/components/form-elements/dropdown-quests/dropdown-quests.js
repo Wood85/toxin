@@ -1,117 +1,137 @@
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+let isDrop = false;
+const selection = document.querySelector('.js-dropdown-quests__selection'),
+  selectionText = selection.querySelector('.js-dropdown-quests__selection-text'),
+  menu = document.querySelector('.js-dropdown-quests__menu'),
+  items = menu.querySelectorAll('.js-dropdown-quests__menu-item'),
+  cleanBtn = menu.querySelector('.js-dropdown-quests__button_clean'),
+  applyBtn = menu.querySelector('.js-dropdown-quests__button_apply'),
+  counts = menu.querySelectorAll('.js-dropdown-quests__count'),
+  decrementButtons = menu.querySelectorAll('.js-dropdown-quests__button-decrement'),
+  min = 0,
+  max = 10,
+  adultsItem = menu.querySelector('.js-dropdown-quests__menu-item[data-id="adults"]'),
+  kidsItem = menu.querySelector('.js-dropdown-quests__menu-item[data-id="kids"]'),
+  babiesItem = menu.querySelector('.js-dropdown-quests__menu-item[data-id="babies"]'),
+  adultsCount = menu.querySelector('.js-dropdown-quests__count[data-value="adults"]'),
+  kidsCount = menu.querySelector('.js-dropdown-quests__count[data-value="kids"]'),
+  babiesCount = menu.querySelector('.js-dropdown-quests__count[data-value="babies"]');
 
-$(document).ready(() => {
-  let $iqdropdown = $('.iqdropdown');
-  const $input = $('.iqdropdown-selection'),
-    $cleanBtn = $('.js-iqdropdown-button-clean'),
-    $dropdown = $('.dropdown-quests');
 
-  $iqdropdown.iqDropdown({
-    maxItems: 30,
-    minItems: 0,
-    controls: {
-      position: 'right',
-      displayCls: 'iqdropdown-item-display',
-      controlsCls: 'iqdropdown-item-controls',
-      counterCls: 'counter',
-    },
-    setSelectionText: (itemCount, totalItems) => {
+selectionText.textContent = `Сколько гостей`;
 
-      let quests = 'гость',
-        babies = 'младенец';
+const data = [0, 0, 0];
 
-      if ((itemCount.adults + itemCount.kids) > 1 && (itemCount.adults + itemCount.kids) < 5) {
-        quests = 'гостя';
-      }
+adultsCount.textContent = data[0];
+kidsCount.textContent = data[1];
+babiesCount.textContent = data[2];
 
-      if ((itemCount.adults + itemCount.kids) > 4) {
-        quests = 'гостей';
-      }
+if(data[0] === 0 && data[1] === 0 && data[2] === 0) {
+  decrementButtons.forEach(btn => btn.classList.add('dropdown-quests__button_disabled'));
+}
 
-      if (itemCount.babies > 1 && itemCount.babies < 5) {
-        babies = 'младенца';
-      }
-
-      if (itemCount.babies > 4) {
-        babies = 'младенцев';
-      }
-
-      let inputText = `${itemCount.adults + itemCount.kids} ${quests}, ${itemCount.babies} ${babies}`;
-
-      if (totalItems === 0) {
-        inputText = `Сколько гостей`;
-      }
-
-      if (totalItems > 0 && itemCount.babies === 0) {
-        inputText = `${itemCount.adults + itemCount.kids} ${quests}`;
-      }
-
-      if (itemCount.babies > 0 && itemCount.adults + itemCount.kids === 0) {
-        inputText = `${itemCount.babies} ${babies}`
-      }
-
-      $input.text(inputText);
-
-    },
-    onChange: (id, count, totalItems) => {
-      // console.log(id, count, totalItems
-
-      if (totalItems > 0) {
-        $cleanBtn.addClass('iqdropdown-button-clean_active');
-      } else {
-        $cleanBtn.removeClass('iqdropdown-button-clean_active');
-      }
-
-      if (id === 'adults' && count === 0) {
-        $('[data-id="adults"] .button-decrement').addClass('iqdropdown-limit');
-      } else if (id === 'adults' && count !== 0) {
-        $('[data-id="adults"] .button-decrement').removeClass('iqdropdown-limit');
-      }
-      if (id === 'adults' && count === 10) {
-        $('[data-id="adults"] .button-increment').addClass('iqdropdown-limit');
-      } else if (id === 'adults' && count !== 10) {
-        $('[data-id="adults"] .button-increment').removeClass('iqdropdown-limit');
-      }
-
-      if (id === 'kids' && count === 0) {
-        $('[data-id="kids"] .button-decrement').addClass('iqdropdown-limit');
-      } else if (id === 'kids' && count !== 0) {
-        $('[data-id="kids"] .button-decrement').removeClass('iqdropdown-limit');
-      }
-      if (id === 'kids' && count === 10) {
-        $('[data-id="kids"] .button-increment').addClass('iqdropdown-limit');
-      } else if (id === 'kids' && count !== 10) {
-        $('[data-id="kids"] .button-increment').removeClass('iqdropdown-limit');
-      }
-
-      if (id === 'babies' && count === 0) {
-        $('[data-id="babies"] .button-decrement').addClass('iqdropdown-limit');
-      } else if (id === 'babies' && count !== 0) {
-        $('[data-id="babies"] .button-decrement').removeClass('iqdropdown-limit');
-      }
-      if (id === 'babies' && count === 10) {
-        $('[data-id="babies"] .button-increment').addClass('iqdropdown-limit');
-      } else if (id === 'babies' && count !== 10) {
-        $('[data-id="babies"] .button-increment').removeClass('iqdropdown-limit');
-      }
-    }
-  });
-
-  $cleanBtn.on('click', function () {
-    $input.text('Сколько гостей');
-    const $counters = $('.counter');
-    $counters.each(function() {
-      $(this).text(0);
-    });
-  });
-
+selection.addEventListener('click', function () {
+  if(isDrop) {
+    menu.classList.remove('dropdown-quests__menu_open');
+    selection.style.borderColor = 'rgba(31, 32, 65, 0.25)';
+  } else {
+    menu.classList.add('dropdown-quests__menu_open');
+    selection.style.borderColor = 'rgba(31, 32, 65, 0.5)';
+  }
+  isDrop = !isDrop;
 });
 
 
+items.forEach(item => item.querySelector('.js-dropdown-quests__button-increment').addEventListener('click', function () {
+  const count = item.querySelector('.js-dropdown-quests__count'),
+    val = parseInt(count.textContent, 10);
+  count.textContent = val + 1;
+  const incrementBtn = item.querySelector('.js-dropdown-quests__button-increment'),
+    decrementBtn = item.querySelector('.js-dropdown-quests__button-decrement');
+  if (count.textContent > max) {
+    count.textContent = max;
+  }
+  if (parseInt(count.textContent, 10) === max) {
+    incrementBtn.classList.add('dropdown-quests__button_disabled');
+  }else if (count.textContent > min){
+    decrementBtn.classList.remove('dropdown-quests__button_disabled');
+  }
+  if (item === adultsItem) {
+    data[0] = (parseInt(count.textContent, 10))
+    showSelectionText();
+  }else if (item === kidsItem) {
+    data[1] = (parseInt(count.textContent, 10))
+    showSelectionText();
+  }else if (item === babiesItem) {
+    data[2] = (parseInt(count.textContent, 10))
+    showSelectionText();
+  }
+}));
 
 
+items.forEach(item => item.querySelector('.js-dropdown-quests__button-decrement').addEventListener('click', function () {
+  const count = item.querySelector('.js-dropdown-quests__count'),
+    val = parseInt(count.textContent, 10);
+  count.textContent = val - 1;
+  const incrementBtn = item.querySelector('.js-dropdown-quests__button-increment'),
+    decrementBtn = item.querySelector('.js-dropdown-quests__button-decrement');
+  if (count.textContent < min) {
+    count.textContent = min;
+  }
+  if (parseInt(count.textContent, 10) === min) {
+    decrementBtn.classList.add('dropdown-quests__button_disabled');
+  }else if (count.textContent < max){
+    incrementBtn.classList.remove('dropdown-quests__button_disabled');
+  }
+  if (item === adultsItem) {
+    data[0] = (parseInt(count.textContent, 10))
+    showSelectionText();
+  }else if (item === kidsItem) {
+    data[1] = (parseInt(count.textContent, 10))
+    showSelectionText();
+  }else if (item === babiesItem) {
+    data[2] = (parseInt(count.textContent, 10))
+    showSelectionText();
+  }
+}));
+
+cleanBtn.addEventListener('click', function () {
+  counts.forEach( count => count.textContent = '0');
+  data[0] = 0;
+  data[1] = 0;
+  data[2] = 0;
+  showSelectionText();
+  decrementButtons.forEach(btn => btn.classList.add('dropdown-quests__button_disabled'));
+});
+
+applyBtn.addEventListener('click', function () {
+  menu.classList.remove('dropdown-quests__menu_open');
+  selection.style.borderColor = 'rgba(31, 32, 65, 0.25)';
+  isDrop = !isDrop;
+});
 
 
+function showSelectionText() {
+  let quests = 'гость';
+  let babies = 'младенец';
+  if(data[0] + data[1] > 1 && data[0] + data[1] < 5) {
+    quests = 'гостя';
+  }else if(data[0] + data[1] > 4 && data[0] + data[1] <= 20) {
+    quests = 'гостей';
+  }
+  if(data[2] > 1 && data[2] < 5) {
+    babies = 'младенца'
+  }else if(data[2] > 4 && data[2] <= 20) {
+    babies = 'младенцев';
+  }
 
+  if (data[0] + data[1] === 0 && data[2] === 0) {
+    selectionText.textContent = `Сколько гостей`;
+  }
 
+  if (data[0] + data[1] > 0 && data[2] === 0) {
+    selectionText.textContent = `${data[0] + data[1]} ${quests}`;
+  }
+  if (data[0] + data[1] > 0 && data[2] > 0) {
+    selectionText.textContent = `${data[0] + data[1]} ${quests}, ${data[2]} ${babies}`;
+  }
+}

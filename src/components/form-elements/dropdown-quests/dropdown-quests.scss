@@ -7,159 +7,130 @@
   color: $darkShade100;
 }
 
+$height: 44px;
+
 .dropdown-quests {
-  width: 320px;
 
-  .iqdropdown {
-    height: 44px;
+
+  &__title {
+    font-weight: 700;
+    color: $darkShade100;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+
+  &__dropdown{
+    width: 320px;
+    position: relative;
+    user-select: none;
+  }
+
+  &__selection{
+    height: $height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border:  1px solid $darkShade25;
     border-radius: 4px 4px 0 0;
-    border-color: $darkShade25;
-
-    .iqdropdown-selection {
-      font-family: Montserrat;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
-      color: $darkShade75;
-      padding-bottom: 3.5px;
-      &::after {
-        background-image: none;
-      }
-    }
-
-    .iqdropdown-menu {
-      box-shadow: none;
-      top: 43px;
-      border: 1px solid $darkShade50;
-      border-top: none;
-      border-radius: 0 0 4px 4px;
-      padding: 5px 6px 7px 14px;
-      width: 320px;
-      margin: 0;
-      left: -1px;
-
-      .iqdropdown-buttons {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0 6px;
-        flex-direction: row-reverse;
-      }
-      .iqdropdown-button-clean,
-      .iqdropdown-button-apply {
-        color: $purple;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        font-family: Montserrat;
-      }
-      .iqdropdown-button-clean{
-        display: none;
-      }
-      .iqdropdown-button-clean_active{
-        display: block;
-      }
-    }
-
-    .iqdropdown-menu-option {
-      justify-content: space-between;
-      height: 30px;
-      padding: 0;
-      margin-bottom: 7px;
-      &:last-child{
-        margin-bottom: 0;
-      }
-    }
-
-    .iqdropdown-item {
-      @include dropdown-font;
-      padding-bottom: 2px;
-    }
-
-    .iqdropdown-item-controls{
-      width: 92px;
-      height: 30px;
-      justify-content: space-between;
-
-      button {
-        align-items: center;
-        border: 1px solid $darkShade25;
-        display: flex;
-        height: 30px;
-        width: 30px;
-        padding: 0;
-        &:hover{
-          background-color: #FFFFFF;
-        }
-      }
-
-      button.button-decrement,
-      button.button-increment{
-        border-radius: 50%;
-        &.iqdropdown-limit {
-          border-color: $darkShade5;
-          .icon-decrement::after{
-            background: $darkShade5;
-          }
-          .icon-decrement.icon-increment::after{
-            background: $darkShade5;
-          }
-          .icon-decrement.icon-increment::before{
-            background: $darkShade5;
-          }
-        }
-      }
-
-      .counter {
-        @include dropdown-font;
-        border: none;
-        padding: 6px 0 0 0;
-      }
-    }
-
-    .icon-decrement {
-      display: inline-block;
-      height: 8px;
-      margin: auto;
-      min-width: 8px;
-      position: relative;
-      width: 8px;
-      &::after{
-        background: $darkShade50;
-        width: 4px;
-        height: 1.5px;
-        top: 4px;
-        left: 2px;
-      }
-    }
-
-    .icon-decrement.icon-increment{
-
-      &::before {
-        background: $darkShade50;
-        height: 1px;
-        top: 3px;
-        width: 7px;
-        left: 1px;
-      }
-      &::after{
-        background: $darkShade50;
-        width: 8px;
-        height: 1px;
-        top: 3px;
-        left: 0;
-
-      }
-    }
-
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    padding: 0 15px;
   }
 
-  .iqdropdown.menu-open {
-    border-color: $darkShade50;
+  &__selection-text{
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkShade75;
+  }
 
-    & .iqdropdown-selection::after{
-      background-image: none;
+  &__selection-check{
+    width: 12px;
+    height: 8px;
+  }
+
+  &__menu{
+    position: absolute;
+    width: 100%;
+    top: $height;
+    right: 0;
+    border:  1px solid $darkShade50;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    padding: 5px 6px 7px 12px;
+    display: none;
+    background-color: #FFFFFF;
+  }
+
+  &__menu_open {
+    display: block;
+  }
+
+  &__menu-item{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin-bottom: 7px;
+    cursor: default;
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 
+  &__item{
+    @include dropdown-font;
+    padding-top: 8px;
+  }
+
+  &__quantity-block{
+    display: flex;
+    width: 92px;
+    height: 30px;
+    justify-content: space-between;
+  }
+
+  &__button-decrement,
+  &__button-increment{
+    align-items: center;
+    border: 1px solid $darkShade50;
+    border-radius: 50%;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    justify-content: center;
+    cursor: pointer;
+  }
+  &__button_disabled{
+    border: 1px solid $darkShade25;
+    color: $darkShade25;
+  }
+  &__count{
+    @include dropdown-font;
+    padding: 6px 0 0 0;
+    cursor: default;
+  }
+
+  &__button-increment{
+
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 6px;
+    flex-direction: row-reverse;
+  }
+
+  &__button{
+    color: $purple;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+  }
 }

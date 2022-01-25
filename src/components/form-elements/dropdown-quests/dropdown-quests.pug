@@ -1,18 +1,29 @@
-mixin dropdownQuests
+mixin dropdownQuests(title)
   .dropdown-quests
-    .iqdropdown
-      p.iqdropdown-selection
-        .iqdropdown-menu
-          .iqdropdown-menu-option(data-id="adults" data-defaultcount="0" data-mincount="0" data-maxcount="10")
-            div
-              p.iqdropdown-item взрослые
-          .iqdropdown-menu-option(data-id="kids" data-defaultcount="0" data-mincount="0" data-maxcount="10")
-            div
-              p.iqdropdown-item дети
-          .iqdropdown-menu-option(data-id="babies" data-defaultcount="0" data-mincount="0" data-maxcount="10")
-            div
-              p.iqdropdown-item младенцы
-          .iqdropdown-buttons
-            button.iqdropdown-button-apply применить
-            button.iqdropdown-button-clean.js-iqdropdown-button-clean очистить
-      img.iqdropdown-selection-chech(src="./assets/img/check-black.png" alt="dropdown trigger")
+    .dropdown-quests__title=title
+    .dropdown-quests__dropdown
+      .dropdown-quests__selection.js-dropdown-quests__selection
+        .dropdown-quests__selection-text.js-dropdown-quests__selection-text
+        img.dropdown-quests__selection-check(src="./assets/img/check-black.png" alt="dropdown trigger")
+      .dropdown-quests__menu.js-dropdown-quests__menu
+        .dropdown-quests__menu-item.js-dropdown-quests__menu-item(data-id="adults")
+          .dropdown-quests__item взрослые
+          .dropdown-quests__quantity-block
+            .dropdown-quests__button-decrement.js-dropdown-quests__button-decrement -
+            .dropdown-quests__count.js-dropdown-quests__count(data-value="adults")
+            .dropdown-quests__button-increment.js-dropdown-quests__button-increment +
+        .dropdown-quests__menu-item.js-dropdown-quests__menu-item(data-id="kids")
+          .dropdown-quests__item дети
+          .dropdown-quests__quantity-block
+            .dropdown-quests__button-decrement.js-dropdown-quests__button-decrement -
+            .dropdown-quests__count.js-dropdown-quests__count(data-value="kids")
+            .dropdown-quests__button-increment.js-dropdown-quests__button-increment +
+        .dropdown-quests__menu-item.js-dropdown-quests__menu-item(data-id="babies")
+          .dropdown-quests__item младенцы
+          .dropdown-quests__quantity-block
+            .dropdown-quests__button-decrement.js-dropdown-quests__button-decrement -
+            .dropdown-quests__count.js-dropdown-quests__count(data-value="babies")
+            .dropdown-quests__button-increment.js-dropdown-quests__button-increment +
+        .dropdown-quests__buttons
+          button.dropdown-quests__button.dropdown-quests__button_apply.js-dropdown-quests__button_apply применить
+          button.dropdown-quests__button.dropdown-quests__button_clean.js-dropdown-quests__button_clean очистить
