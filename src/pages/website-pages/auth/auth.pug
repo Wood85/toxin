@@ -1,4 +1,5 @@
 - let isAuth = false;
+include ../../../components/cards/account-registration/account-registration
 
 .auth
   .auth__content
@@ -17,6 +18,6 @@
           include ../../../components/cards/account-login/account-login
       else
         .auth__card-registration
-          include ../../../components/cards/account-registration/account-registration
+          +accountRegistration("Зарегистрироваться")
   .auth__footer
     include  ../../../components/headers-and-footers/footer/footer

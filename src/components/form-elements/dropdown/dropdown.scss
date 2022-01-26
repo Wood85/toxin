@@ -1,26 +1,36 @@
-.dropdown__title{
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  color: $darkShade100;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-}
-.dropdown__input{
+.dropdown{
+  position: relative;
   width: 320px;
-  height: 44px;
-  border-radius: 4px;
-  border: 1px solid $darkShade25;
-  padding-left: 15px;
-  background-color: #ffffff;
-  outline: none;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  &::placeholder{
+
+  &__title{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    color: $darkShade100;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+
+  &__input{
+    width: 320px;
+    height: 44px;
+    border-radius: 4px;
+    color: $darkShade75;
+    border: 1px solid $darkShade25;
+    padding-left: 15px;
+    background-color: #ffffff;
+    outline: none;
+    font-size: 14px;
+    line-height: 24px;
     letter-spacing: 0;
   }
-}
-.dropdown__input-check{
-  transform: translate(-28px, 0);
+
+  &__input-check{
+    position: absolute;
+    bottom: 18px;
+    right: 14px;
+    width: 12px;
+    height: 8px;
+  }
+
 }

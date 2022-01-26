@@ -5,28 +5,29 @@ include  ../../form-elements/toggle-button/toggle-button
 include  ../../form-elements/button-size-large/button-size-large
 include  ../../form-elements/button-transparent/button-transparent
 
-form.account-registration
-  h1.account-registration__title Регистрация аккаунта
-  .account-registration__form
-    .account-registration__name
-      +inputField("text", "Имя")
-    .account-registration__surname
-      +inputField("text", "Фамилия")
-    .account-registration__gender
-      +radioButtons
-    .account-registration__date-of-birth
-      +inputMaskedField("дата рождения")
-    .account-registration__login-details
-      h3.account-registration__login-details-title данные для входа в сервис
-      .account-registration__email
-        +inputField("email", "Email")
-      .account-registration__password
-        +inputField("password", "Пароль")
-    .account-registration__toggle-special-offers
-      +toggleButton("Получать спецпредложения")
-    .account-registration__payment-button
-      +buttonSizeLarge("зарегистрироваться")
-    .account-registration__log-in
-      .account-registration__log-in-text Уже есть аккаунт на Toxin
-      .account-registration__log-in-button
-        +buttonTransparent({text:"Войти"})
+mixin accountRegistration(buttonText)
+  form.account-registration
+    h1.account-registration__title Регистрация аккаунта
+    .account-registration__form
+      .account-registration__name
+        +inputField("text", "Имя")
+      .account-registration__surname
+        +inputField("text", "Фамилия")
+      .account-registration__gender
+        +radioButtons
+      .account-registration__date-of-birth
+        +inputMaskedField("дата рождения")
+      .account-registration__login-details
+        h3.account-registration__login-details-title данные для входа в сервис
+        .account-registration__email
+          +inputField("email", "Email")
+        .account-registration__password
+          +inputField("password", "Пароль")
+      .account-registration__toggle-special-offers
+        +toggleButton("Получать спецпредложения")
+      .account-registration__payment-button
+        +buttonSizeLarge(buttonText)
+      .account-registration__log-in
+        .account-registration__log-in-text Уже есть аккаунт на Toxin
+        .account-registration__log-in-button
+          +buttonTransparent({text:"Войти"})

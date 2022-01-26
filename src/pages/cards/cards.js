@@ -1,2 +1,5 @@
 import '../../components/form-elements/rate-button/rate-button'
 import '../../components/cards/room-card/room-card'
+import '../../components/form-elements/dropdown-quests/dropdown-quests'
+import '../../components/cards/room-search-form/room-search-form'
+import '../../components/cards/calendar/calendar'

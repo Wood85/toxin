@@ -16,10 +16,9 @@ const selection = document.querySelector('.js-dropdown-quests__selection'),
   kidsCount = menu.querySelector('.js-dropdown-quests__count[data-value="kids"]'),
   babiesCount = menu.querySelector('.js-dropdown-quests__count[data-value="babies"]');
 
-
-selectionText.textContent = `Сколько гостей`;
-
 const data = [0, 0, 0];
+
+showSelectionText();
 
 adultsCount.textContent = data[0];
 kidsCount.textContent = data[1];
@@ -27,14 +26,20 @@ babiesCount.textContent = data[2];
 
 if(data[0] === 0 && data[1] === 0 && data[2] === 0) {
   decrementButtons.forEach(btn => btn.classList.add('dropdown-quests__button_disabled'));
+  cleanBtn.style.display = 'none';
+}
+if (data[0] !== 0 || data[1] !== 0 || data[2] !== 0) {
+  cleanBtn.style.display = 'block';
 }
 
 selection.addEventListener('click', function () {
   if(isDrop) {
     menu.classList.remove('dropdown-quests__menu_open');
+    selection.style.borderRadius = '4px';
     selection.style.borderColor = 'rgba(31, 32, 65, 0.25)';
   } else {
     menu.classList.add('dropdown-quests__menu_open');
+    selection.style.borderRadius = '4px 4px 0 0';
     selection.style.borderColor = 'rgba(31, 32, 65, 0.5)';
   }
   isDrop = !isDrop;
@@ -65,6 +70,10 @@ items.forEach(item => item.querySelector('.js-dropdown-quests__button-increment'
     data[2] = (parseInt(count.textContent, 10))
     showSelectionText();
   }
+
+  if (data[0] !== 0 || data[1] !== 0 || data[2] !== 0) {
+    cleanBtn.style.display = 'block';
+  }
 }));
 
 
@@ -92,6 +101,10 @@ items.forEach(item => item.querySelector('.js-dropdown-quests__button-decrement'
     data[2] = (parseInt(count.textContent, 10))
     showSelectionText();
   }
+
+  if(data[0] === 0 && data[1] === 0 && data[2] === 0) {
+    cleanBtn.style.display = 'none';
+  }
 }));
 
 cleanBtn.addEventListener('click', function () {
@@ -101,10 +114,12 @@ cleanBtn.addEventListener('click', function () {
   data[2] = 0;
   showSelectionText();
   decrementButtons.forEach(btn => btn.classList.add('dropdown-quests__button_disabled'));
+  cleanBtn.style.display = 'none';
 });
 
 applyBtn.addEventListener('click', function () {
   menu.classList.remove('dropdown-quests__menu_open');
+  selection.style.borderRadius = '4px';
   selection.style.borderColor = 'rgba(31, 32, 65, 0.25)';
   isDrop = !isDrop;
 });

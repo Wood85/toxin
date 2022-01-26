@@ -1,5 +1,5 @@
-mixin dropdown(title)
+mixin dropdown(title, value)
   .dropdown
     h3.dropdown__title=title
-    input.dropdown__input(placeholder="Сколько гостей" readonly)
+    input.dropdown__input(value=value readonly)
     img.dropdown__input-check(src="./assets/img/check.png" alt="checkbox list trigger")

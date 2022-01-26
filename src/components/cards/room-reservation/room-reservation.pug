@@ -1,3 +1,4 @@
+include  ../../form-elements/dropdown/dropdown
 include  ../../form-elements/date-dropdown/date-dropdown
 include  ../../form-elements/dropdown-quests/dropdown-quests
 include  ../../form-elements/button-size-large/button-size-large
@@ -12,7 +13,7 @@ include  ../../form-elements/button-size-large/button-size-large
   .room-reservation__date
     +dateDropdown("прибытие", "выезд", "19.08.2019", "23.08.2019" )
   .room-reservation__quests
-    +dropdownQuests("Гости")
+    +dropdown("Гости", "3 гостя")
   .room-reservation__calculations
     .room-reservation__string.room-reservation__price-period
       .room-reservation__item
