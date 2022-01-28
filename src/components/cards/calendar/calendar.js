@@ -1,16 +1,20 @@
 import AirDatepicker from 'air-datepicker'
 import 'air-datepicker/air-datepicker.css'
 
-new AirDatepicker('.calendar__body',{
+new AirDatepicker('.js-calendar',{
   navTitles: {
         days: '<h2 class="calendar__title-month">MMMM</h2> <h2 class="calendar__title-year">yyyy</h2>'
     },
     prevHtml:'<img class="calendar__arrow-prev" src="../../../assets/img/arrow-prev.svg" alt="arrow-prev"/>',
     nextHtml:'<img src="../../../assets/img/arrow-forward.svg" alt="arrow-forward"/>',
     range: true,
-  //   // minDate: new Date().setDate(new Date().getDate() + 1),
-  //   // maxDate:  new Date().setFullYear(new Date().getFullYear() + 1),
-  //   buttons: [clearButton, applyButton],
+    // minDate: new Date().setDate(new Date().getDate() + 1),
+    // maxDate:  new Date().setFullYear(new Date().getFullYear() + 1),
+    buttons: ['clear',{
+      content() {
+        return 'Применить'
+      }
+    }]
   //   onSelect({date, formattedDate, datepicker}){
   //       dateFieldFrom.value = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`
   //       let arraySelectedDates = datepicker.selectedDates

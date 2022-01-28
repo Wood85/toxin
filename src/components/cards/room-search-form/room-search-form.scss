@@ -1,6 +1,7 @@
 @import '../../form-elements/date-dropdown/date-dropdown';
 @import '../../form-elements/dropdown-quests/dropdown-quests';
 @import '../../form-elements/button-size-large/button-size-large';
+@import '../calendar/calendar';
 
 .room-search-form{
   width: 380px;
@@ -45,6 +46,17 @@
     }
   }
 }
+
+.room-search-form__date{
+  position: relative;
+  z-index: 100;
+}
+
+.room-search-form__datepicker{
+  position: absolute;
+  display: none;
+}
+
 .room-search-form__quests{
   position: relative;
   z-index: 2;
