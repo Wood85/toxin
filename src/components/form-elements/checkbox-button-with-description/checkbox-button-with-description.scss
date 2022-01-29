@@ -29,4 +29,9 @@
   color: $darkShade50;
   width: 230px;
   padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-with-description__description-string{
+  font-weight: 400;
 }

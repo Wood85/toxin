@@ -1,7 +1,7 @@
 import '../../form-elements/rate-button/rate-button'
-import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper'
 
-Swiper.use([Navigation, Pagination])
+Swiper.use([Navigation, Pagination, EffectFade, Autoplay])
 
 const swiper = new Swiper('.swiper', {
     loop: true,

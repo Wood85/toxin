@@ -9,7 +9,19 @@ const path = require('path'),
   ESLintWebpackPlugin = require('eslint-webpack-plugin'),
 
   isDev = process.env.NODE_ENV === 'development',
-  isProd = !isDev;
+  isProd = !isDev,
+
+  pages = ['search-room', 'room-details', 'auth'],
+  multipleHtmlPlugins = pages.map(page => {
+    return new HTMLWebpackPlugin({
+      filename: `${page}.html`,
+      template: `./src/pug/${page}.pug`,
+      minify: {
+        collapseWhitespace: isProd
+      }
+
+    })
+  });
 
   optimization = () => {
     const config = {
@@ -42,16 +54,18 @@ module.exports = {
     hot: isDev
   },
   plugins: [
+
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jquery': 'jquery',
+    }),
     new HTMLWebpackPlugin({
+      filename: 'index.html',
       template: './src/pug/index.pug',
       minify: {
         collapseWhitespace: isProd
       }
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jquery': 'jquery'
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
@@ -65,7 +79,7 @@ module.exports = {
       filename: '[name].[hash].css'
     }),
     new ESLintWebpackPlugin()
-  ],
+  ].concat(multipleHtmlPlugins),
   module: {
     rules: [
       {

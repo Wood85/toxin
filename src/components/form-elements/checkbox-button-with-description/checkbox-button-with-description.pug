@@ -1,7 +1,10 @@
-mixin checkboxButtonWithDescription(title,description)
+
+mixin checkboxButtonWithDescription(title,string1,string2)
   label.checkbox-with-description
     input.checkbox-with-description__input(type="checkbox")&attributes(attributes)
     span.checkbox-with-description__img
     .checkbox-with-description__content
       .checkbox-with-description__title=title
-      .checkbox-with-description__description=description
+        .checkbox-with-description__description
+          .checkbox-with-description__description-string=string1
+          .checkbox-with-description__description-string=string2

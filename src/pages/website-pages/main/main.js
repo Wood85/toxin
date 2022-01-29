@@ -1,10 +1,14 @@
 import '../../../components/cards/room-search-form/room-search-form'
 import '../../../components/headers-and-footers/header/header'
-import Swiper from 'swiper'
+import Swiper, {EffectFade, Autoplay} from 'swiper'
+
+Swiper.use([EffectFade, Autoplay])
+
+
 const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: {
-        delay: 5000,
+        delay: 10000,
     },
     effect: 'fade',
     fadeEffect: {
