@@ -15,7 +15,7 @@ const navSlide = () => {
       }
     });
     //Анимация бургера
-    burger.classList.toggle('toggle')
+    burger.classList.toggle('toggle');
   });
 };
 

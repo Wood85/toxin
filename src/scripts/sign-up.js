@@ -7,9 +7,9 @@ import '../components/cards/account-registration/account-registration';
 
 import Swiper, {EffectFade, Autoplay} from 'swiper';
 
-Swiper.use([EffectFade, Autoplay])
+Swiper.use([EffectFade, Autoplay]);
 
-const swiperForBackground = new Swiper('.swiper', {
+new Swiper('.swiper', {
   loop: true,
   autoplay: {
     delay: 5000,

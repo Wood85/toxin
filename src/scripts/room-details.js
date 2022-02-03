@@ -9,7 +9,7 @@ function arrayOfIntervals1(start, end, interval) {
     if (i === 12 || i === 112 || i === 212 || i === 312 || i === 412 || i === 512 || i === 612 || i === 712 || i === 812 || i === 912) continue;
     arr.push(i);
     arr.push(i+1);
-    arr.push(i+2)
+    arr.push(i+2);
   }
   return arr;
 }
@@ -97,7 +97,7 @@ const backgroundColors = colors,
       const ul = getOrCreateLegendList(chart, options.containerClass);
       console.log(ul.children);
       while(ul.firstChild) {
-        ul.firstChild.remove()
+        ul.firstChild.remove();
       }
       const legendItems = chart.options.plugins.legend.labels.generateLabels(chart);
       legendItems.forEach((item, index) => {
@@ -112,7 +112,7 @@ const backgroundColors = colors,
             chart.setDatasetVisibility(item.datasetIndex, !chart.isDatasetVisible(item.datasetIndex));
           }
           chart.update();
-        })
+        });
 
         const colorBox = document.createElement('span');
         colorBox.classList.add('page-room-details__color-box');
@@ -165,8 +165,8 @@ const backgroundColors = colors,
       radius: 62,
     },
     plugins: [htmlLegendPlugin, counter]
-  },
-  myChart = new Chart(
+  };
+  new Chart(
     document.querySelector('.page-room-details__chart'),
     config
   );

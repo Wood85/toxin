@@ -1,5 +1,5 @@
-import AirDatepicker from 'air-datepicker'
-import 'air-datepicker/air-datepicker.css'
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
 
 (function() {
   new AirDatepicker('.js-calendar', {
@@ -11,7 +11,7 @@ import 'air-datepicker/air-datepicker.css'
     range: true,
     buttons: ['clear', {
       content() {
-        return 'Применить'
+        return 'Применить';
       }
     }]
   });

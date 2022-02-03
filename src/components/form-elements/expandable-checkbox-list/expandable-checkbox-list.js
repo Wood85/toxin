@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 (function() {
   let isExpandable = false;
   const $trigger = $('.expandable-checkbox-list__trigger'),
@@ -13,5 +15,5 @@
       $trigger.addClass('trigger-down');
     }
     isExpandable = !isExpandable;
-  })
+  });
 }());

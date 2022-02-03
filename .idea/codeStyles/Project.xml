@@ -9,6 +9,9 @@
         <option name="SMART_TABS" value="true" />
       </value>
     </option>
+    <JSCodeStyleSettings version="0">
+      <option name="FORCE_SEMICOLON_STYLE" value="true" />
+    </JSCodeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <indentOptions>
         <option name="INDENT_SIZE" value="2" />

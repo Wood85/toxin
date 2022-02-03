@@ -4,9 +4,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
-import '../components/form-elements/rate-button/rate-button'
-import '../components/cards/room-card/room-card'
-import '../components/form-elements/dropdown-quests/dropdown-quests'
-import '../components/form-elements/input-masked-field/input-masked-field'
-import '../components/cards/room-search-form/room-search-form'
-import '../components/cards/calendar/calendar'
+import '../components/form-elements/rate-button/rate-button';
+import '../components/cards/room-card/room-card';
+import '../components/form-elements/dropdown-quests/dropdown-quests';
+import '../components/form-elements/input-masked-field/input-masked-field';
+import '../components/cards/room-search-form/room-search-form';
+import '../components/cards/calendar/calendar';

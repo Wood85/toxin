@@ -64,7 +64,6 @@ module.exports = {
     hot: isDev
   },
   plugins: [
-
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

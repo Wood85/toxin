@@ -1,8 +1,9 @@
+import $ from 'jquery';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 (function() {
-  jQuery(function($) {
+  $(document).ready(() => {
     const $iqdropdown = $('.iqdropdown'),
       $input = $('.iqdropdown-selection');
     $iqdropdown.iqDropdown({
@@ -40,8 +41,8 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
         $('[data-id="bathrooms"] .button-decrement').addClass('iqdropdown-limit');
 
       },
-      onChange: (id, count, totalItems) => {
-        console.log(id, count, totalItems)
+      onChange: (id, count) => {
+
         if(id === 'bedrooms' && count === 1) {
           $('[data-id="bedrooms"] .button-decrement').addClass('iqdropdown-limit');
         }else if(id === 'bedrooms' && count !== 1) {

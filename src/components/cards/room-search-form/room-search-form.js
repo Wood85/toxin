@@ -14,9 +14,9 @@ import 'air-datepicker/air-datepicker.css';
       content: 'очистить',
       className: 'clear-button-custom',
       onClick: (datepicker) => {
-        datepicker.clear()
-        dateFieldFrom.value = ''
-        dateFieldTo.value = ''
+        datepicker.clear();
+        dateFieldFrom.value = '';
+        dateFieldTo.value = '';
       }
     },
 
@@ -39,9 +39,9 @@ import 'air-datepicker/air-datepicker.css';
         dateFieldTo.value = `${dateTo.day}.${dateTo.month}.${dateTo.year}`;
         calendar.style.display = "none";
       }
-    },
+    };
 
-    datepicker = new AirDatepicker('.js-room-search-form__datepicker',{
+    new AirDatepicker('.js-room-search-form__datepicker',{
 
       navTitles: {
         days: '<h2 class="calendar__title-month">MMMM</h2> <h2 class="calendar__title-year">yyyy</h2>'
@@ -50,25 +50,25 @@ import 'air-datepicker/air-datepicker.css';
       nextHtml:'<img src="../../../assets/img/arrow-forward.svg" alt="arrow-forward"/>',
       range: true,
       buttons: [clearButton, applyButton],
-      onSelect({date, formattedDate, datepicker}){
-        dateFieldFrom.value = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`
-        let arraySelectedDates = datepicker.selectedDates
-        dateFieldTo.value = `${('0' + arraySelectedDates[1].getDate()).slice(-2)}.${('0' + (arraySelectedDates[1].getMonth()+1)).slice(-2)}.${arraySelectedDates[1].getFullYear()}`
+      onSelect({date, datepicker}){
+        dateFieldFrom.value = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`;
+        let arraySelectedDates = datepicker.selectedDates;
+        dateFieldTo.value = `${('0' + arraySelectedDates[1].getDate()).slice(-2)}.${('0' + (arraySelectedDates[1].getMonth()+1)).slice(-2)}.${arraySelectedDates[1].getFullYear()}`;
       }
-    }),
+    });
 
 
-    valueDateDropdown = body.querySelectorAll('.js-date-dropdown__input, .js-date-dropdown__input-check-container, .js-date-dropdown__input-check');
+  const valueDateDropdown = body.querySelectorAll('.js-date-dropdown__input, .js-date-dropdown__input-check-container, .js-date-dropdown__input-check');
 
   valueDateDropdown.forEach(function (val) {
     let isShow = false;
     val.onclick = function () {
       if(!isShow) {
-        calendar.style.display = "block"
+        calendar.style.display = "block";
       }else{
-        calendar.style.display = "none"
+        calendar.style.display = "none";
       }
-      isShow = !isShow
+      isShow = !isShow;
     };
   });
 

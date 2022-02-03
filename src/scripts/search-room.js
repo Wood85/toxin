@@ -9,8 +9,6 @@ import '../components/form-elements/expandable-checkbox-list/expandable-checkbox
 
 //Прокрутка контента внутри блока
 class ScrollBox {
-  // минимальная высота ползунка скроллбара
-  // static SCROLLER_HEIGHT_MIN = 25;
 
   constructor(container) {
     // область просмотра, в которой находится контент и скроллбар
@@ -63,7 +61,7 @@ class ScrollBox {
   }
 
   // регистрация обработчиков событий
-  registerEventsHandler(e) {
+  registerEventsHandler() {
     // вращение колёсика мыши
     this.contentBox.addEventListener('scroll', () => {
       this.scroller.style.top = (this.contentBox.scrollTop * this.ratio) + 'px';
@@ -121,7 +119,7 @@ const containers = document.querySelectorAll('.scroll-container');
 // перебираем полученную коллекцию элементов
 for (let container of containers) {
   // создаём экземпляр контейнера, в котором будем прокручивать контент
-  const scrollbox = new ScrollBox(container);
+  new ScrollBox(container);
 }
 
 //показ фильтра поиска номеров
@@ -129,5 +127,5 @@ const filtersButton = document.querySelector('.search-room__filters'),
   filtersOptions = document.querySelector('.search-room__options');
 filtersButton.addEventListener('click', ()=> {
     filtersOptions.classList.toggle('search-room__options_active');
-    document.body.classList.toggle('lock')
+    document.body.classList.toggle('lock');
 });

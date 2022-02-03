@@ -9,7 +9,7 @@ import Swiper, {EffectFade, Autoplay} from 'swiper';
 Swiper.use([EffectFade, Autoplay]);
 
 
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
     loop: true,
     autoplay: {
         delay: 10000,

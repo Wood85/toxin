@@ -7,8 +7,8 @@ import Swiper, { Navigation, Pagination, EffectFade} from 'swiper';
 
 
 (function() {
-  Swiper.use([Navigation, Pagination, EffectFade])
-  const swiper = new Swiper('.swiper', {
+  Swiper.use([Navigation, Pagination, EffectFade]);
+  new Swiper('.swiper', {
     loop: true,
     effect: 'fade',
     fadeEffect: {

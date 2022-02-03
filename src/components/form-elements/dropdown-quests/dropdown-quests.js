@@ -62,13 +62,13 @@
       decrementBtn.classList.remove('dropdown-quests__button_disabled');
     }
     if (item === adultsItem) {
-      data[0] = (parseInt(count.textContent, 10))
+      data[0] = (parseInt(count.textContent, 10));
       showSelectionText();
     }else if (item === kidsItem) {
-      data[1] = (parseInt(count.textContent, 10))
+      data[1] = (parseInt(count.textContent, 10));
       showSelectionText();
     }else if (item === babiesItem) {
-      data[2] = (parseInt(count.textContent, 10))
+      data[2] = (parseInt(count.textContent, 10));
       showSelectionText();
     }
 
@@ -93,13 +93,13 @@
       incrementBtn.classList.remove('dropdown-quests__button_disabled');
     }
     if (item === adultsItem) {
-      data[0] = (parseInt(count.textContent, 10))
+      data[0] = (parseInt(count.textContent, 10));
       showSelectionText();
     }else if (item === kidsItem) {
-      data[1] = (parseInt(count.textContent, 10))
+      data[1] = (parseInt(count.textContent, 10));
       showSelectionText();
     }else if (item === babiesItem) {
-      data[2] = (parseInt(count.textContent, 10))
+      data[2] = (parseInt(count.textContent, 10));
       showSelectionText();
     }
 
@@ -137,7 +137,7 @@
       quests = 'гостей';
     }
     if(data[2] > 1 && data[2] < 5) {
-      babies = 'младенца'
+      babies = 'младенца';
     }else if(data[2] > 4 && data[2] <= 20) {
       babies = 'младенцев';
     }
