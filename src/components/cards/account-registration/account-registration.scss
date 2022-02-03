@@ -58,6 +58,7 @@
 .account-registration__log-in-text{
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .account-registration__log-in-button{
   margin-top: 2px;

@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'fonts';
+@import 'global';
+
+.root{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root__links{
+  height: 300px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.link{
+  justify-content: center;
+}
+.link__pages{
+  display: block;
+  text-align: center;
+  height: 26px;
+  font-size: 14px;
+  padding-top: 2px;
+  background: $purple;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-bottom: 2px;
+}

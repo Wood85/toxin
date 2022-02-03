@@ -4,14 +4,25 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel='apple-touch-icon' sizes='180x180' href='assets/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='assets/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='assets/favicon/favicon-16x16.png')
+    link(rel='manifest' href='assets/favicon/site.webmanifest')
+    link(rel='mask-icon' href='assets/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    meta(name='msapplication-TileColor' content='#2b5797')
+    meta(name='theme-color' content='#ffffff')
     title Toxin
   body
-    //include  ../pages/colors-and-type/colors-and-type
-    //include  ../pages/form-elements/form-elements
-    //include  ../pages/cards/cards
-    //include  ../pages/headers-and-footers/headers-and-footers
-    include  ../pages/website-pages/main/main
-    //include  ../pages/website-pages/search-room/search-room
-    //include  ../pages/website-pages/room-details/room-details
-    //include ../pages/website-pages/auth/auth
-
+    .root
+      .root__links
+        .link__title
+          a.link__pages(href="colors-and-type.html") colors & type
+          a.link__pages(href="form-elements.html") form elements
+          a.link__pages(href="cards.html") cards
+          a.link__pages(href="headers-and-footers.html") headers & footers
+        .link__title
+          a.link__pages(href="main.html") main
+          a.link__pages(href="search-room.html") search room
+          a.link__pages(href="room-details.html") room details
+          a.link__pages(href="sign-up.html") registration
+          a.link__pages(href="sign-in.html") sign in

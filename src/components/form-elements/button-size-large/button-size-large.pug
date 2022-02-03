@@ -1,2 +1,5 @@
-mixin buttonSizeLarge(text)
-  a.button-size-large(href="/mock-address/change-me")=text
+mixin buttonSizeLarge(options)
+  if options.button
+    button.button-size-large(type=options.type)=options.text
+  else
+    a.button-size-large(href=options.href)=options.text

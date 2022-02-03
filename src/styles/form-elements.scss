@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'fonts';
+@import 'global';
+@import '../components/form-elements/input-field/input-field';
+@import '../components/form-elements/dropdown/dropdown';
+@import '../components/form-elements/input-masked-field/input-masked-field';
+@import '../components/form-elements/date-dropdown/date-dropdown';
+@import '../components/form-elements/filter-date-dropdown/filter-date-dropdown';
+@import '../components/form-elements/subscription-field/subscription-field';
+@import '../components/form-elements/dropdown-selection/dropdown-selection';
+@import '../components/form-elements/dropdown-quests/dropdown-quests';
+@import '../components/form-elements/checkbox-buttons/checkbox-buttons';
+@import '../components/form-elements/expandable-checkbox-list/expandable-checkbox-list';
+@import '../components/form-elements/radio-buttons/radio-buttons';
+@import '../components/form-elements/toggle-button/toggle-button';
+@import '../components/form-elements/like-button/like-button';
+@import '../components/form-elements/rate-button/rate-button';
+@import '../components/form-elements/rich-checkbox-buttons/rich-checkbox-buttons';
+@import '../components/form-elements/range-slider/range-slider';
+@import '../components/form-elements/button-color/button-color';
+@import '../components/form-elements/button-transparent/button-transparent';
+@import '../components/form-elements/button-link/button-link';
+@import '../components/form-elements/button-size-large/button-size-large';
+@import '../components/form-elements/pagination/pagination';
+@import '../components/form-elements/bullet-list/bullet-list';
+@import '../components/form-elements/room-details-item/room-details-item';
+@import '../components/form-elements/reviews/reviews';
+
+
+.form-elements{
+  padding: 143px 141px 131px;
+  &>div{
+    margin-top: 20px;
+  }
+}
+.title-form,
+.subscription-field__title{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: $darkShade100;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.subscription-field__title{
+  padding-bottom: 2px;
+}
+.toggle__item{
+  padding-top: 9px;
+} 
+.like-button__container{
+  height: 51px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.like-button__buttons{
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+}
+.rate-button__container{
+  padding-top: 20px;
+}
+.rate-button__rate{
+  margin-top: 12px;
+  padding-left: 2px;
+  width: 261px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+.buttons__item{
+  & > button,a{
+    margin-bottom: 20px;
+  }
+  & > button:first-child{
+    margin-top: 20px;
+  }
+}
+.pagination__title{
+  margin-bottom: 12px;
+}
+.form-elements__reviews{
+  width: 711px;
+}

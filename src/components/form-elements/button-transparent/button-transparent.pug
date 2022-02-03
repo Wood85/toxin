@@ -1,5 +1,5 @@
 mixin buttonTransparent(options)
   if options.sizeSmall
-    a.button-transparent(href="/mock-address/change-me" class="button-transparent_size_small")=options.text
+    a.button-transparent(href=options.href class="button-transparent_size_small")=options.text
   else
-    a.button-transparent(href="/mock-address/change-me")=options.text
+    a.button-transparent(href=options.href)=options.text

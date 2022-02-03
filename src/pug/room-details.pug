@@ -4,14 +4,69 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel='apple-touch-icon' sizes='180x180' href='assets/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='assets/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='assets/favicon/favicon-16x16.png')
+    link(rel='manifest' href='assets/favicon/site.webmanifest')
+    link(rel='mask-icon' href='assets/favicon/safari-pinned-tab.svg' color='#5bbad5')
+    meta(name='msapplication-TileColor' content='#2b5797')
+    meta(name='theme-color' content='#ffffff')
     title Toxin
   body
-    //include  ../pages/colors-and-type/colors-and-type
-    //include  ../pages/form-elements/form-elements
-    //include  ../pages/cards/cards
-    //include  ../pages/headers-and-footers/headers-and-footers
-    //include  ../pages/website-pages/main/main
-    //include  ../pages/website-pages/search-room/search-room
-    include  ../pages/website-pages/room-details/room-details
-    //include ../pages/website-pages/auth/auth
+    include ../components/form-elements/room-details-item/room-details-item
+    include ../components/form-elements/reviews/reviews
+    include ../components/form-elements/bullet-list/bullet-list
+
+    include  ../components/headers-and-footers/header/header
+    main.page-room-details
+      .page-room-details__photos-container
+        .page-room-details__photo_main
+          img.page-room-details__photo(src="./assets/img/room-details-main.jpg" alt="room-details-main")
+        .page-room-details__photos
+          .page-room-details__photo_secondary
+            img.page-room-details__photo(src="./assets/img/room-details-1.jpg" alt="room-details-1")
+          .page-room-details__photo_secondary
+            img.page-room-details__photo(src="./assets/img/room-details-2.jpg" alt="room-details-2")
+      .page-room-details__info
+        .page-room-details__main-block
+          .page-room-details__main-block-top
+            .page-room-details__details
+              h2.page-room-details__details-title Сведения о номере
+              .page-room-details__details-items
+                +roomDetailsItem('./assets/img/smile-icon.svg', "smile-icon", 'Комфорт', 'Шумопоглощающие стены')
+                +roomDetailsItem('./assets/img/city-icon.svg', "city-icon", 'Удобство', 'Окно в каждой из спален')
+                +roomDetailsItem('./assets/img/fire-icon.svg', "fire-icon", 'Уют', 'Номер оснащён камином')(class="room-details__line_hidden")
+            .page-room-details__diagram
+              h2.page-room-details__diagram-title Впечатления от номера
+              .page-room-details__diagram-content
+                .page-room-details__chart-container
+                  canvas.page-room-details__chart
+                  .page-room-details__chart-subtext
+                .page-room-details__legend-container
+          .page-room-details__reviews
+            .page-room-details__reviews-title-container
+              h2.page-room-details__reviews-title Отзывы посетителей номера
+              .page-room-details__number-of-reviews 2 отзыва
+            .page-room-details__reviews-content
+              .page-room-details__review
+                +reviews('./assets/img/users-img-3.png','Мурад Сарафанов', '5 дней назад', 12,'Великолепный матрас на кровати в основной спальне!' +
+                ' А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.' +
+                ' Выкрикивал комплименты повару — никто не жаловался из соседей.')(class='like')
+              .page-room-details__review
+                +reviews('./assets/img/users-img-2.png','Патрисия Стёклышкова', 'Неделю назад', 2,'Обслуживание на высоте! Всё аккуратно, чисто. ' +
+                'Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+          .page-room-details__main-block-bottom
+            .page-room-details__rules
+              h2.page-room-details__rules-title Правила
+              +bulletList
+            .page-room-details__cancel
+              h2.page-room-details__cancel-title Отмена
+              .page-room-details__cancel-text Бесплатная отмена в течение 48 ч. После
+              | этого при отмене не позднее чем за 5 дн. до
+              | прибытия вы получите полный возврат за
+              | вычетом сбора за услуги.
+        .page-room-details__card
+          include ../components/cards/room-reservation/room-reservation
+      .page-room-details__line
+    include  ../components/headers-and-footers/footer/footer
 

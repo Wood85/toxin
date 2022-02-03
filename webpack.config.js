@@ -11,11 +11,12 @@ const path = require('path'),
   isDev = process.env.NODE_ENV === 'development',
   isProd = !isDev,
 
-  pages = ['search-room', 'room-details', 'auth'],
+  pages = ['main', 'search-room', 'room-details', 'sign-in', 'sign-up', 'colors-and-type', 'form-elements', 'cards', 'headers-and-footers'],
   multipleHtmlPlugins = pages.map(page => {
     return new HTMLWebpackPlugin({
       filename: `${page}.html`,
       template: `./src/pug/${page}.pug`,
+      chunks: [`${page}`],
       minify: {
         collapseWhitespace: isProd
       }
@@ -41,7 +42,16 @@ const path = require('path'),
 module.exports = {
   mode: 'development',
   entry: {
-    main:'./src/index.js'
+    index:'./src/index.js',
+    'colors-and-type':'./src/scripts/colors-and-type.js',
+    'form-elements':'./src/scripts/form-elements.js',
+    cards:'./src/scripts/cards.js',
+    'headers-and-footers':'./src/scripts/headers-and-footers.js',
+    main:'./src/scripts/main.js',
+    'search-room':'./src/scripts/search-room.js',
+    'room-details':'./src/scripts/room-details.js',
+    'sign-in':'./src/scripts/sign-in.js',
+    'sign-up':'./src/scripts/sign-up.js'
   },
   output: {
     filename: '[name].[hash].js',
@@ -63,6 +73,7 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: 'index.html',
       template: './src/pug/index.pug',
+      chunks: ['index'],
       minify: {
         collapseWhitespace: isProd
       }
@@ -72,6 +83,9 @@ module.exports = {
       patterns: [
         { from: path.resolve(__dirname, 'src/assets/img'),
           to: path.resolve(__dirname, 'dist/assets/img')
+        },
+        { from: path.resolve(__dirname, 'src/assets/favicon'),
+          to: path.resolve(__dirname, 'dist/assets/favicon')
         }
       ]
     }),

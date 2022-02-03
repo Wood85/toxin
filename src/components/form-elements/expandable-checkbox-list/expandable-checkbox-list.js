@@ -1,4 +1,4 @@
-function expandableCheckboxList() {
+(function() {
   let isExpandable = false;
   const $trigger = $('.expandable-checkbox-list__trigger'),
     $dropdown = $('.expandable-checkbox-list__dropdown');
@@ -14,6 +14,4 @@ function expandableCheckboxList() {
     }
     isExpandable = !isExpandable;
   })
-}
-
-expandableCheckboxList();
+}());
