@@ -4,7 +4,6 @@ import '../components/form-elements/range-slider/range-slider';
 import '../components/cards/room-card/room-card';
 import '../components/form-elements/pagination/pagination';
 import '../components/form-elements/dropdown-selection/dropdown-selection';
-import '../components/form-elements/dropdown-quests/dropdown-quests';
 import '../components/form-elements/expandable-checkbox-list/expandable-checkbox-list';
 
 //Прокрутка контента внутри блока
@@ -123,9 +122,9 @@ for (let container of containers) {
 }
 
 //показ фильтра поиска номеров
-const filtersButton = document.querySelector('.search-room__filters'),
+const filtersButton = document.querySelector('.search-room__filters-container'),
   filtersOptions = document.querySelector('.search-room__options');
-filtersButton.addEventListener('click', ()=> {
-    filtersOptions.classList.toggle('search-room__options_active');
-    document.body.classList.toggle('lock');
+filtersButton.addEventListener('click', function() {
+  filtersOptions.classList.toggle('search-room__options_active');
+  document.body.classList.toggle('lock');
 });
